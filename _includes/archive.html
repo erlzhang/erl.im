@@ -1,0 +1,14 @@
+<div class="sidebar" id="sidebar">
+  <h2 class="sidebar__title">{{ site.title }}</h2>
+  <ul class="archive">
+    {% for book in page.books %}
+      <li class="archive__item">
+        <a href="/leaf/" class="archive__link">{{ book.title }}</a>
+        <span class="archive__time">({{ book.date }})</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="sidebar__copyright">
+    <p>文章版权所有，盗版必究！</p>
+    <p>All rights reserved.</p>
+  </div>
