@@ -25,6 +25,7 @@ module Jekyll
       books = []
 
       begin
+
         Dir.foreach(dir) do |book_dir|
           book_path = File.join(dir, book_dir)
           if File.directory?(book_path) and book_dir.chars.first != "."
@@ -35,17 +36,27 @@ module Jekyll
             book = Hash.new
 
             book["title"] = book_config["title"]
-            book["start"] = book_config["start"]
             book["end"] = book_config["end"]
-            book["slug"] = book_dir
 
+            if ( book_config["start"] == book_config["end"] ) or ( !book_config["end"] )
+              book["date"] = book_config["start"].to_s
+            else
+              book["date"] = "#{book_config["start"]}-#{book_config["end"]}"
+            end
+
+            book["slug"] = book_dir
             books << book
           end
         end
 
         books.sort! { |x, y|
-          x.end_date.to_i <=> y.end_date.to_i
+          x["end"].to_i <=> y["end"].to_i
         }
+
+        books.each_with_index do |book, index|
+          book["current"] = ( index == 0 )
+          book["odd"] = ( index % 2 == 0 )
+        end
 
         book_index = IndexPage.new(site, site.source, "", books)
         book_index.render(site.layouts, site.site_payload)
