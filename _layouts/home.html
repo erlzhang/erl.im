@@ -1,18 +1,13 @@
-<html>
+---
+layout: default
+---
 
-  {% include head.html %}
+{% include loading.html %}
 
-  <body>
+{% include archive.html %}
 
-    {% include header.html %}
+{% include content.html %}
 
-    {% include archive.html %}
+{{ content }}
 
-    {% include content.html %}
-
-    {{ content }}
-    
-    {% include footer.html %}
-  
-  </body>
-</html>
+{% include footer.html %}

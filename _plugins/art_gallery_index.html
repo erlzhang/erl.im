@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include archive.html %}
+
+<main class="gallery">
+  <div class="gallery-list">
+    {% for gallery in page.galleries %}
+      <li>
+        <a href="{{ gallery['link'] }}" class="gallery-link">
+            <img class="gallery-best-image" src="{{ gallery['link'] }}/thumbs/front_{{ gallery['best_image'] }}">
+        </a>
+      </li>
+    {% endfor %}
+  </div>
+
+  {% include gallery_footer.html%}
+
+</main>

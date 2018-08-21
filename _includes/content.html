@@ -1,11 +1,11 @@
-<div class="slide" id="sectionContainer">
+<main class="slide" id="sectionContainer">
   {% for book in page.books %}
     <div class="slide__section">
       {% if book.odd %}
         <div class="slide__img">
           <a href="/{{ book.slug }}/" class="slide__link"></a>
-          <img src="images/leaf.jpg">
-          <div class="slide__img_placehold" style="background-image: url('images/{{ book.slug }}.jpg');">
+          <img src="/assets/images/{{ book.slug }}.jpg">
+          <div class="slide__img_placehold" style="background-image: url('/assets/images/{{ book.slug }}.jpg');">
           </div>
         </div>
       {% endif %}
@@ -30,14 +30,14 @@
       {% unless book.odd %}
         <div class="slide__img">
           <a href="/{{ book.slug }}/" class="slide__link"></a>
-          <img src="images/leaf.jpg">
-          <div class="slide__img_placehold" style="background-image: url('images/{{ book.slug }}.jpg');">
+          <img src="/assets/images/{{ book.slug }}.jpg">
+          <div class="slide__img_placehold" style="background-image: url('/assets/images/{{ book.slug }}.jpg');">
           </div>
         </div>
       {% endunless %}
     </div>
   {% endfor %}
-</div>
+</main>
 
 <ul class="slide__controls">
   <div class="slide__control__icon slide__control_top" id="prevBtn">

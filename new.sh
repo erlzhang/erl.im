@@ -1,22 +1,22 @@
 #!/bin/bash
-echo "Please enter your book's dir name:"
-read dname
-echo "And the title:"
-read title
-echo "When you start this book?(please enter the year)"
-read start_year
-echo "And the end year?"
-read end_year
+read -p "dirname:" dname
+
+# 判断是否输入目录名
+test -z $dname && echo "Dirname is needed" && exit 0
+
+# 判断目录是否存在
+test -e _books/${dname} && echo "Dir is already existed" && exit 0 
 
 cd _books
 mkdir ${dname}
 cd ${dname}
 gitbook init
 
+start_year=`date +%Y`
+
 echo "{" >> config.json
-echo "\"title\": \"${dname}\"," >> config.json
+echo "\"title\": \"\"," >> config.json
 echo "\"start\": \"${start_year}\"," >> config.json
-echo "\"end\": \"${end_year}\"," >> config.json
 echo "\"plugins\": [\"-lunr\", \"-search\", \"-sharing\"]," >> config.json
 echo "\""links\" : { \"sidebar\" : { \"Home\" : \"http://yexiqingxi.com\" } } >> config.json
 echo "}" >> config.json

@@ -1,0 +1,12 @@
+---
+# individual pages for each gallery
+header:
+    title: Some Title
+    background-color: "#6B8A78"
+---
+
+[
+  {% for image in page.images %}
+    "{{ image }}"{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+]

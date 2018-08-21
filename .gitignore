@@ -4,3 +4,6 @@ _site
 
 /_books/*
 !/_books/.keep
+
+/_gallery/*
+!/_gallery/.keep
