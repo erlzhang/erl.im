@@ -29,7 +29,7 @@ module Jekyll
         Dir.foreach(dir) do |book_dir|
           book_path = File.join(dir, book_dir)
           if File.directory?(book_path) and book_dir.chars.first != "."
-            config_file = File.join(book_path, "config.json")
+            config_file = File.join(book_path, "book.json")
             config = File.read(config_file)
             book_config = JSON.parse(config)
 
@@ -49,8 +49,12 @@ module Jekyll
           end
         end
 
+        gallery = {"title" =>  "Potography", "date" =>  "2016-#{Time.now.year}", "end" => Time.now.year, "slug" =>  "gallery"}
+
+        books.push(gallery)
+
         books.sort! { |x, y|
-          x["end"].to_i <=> y["end"].to_i
+          y["end"].to_i <=> x["end"].to_i
         }
 
         books.each_with_index do |book, index|
@@ -58,7 +62,9 @@ module Jekyll
           book["odd"] = ( index % 2 == 0 )
         end
 
-        book_index = IndexPage.new(site, site.source, "", books)
+        site.config["books"] = books
+
+        book_index = IndexPage.new(site, site.source, "", books[0..4])
         book_index.render(site.layouts, site.site_payload)
         book_index.write(site.dest)
 
