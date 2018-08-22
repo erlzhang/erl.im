@@ -20,11 +20,15 @@ body, html {
 	width: 100%;
 	height: 100%;
 	background-color: var(--bg-color);
-  overflow: hidden;  
   color: var(--dark);
 }
-a, a:hover, a:visited, a:linked {
-  text-decoration: none;
+a {
+  text-decoration: none!important;
+  color: var(--dark);
+}
+a:hover, a:visited, a:linked, a:active {
+  text-decoration: none!important;
+  color: var(--dark);
 }
 
 /*loading*/
@@ -68,7 +72,7 @@ a, a:hover, a:visited, a:linked {
   animation: spin 1s linear infinite;
 }
 
-/*sidebar*/
+/*header*/
 .logo {
   position: fixed;
   left: 3rem;
@@ -131,12 +135,33 @@ a, a:hover, a:visited, a:linked {
   transform: rotate(-45deg);
 }
 
+.icon__list {
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  z-index: 10;
+  display: inline-block;
+  text-align: right;
+}
+.icon__link svg {
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+}
+.icon__fill {
+  fill: var(--gray);
+}
+.icon__stroke {
+  stroke: var(--gray);
+}
+
 /*sidebar*/
 .sidebar {
   width: 0;
   transform: translateX(-100%);
   opacity: 0;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
   position: fixed;
   left: 0;
   top: 0;
@@ -325,7 +350,7 @@ a, a:hover, a:visited, a:linked {
 
 .slide__controls {
   position: fixed;
-  right: 40px;
+  right: 3rem;
   top: 0;
   height: 100%;
   display: flex;
@@ -444,7 +469,14 @@ a, a:hover, a:visited, a:linked {
     margin-top: 0;
   }
 }
-.gallery-list {
+.gallery {
+  width: 100%;
+  text-align: center;
+  overflow-y: auto;
+  min-height: 100vh;
+  z-index: 1;
+}
+.gallery__list {
   max-width: 830px;
   margin: 3rem auto;
   width: 100%;
@@ -455,23 +487,23 @@ a, a:hover, a:visited, a:linked {
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
 }
-.gallery-list li {
+.gallery__item {
   display: inline-block;
   list-style: none;
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.gallery-list li a {
+.gallery__link {
   display: inline-block;
   width: 100%;
   overflow: hidden;
 }
-.gallery-list li a img {
+.gallery__image {
   width: 100%;
   vertical-align: bottom;
   transition: all 0.35s linear;
 }
-.gallery-list li a:hover img {
+.gallery__link:hover .gallery__image {
   transform: scale(1.2);
 }

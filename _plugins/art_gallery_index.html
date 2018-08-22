@@ -4,12 +4,12 @@ layout: default
 
 {% include archive.html %}
 
-<main>
-  <div class="gallery-list">
+<main class="gallery">
+  <div class="gallery__list">
     {% for gallery in page.galleries %}
-      <li>
-        <a href="{{ gallery['link'] }}" class="gallery-link">
-            <img class="gallery-best-image" src="{{ gallery['link'] }}/thumbs/front_{{ gallery['best_image'] }}">
+      <li class="gallery__item">
+        <a href="{{ gallery['link'] }}" class="gallery__link">
+            <img class="gallery__image" src="{{ gallery['link'] }}/thumbs/front_{{ gallery['best_image'] }}">
         </a>
       </li>
     {% endfor %}

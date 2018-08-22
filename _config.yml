@@ -44,3 +44,4 @@ exclude:
   - build.sh
   - new.sh
   - book.conf.d
+  - update.sh

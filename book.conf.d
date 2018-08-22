@@ -1,7 +1,7 @@
 "author": "Erl",
-"plugins": ["-lunr", "-search", "-sharing", "katex-plus"],
+"plugins": ["-lunr", "-search", "-sharing"],
 "links": {
   "sidebar": {
-    "Home": "/"
+    "叶夕青兮": "/"
   }
 }
