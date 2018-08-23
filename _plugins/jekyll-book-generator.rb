@@ -31,20 +31,16 @@ module Jekyll
         @name = name
       end
 
-      self.process(@name == "README.md" ? "index.html" : @name)
+      self.process(@name)
 
       read_yaml(File.join(base, "_books", @dir), @name)
 
       self.data["layout"] = 'book'
       self.data["book"] = book
 
-      if @name == "README.md"
-        self.data["link"] = File.join(@dir, "index.html")
-      else
-        basename = File.basename(@name, '.md')
-        newname = basename + ".html"
-        self.data["link"] = File.join(@dir, newname)
-      end
+      basename = File.basename(@name, '.md')
+      newname = basename + ".html"
+      self.data["link"] = File.join(@dir, newname)
 
       self.data["title"] = config["title"] 
       self.data["level"] = config["level"]
@@ -82,11 +78,9 @@ module Jekyll
             book["slug"] = book_dir
             books << book
 
-            # TODO：创建书籍页面
+            # 创建书籍页面
             summary = File.read(File.join(book_path, "SUMMARY.md")) # 怎么解析它应该是最大的难点
-
             parts = self.parse_summary(summary)
-
             chapters = []
 
             # 生成章节页面
@@ -96,23 +90,8 @@ module Jekyll
             end
 
             # 生成summary
-            items = []
-            current_item = nil
-            chapters.each do |chapter|
-              item = Hash.new
-              item["title"] = chapter.data["title"]
-              item["link"] = chapter.data["link"]
-              if chapter.data["level"] == 1
-                items.push(item)
-                current_item = item
-                item["chapters"] = []
-              else
-                current_item["chapters"].push(item)
-              end
-            end
-
-            puts items
-
+            items = self.get_parts(chapters)
+            book["index"] = items.shift()
             book["parts"] = items
 
             # 给章节设定上一页及下一页
@@ -121,11 +100,10 @@ module Jekyll
                 chapter.data["prev"] = chapters[index - 1]
               end
               if index < chapters.size - 1
-                chapter.data["next"] = chapters[index]
+                chapter.data["next"] = chapters[index + 1]
               end
               site.pages << chapter
             end
-
 
           end
         end
@@ -153,6 +131,24 @@ module Jekyll
       rescue Exception => e
         puts e
       end 
+    end
+
+    def get_parts(chapters)
+      items = []
+      current_item = nil
+      chapters.each do |chapter|
+        item = Hash.new
+        item["title"] = chapter.data["title"]
+        item["link"] = chapter.data["link"]
+        if chapter.data["level"] == 1
+          items.push(item)
+          current_item = item
+          item["chapters"] = []
+        else
+          current_item["chapters"].push(item)
+        end
+      end
+      return items
     end
 
     def parse_summary(summary)

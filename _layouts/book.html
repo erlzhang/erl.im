@@ -1,7 +1,7 @@
 <html>
   {% include book/head.html %}
   <body>
-    <div class="book">
+    <div class="book with-summary">
       {% include book/summary.html %}
       <div class="book-body">
         <div class="body-inner">
@@ -15,12 +15,12 @@
         </div>
         {% if page.prev and page.prev.path %}
           <a href="/{{ page.prev.link }}" class="navigation navigation-prev" aria-label="Previous page: {{ page.prev.title }}">
-              <i class="fa fa-angle-left"></i>
+            {% include icons/left.html %}
           </a>
         {% endif %}
         {% if page.next and page.next.path %}
           <a href="/{{ page.next.link }}" class="navigation navigation-next" aria-label="Next page: {{ page.next.title }}">
-              <i class="fa fa-angle-right"></i>
+            {% include icons/right.html %}
           </a>
         {% endif %}
       </div>
