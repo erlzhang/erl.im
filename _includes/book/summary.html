@@ -1,0 +1,29 @@
+<div class="book-summary">
+  <nav role="navigation">
+    <ul class="summary">
+      <li>
+        <a href="{{ "/" | relative_url }}" target="_blank" class="custom-link">{{ site.title }}</a>
+      </li>
+      <li class="divider"></li>
+      {% for part in page.book.parts %}
+        <li class="chapter" data-level="">
+          {% if part.link %}
+          <a href="/{{ part.link }}">{{ part.title }}</a>
+          {% else %}
+            <span>{{ part.title }}</span>
+          {% endif %}
+
+          {% if part.chapters.size > 0 %}
+          <ul class="articles">
+            {% for chapter in part.chapters %}
+              <li class="chapter">
+                <a href="/{{ chapter.link }}">{{ chapter.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
