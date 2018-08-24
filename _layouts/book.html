@@ -3,8 +3,9 @@
   <body>
     <div class="book with-summary">
       {% include book/summary.html %}
-      <div class="book-body">
+      <div class="book-body" id="book_body">
         <div class="body-inner">
+          {% include book/header.html %}
           <div class="page-wrapper" tabindex="-1" role="main">
               <div class="page-inner">
                 <section class="normal markdown-section">
@@ -25,5 +26,6 @@
         {% endif %}
       </div>
     </div>
+    {% include archive.html %}
   </body>
 </html>

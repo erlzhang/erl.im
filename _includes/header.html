@@ -1,12 +1,6 @@
-<a href="{{ "/" | relative_url }}">
-  {% include icons/logo.html %}
-</a>
+{% include icons/logo.html %}
 
-<div class="sidebar__toggler" data-toggle="0" id="sidebarToggler">
-  <span class="sidebar__toggler_top"></span>
-  <span class="sidebar__toggler_middle"></span>
-  <span class="sidebar__toggler_bottom"></span>
-</div>
+{% include icons/toggler.html %}
 
 <div class="icon__list">
   <a href="https://github.com/{{ site.github_username }}" class="icon__link" target="_blank">
