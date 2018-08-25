@@ -14,10 +14,11 @@ function bindSidebarEvent () {
       sidebar.classList.add("active");
       menuToggler.classList.add("active");
       logo.classList.add("active");
-      isOpen = true; 
+      isOpen = true;
     }
   }
 }
+bindSidebarEvent();
 document.addEventListener("turbolinks:load", function () {
   bindSidebarEvent();
 });
