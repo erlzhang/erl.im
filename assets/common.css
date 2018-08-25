@@ -73,23 +73,24 @@ a:hover, a:visited, a:linked, a:active {
 }
 .sidebar__toggler span {
   display: inline-block;
-  position: absolute; 
+  position: absolute;
   background-color: var(--gray);
   height: 2px;
   left: 5%;
   transition: all 0.25s linear;
+	border-radius: 2px;
 }
 .sidebar__toggler_top {
   width: 40%;
-  top: 7.5px;  
+  top: 7.5px;
 }
 .sidebar__toggler_middle {
   width: 70%;
-  top: 19px;  
+  top: 19px;
 }
 .sidebar__toggler_bottom {
   width: 90%;
-  bottom: 7.5px;  
+  bottom: 7.5px;
 }
 .sidebar__toggler:hover .sidebar__toggler_top {
   width: 90%;

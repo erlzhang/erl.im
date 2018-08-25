@@ -1,5 +1,7 @@
 var galleryLinks = document.getElementsByClassName("gallery__link");
 
+console.log(galleryLinks)
+
 if( galleryLinks.length > 0 ) {
   for( var i = 0, len = galleryLinks.length; i < len; i ++ ) {
     galleryLinks[i].onclick = function(event) {
@@ -8,7 +10,7 @@ if( galleryLinks.length > 0 ) {
       while( ele.tagName != "A" ){
         ele = ele.parentNode;
       }
-      var url = window.location.origin + ele.href + "/index.json";
+      var url = ele.href + "index.json";
       $.ajax({
         url: url,
         type: "get",
@@ -24,5 +26,5 @@ if( galleryLinks.length > 0 ) {
         }
       });
     }
-  } 
+  }
 }

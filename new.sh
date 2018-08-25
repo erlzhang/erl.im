@@ -5,7 +5,7 @@ read -p "Your book dirname: " dname
 test -z $dname && echo "Dirname is needed" && exit 0
 
 # 判断目录是否存在
-test -e _books/${dname} && echo "Dir is already existed" && exit 0 
+test -e _books/${dname} && echo "Dir is already existed" && exit 0
 
 read -p "Your book title: " title
 
@@ -21,5 +21,5 @@ echo "* [$title](index.md)" > SUMMARY.md
 echo "{" >> book.json
 echo "\"title\": \"${title}\"," >> book.json
 echo "\"start\": \"\"," >> book.json
-echo "\"end\": \"\"," >> book.json
+echo "\"end\": \"\"" >> book.json
 echo "}" >> book.json

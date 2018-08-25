@@ -7,3 +7,6 @@ _site
 
 /_gallery/*
 !/_gallery/.keep
+
+/img/*
+!/img/.keep
