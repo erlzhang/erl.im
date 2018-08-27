@@ -44,10 +44,7 @@ module Jekyll
       config = site.data["gallery"] || {}
 
       self.process(@name)
-      gallery_index = File.join(base, "_layouts", "art_gallery_index.html")
-      unless File.exists?(gallery_index)
-        gallery_index = File.join(File.dirname(__FILE__), "art_gallery_index.html")
-      end
+      gallery_index = File.join(base, "_layouts", "gallery.html")
       self.read_yaml(File.dirname(gallery_index), File.basename(gallery_index))
       self.data["title"] = config["title"] || "Photos"
       self.data["galleries"] = []
@@ -113,10 +110,7 @@ module Jekyll
       sort_field = config["sort_field"] || "name"
 
       self.process(@name)
-      gallery_page = File.join(base, "_layouts", "art_gallery_page.html")
-      unless File.exists?(gallery_page)
-        gallery_page = File.join(File.dirname(__FILE__), "gallery_page_data.json")
-      end
+      gallery_page = File.join(base, "_layouts", "gallery_data.json")
       self.read_yaml(File.dirname(gallery_page), File.basename(gallery_page))
       self.data["gallery"] = gallery_name # aka folder name
       self.data["description"] = gallery_config["description"]

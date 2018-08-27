@@ -76,7 +76,11 @@ module Jekyll
             end
 
             book["slug"] = book_dir
-            books << book
+            
+            # 首页仅显示开放状态书籍
+            if book_config["open"]
+              books << book
+            end
 
             # 创建书籍页面
             summary = File.read(File.join(book_path, "SUMMARY.md")) # 怎么解析它应该是最大的难点
