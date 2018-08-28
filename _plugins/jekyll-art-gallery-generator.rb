@@ -253,10 +253,10 @@ module Jekyll
       self.data["best_image"] = best_image
 
       # generate best image thumb for the gallery super-index page
-      makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "front_"+best_image, config["front_thumb_size"]["x"] || 400, config["front_thumb_size"]["y"] || 400,"crop")
+      # makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "front_"+best_image, config["front_thumb_size"]["x"] || 400, config["front_thumb_size"]["y"] || 400,"crop")
 
       # generate best image thumb for the header of a gallery index page
-      makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "header_"+best_image, config["header_thumb_size"]["x"] || 400, config["header_thumb_size"]["y"] || 400,"crop")
+      # makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "header_"+best_image, config["header_thumb_size"]["x"] || 400, config["header_thumb_size"]["y"] || 400,"crop")
 
       self.data["header"]["image_fullwidth"] = "thumbs/header_"+best_image # used in the theme
       GC.start
