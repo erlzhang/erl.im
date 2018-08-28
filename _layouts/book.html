@@ -1,7 +1,9 @@
 <html>
   {% include book/head.html %}
+  <title>{{ page.title }} | {{ site.title }}</title>
+</head>
   <body>
-    <div class="book">
+    <div class="book sidebar-right">
       {% include header.html %}
       <div class="book__cover">
         <img src="/assets/images/{{ page.slug }}.jpg" class="book__img">

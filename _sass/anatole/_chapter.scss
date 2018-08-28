@@ -1,3 +1,5 @@
+.book__wrapper {
+}
 .summary__toggler {
   position: absolute;
   top: 1.5rem;
@@ -13,6 +15,16 @@
 }
 .summary__toggler.active {
   transform: rotate(90deg);
+}
+.book-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 7;
+}
+.with-summary .book-header {
+  width: calc(100% - 300px);
 }
 .book-header h1 {
   margin: 0px;
@@ -45,22 +57,22 @@
   opacity: 1;
 }
 /*SUMMARY*/
-.book.with-summary .book-summary {
+.book__wrapper.with-summary .book-summary {
   left: 0px;
 }
 .book.without-animation .book-summary {
   @include transition(none !important);
 }
 @media (min-width: 600px) {
-  .book.with-summary .book-body {
+  .book__wrapper.with-summary .book__body {
     left: 300px;
   }
 }
 @media (max-width: 600px) {
-  .book.with-summary {
+  .book__wrapper.with-summary {
     overflow: hidden;
   }
-  .book.with-summary .book-body {
+  .book__wrapper.with-summary .book__body {
     @include transform(translate(calc( 100% - 60px ), 0px));
   }
 }

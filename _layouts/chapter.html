@@ -1,7 +1,9 @@
 <html>
   {% include book/head.html %}
+  <title>{{ page.title }} - {{ page.book.title }} | {{ site.title }}</title>
+</head>
   <body>
-    <div class="book">
+    <div class="book__wrapper sidebar-right" id="bookMain">
       {% include book/summary.html %}
       <div class="book__body">
         <div class="body__inner">

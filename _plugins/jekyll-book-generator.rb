@@ -36,7 +36,7 @@ module Jekyll
         self.data["date"] = "#{self.data["start"]}-#{self.data["end"]}"
       end
 
-      self.data["link"] = File.join(@base, @dir)
+      self.data["link"] = @dir
 
       self.data["slug"] = @dir
     end
