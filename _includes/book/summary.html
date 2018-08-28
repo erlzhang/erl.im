@@ -21,15 +21,15 @@
           <span>{{ part.title }}</span>
           {% endif %}
 
-          {% if part.chapters.size > 0 %}
+          {% if part.parts.size > 0 %}
           <ul class="articles">
-            {% for chapter in part.chapters %}
-              {% if chapter.link == page.link %}
+            {% for part in part.parts %}
+              {% if part.link == page.link %}
               <li class="chapter active">
               {% else %}
               <li class="chapter">
               {% endif %}
-                <a href="/{{ chapter.link }}">{{ chapter.title }}</a>
+                <a href="/{{ part.link }}">{{ part.title }}</a>
               </li>
             {% endfor %}
           </ul>

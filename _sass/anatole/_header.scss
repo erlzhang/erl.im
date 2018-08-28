@@ -16,10 +16,21 @@
   margin-top: -20px;
   z-index: 10;
 }
+.book .logo, .book .sidebar__toggler {
+  right: 3rem;
+  left: auto;
+}
 .sidebar__toggler.active, .logo.active {
   left: 50%;
   margin-left: -20px;
 }
+.book .sidebar__toggler.active, .book .logo.active {
+  left: auto;
+  right: 50%;
+  margin-left: 0;
+  margin-right: -20px;
+}
+
 .sidebar__toggler span {
   display: inline-block;
   position: absolute;

@@ -1,0 +1,31 @@
+<html>
+  {% include book/head.html %}
+  <body>
+    <div class="book">
+      {% include book/summary.html %}
+      <div class="book__body">
+        <div class="body__inner">
+          {% include book/header.html %}
+          <main class="chapter" tabindex="-1" role="main">
+              <div class="chapter__inner">
+                <article class="chapter__content">
+                  {{ content }}
+                </article>
+              </div>
+          </div>
+        </div>
+        {% if page.prev and page.prev.path %}
+          <a href="/{{ page.prev.link }}" class="navigation navigation-prev" aria-label="Previous page: {{ page.prev.title }}">
+            {% include icons/left.html %}
+          </a>
+        {% endif %}
+        {% if page.next and page.next.path %}
+          <a href="/{{ page.next.link }}" class="navigation navigation-next" aria-label="Next page: {{ page.next.title }}">
+            {% include icons/right.html %}
+          </a>
+        {% endif %}
+      </div>
+      {% include archive.html %}
+    </div>
+  </body>
+</html>

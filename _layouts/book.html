@@ -1,31 +1,30 @@
 <html>
   {% include book/head.html %}
   <body>
-    <div class="book" id="bookMain">
-      {% include book/summary.html %}
-      <div class="book-body" id="book_body">
-        <div class="body-inner">
-          {% include book/header.html %}
-          <div class="page-wrapper" tabindex="-1" role="main">
-              <div class="page-inner">
-                <section class="normal markdown-section">
-                  {{ content }}
-                </section>
-              </div>
-          </div>
+    <div class="book">
+      {% include header.html %}
+      <div class="book__cover">
+        <img src="/assets/images/{{ page.slug }}.jpg" class="book__img">
+      </div>
+      <div class="book__content">
+        <h1 class="book__title">{{ page.title }}</h1>
+        <div class="book__date">
         </div>
-        {% if page.prev and page.prev.path %}
-          <a href="/{{ page.prev.link }}" class="navigation navigation-prev" aria-label="Previous page: {{ page.prev.title }}">
-            {% include icons/left.html %}
-          </a>
-        {% endif %}
+        <div class="book__desc">
+          {{ content }}
+        </div>
         {% if page.next and page.next.path %}
-          <a href="/{{ page.next.link }}" class="navigation navigation-next" aria-label="Next page: {{ page.next.title }}">
-            {% include icons/right.html %}
+          <a href="/{{ page.next.link }}" class="book__more">
+            <div class="book__icon">
+              <svg width="80" height="80">
+                <circle class="circle-progress" r="36" cy="40" cx="40"  stroke-linejoin="round" stroke-linecap="round" ></cricle>
+              </svg>
+              <span class="book__icon_arrow"></span>
+            </div>
           </a>
         {% endif %}
       </div>
+      {% include archive.html %}
     </div>
-    {% include archive.html %}
   </body>
 </html>

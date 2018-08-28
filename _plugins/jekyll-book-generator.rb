@@ -17,6 +17,31 @@ module Jekyll
     end
   end
 
+  class BookPage < Page
+    def initialize(site, base, dir)
+      @site = site
+      @base = base
+      @dir = dir.gsub(/^_/, "").downcase
+      @name = "index.md"
+
+      self.process(@name)
+
+      read_yaml(File.join(@base, "_books", @dir), @name)
+
+      self.data["layout"] = 'book'
+
+      if ( self.data["start"] == self.data["end"] ) or ( !self.data["end"] )
+        self.data["date"] = self.data["start"].to_s
+      else
+        self.data["date"] = "#{self.data["start"]}-#{self.data["end"]}"
+      end
+
+      self.data["link"] = File.join(@base, @dir)
+
+      self.data["slug"] = @dir
+    end
+  end
+
   class ChapterPage < Page
     def initialize(site, base, dir, name, book, config)
       @site = site
@@ -35,7 +60,7 @@ module Jekyll
 
       read_yaml(File.join(base, "_books", @dir), @name)
 
-      self.data["layout"] = 'book'
+      self.data["layout"] = 'chapter'
       self.data["book"] = book
 
       basename = File.basename(@name, '.md')
@@ -52,56 +77,46 @@ module Jekyll
 
       dir = "_books"
 
-      books = []
+      archive = []
 
       begin
 
         Dir.foreach(dir) do |book_dir|
           book_path = File.join(dir, book_dir)
           if File.directory?(book_path) and book_dir.chars.first != "."
-
-            # 解析书籍配置
-            config_file = File.join(book_path, "book.json")
-            config = File.read(config_file)
-            book_config = JSON.parse(config)
-
-            book = Hash.new
-            book["title"] = book_config["title"]
-            book["end"] = book_config["end"]
-
-            if ( book_config["start"] == book_config["end"] ) or ( !book_config["end"] )
-              book["date"] = book_config["start"].to_s
-            else
-              book["date"] = "#{book_config["start"]}-#{book_config["end"]}"
-            end
-
-            book["slug"] = book_dir
-            
-            # 首页仅显示开放状态书籍
-            if book_config["open"]
-              books << book
-            end
+            book = BookPage.new(site, site.source, book_dir)
 
             # 创建书籍页面
-            summary = File.read(File.join(book_path, "SUMMARY.md")) # 怎么解析它应该是最大的难点
+            summary = File.read(File.join(book_path, "SUMMARY.md"))
             parts = self.parse_summary(summary)
+
             chapters = []
+
+            book.data["parts"] = []
+            current = nil
 
             # 生成章节页面
             parts.each do |part|
               chapter = ChapterPage.new(site, site.source, book_dir, part["link"], book, part)
+
+              # 构建层级关系
+              if part["level"] == 1
+                book.data["parts"].push(chapter)
+                current = chapter
+                chapter.data["parts"] = []
+              else
+                current.data["parts"].push(chapter)
+              end
+
               chapters.push(chapter)
             end
-
-            # 生成summary
-            items = self.get_parts(chapters)
-            book["index"] = items.shift()
-            book["parts"] = items
 
             # 给章节设定上一页及下一页
             chapters.each_with_index do |chapter, index|
               if index > 0
                 chapter.data["prev"] = chapters[index - 1]
+              else
+                chapter.data["prev"] = book
               end
               if index < chapters.size - 1
                 chapter.data["next"] = chapters[index + 1]
@@ -109,25 +124,30 @@ module Jekyll
               site.pages << chapter
             end
 
+            book.data["next"] = chapters.first
+
+            # 首页仅显示开放状态书籍
+            if book.data["open"]
+              archive << book
+            end
+
+            site.pages << book
+
           end
         end
 
-        gallery = {"title" =>  "Potography", "date" =>  "2016-#{Time.now.year}", "end" => Time.now.year, "slug" =>  "gallery"}
-
-        books.push(gallery)
-
-        books.sort! { |x, y|
-          y["end"].to_i <=> x["end"].to_i
+        archive.sort! { |x, y|
+          y.data["end"].to_i <=> x.data["end"].to_i
         }
 
-        books.each_with_index do |book, index|
-          book["current"] = ( index == 0 )
-          book["odd"] = ( index % 2 == 0 )
+        archive.each_with_index do |book, index|
+          book.data["current"] = ( index == 0 )
+          book.data["odd"] = ( index % 2 == 0 )
         end
 
-        site.config["books"] = books
+        site.config["archive"] = archive
 
-        book_index = IndexPage.new(site, site.source, "", books[0..4])
+        book_index = IndexPage.new(site, site.source, "", archive[0..4])
         book_index.render(site.layouts, site.site_payload)
         book_index.write(site.dest)
 
@@ -135,24 +155,6 @@ module Jekyll
       rescue Exception => e
         puts e
       end 
-    end
-
-    def get_parts(chapters)
-      items = []
-      current_item = nil
-      chapters.each do |chapter|
-        item = Hash.new
-        item["title"] = chapter.data["title"]
-        item["link"] = chapter.data["link"]
-        if chapter.data["level"] == 1
-          items.push(item)
-          current_item = item
-          item["chapters"] = []
-        else
-          current_item["chapters"].push(item)
-        end
-      end
-      return items
     end
 
     def parse_summary(summary)

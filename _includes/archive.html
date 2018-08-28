@@ -1,7 +1,7 @@
 <div class="sidebar" id="sidebar">
   <h2 class="sidebar__title">{{ site.title }}</h2>
   <ul class="archive">
-    {% for book in site.books %}
+    {% for book in site.archive %}
       <li class="archive__item">
         <a href="/{{ book.slug }}/" class="archive__link">{{ book.title }}</a>
         <span class="archive__time">({{ book.date }})</span>
