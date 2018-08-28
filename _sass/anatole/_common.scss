@@ -1,0 +1,36 @@
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.35s ease-in-out;
+}
+body, html {
+  font-family: "Microsoft YaHei", "微软雅黑", "宋体", STXihei, "华文细黑", Arial, Verdana, arial, serif;
+	width: 100%;
+	height: 100%;
+	background-color: var(--bg-color);
+  color: var(--dark);
+}
+h1, h2, h3 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 2.36rem;
+}
+
+h2 {
+  font-size: 1.77rem;
+}
+
+h3 {
+  font-size: 1.33rem;
+}
+a {
+  text-decoration: none!important;
+  color: var(--dark);
+}
+a:hover, a:visited, a:linked, a:active {
+  text-decoration: none!important;
+  color: var(--dark);
+}

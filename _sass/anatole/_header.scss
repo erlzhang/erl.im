@@ -1,0 +1,103 @@
+.logo {
+  position: fixed;
+  left: 3rem;
+  top: 2rem;
+  z-index: 10;
+  fill: var(--gray);
+}
+.sidebar__toggler {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+  position: fixed;
+  left: 3rem;
+  bottom: 2rem;
+  margin-top: -20px;
+  z-index: 10;
+}
+.sidebar__toggler.active, .logo.active {
+  left: 50%;
+  margin-left: -20px;
+}
+.sidebar__toggler span {
+  display: inline-block;
+  position: absolute;
+  background-color: var(--gray);
+  height: 2px;
+  left: 5%;
+  transition: all 0.25s linear;
+	border-radius: 2px;
+}
+.sidebar__toggler_top {
+  width: 40%;
+  top: 7.5px;
+}
+.sidebar__toggler_middle {
+  width: 70%;
+  top: 19px;
+}
+.sidebar__toggler_bottom {
+  width: 90%;
+  bottom: 7.5px;
+}
+.sidebar__toggler:hover .sidebar__toggler_top {
+  width: 90%;
+}
+.sidebar__toggler:hover .sidebar__toggler_bottom {
+  width: 40%;
+}
+.sidebar__toggler.active .sidebar__toggler_top {
+  transform-origin: 5% 5%;
+  width: 90%;
+  transform: rotate(45deg);
+}
+.sidebar__toggler.active .sidebar__toggler_middle {
+  opacity: 0;
+}
+.sidebar__toggler.active .sidebar__toggler_bottom {
+  width: 90%;
+  transform-origin: 5% 95%;
+  transform: rotate(-45deg);
+}
+.icon__list {
+  position: fixed;
+  right: 3rem;
+  margin-right: -5px;
+  bottom: 2rem;
+  z-index: 10;
+  display: inline-block;
+  text-align: right;
+}
+.icon__link svg {
+  margin: 0 5px;
+  width: 18px;
+  height: 18px;
+}
+.icon__fill {
+  fill: var(--gray);
+}
+.icon__stroke {
+  stroke: var(--gray);
+}
+.icon__list a:hover .icon__fill {
+  fill: var(--dark);
+}
+.icon__list a:hover .icon__stroke {
+  stroke: var(--dark);
+}
+
+@media screen and (max-width: 768px) {
+  .logo, .logo.active {
+    left: 1.5rem;
+    top: 1rem;
+    margin: 0;
+  }
+  .sidebar__toggler, .sidebar__toggler.active {
+    bottom: auto;
+    top: 1rem;
+    right: 1rem;
+    margin: -10px 0 0 0;
+    left: auto;
+  }
+}

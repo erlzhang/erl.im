@@ -1,0 +1,44 @@
+.sidebar {
+  width: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9;
+}
+.sidebar.active {
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0);
+}
+.sidebar__title {
+  margin-bottom: 1.5rem;
+}
+.sidebar__copyright {
+  color: var(--gray);
+  font-size: 14px;
+  text-align: center;
+}
+.archive {
+  margin-bottom: 2rem;
+}
+.archive__item {
+  list-style: circle;
+}
+.archive__link {
+  color: var(--dark);
+  margin-right: 1rem;
+  line-height: 2.5rem;
+}
+.archive__time {
+  font-size: 0.9rem;
+  color: var(--gray);
+}

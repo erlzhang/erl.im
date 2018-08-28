@@ -1,0 +1,171 @@
+.book-header {
+  overflow: visible;
+  height: 50px;
+  padding: 0px 8px;
+  z-index: 2;
+  font-size: 0.85em;
+  color: var(--gray);
+  background: transparent;
+}
+.summary__toggler {
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
+  z-index: 8;
+  transition: transform 0.25s linear;
+  transform-origin: top left;
+  color: var(--gray);
+}
+.summary__toggler {
+  width: 30px;
+  height: 30px;
+}
+.summary__toggler.active {
+  transform: rotate(90deg);
+}
+.book-header h1 {
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 50px;
+  opacity: 0;
+  padding-left: 200px;
+  padding-right: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include transition(opacity ease 0.4s);
+}
+.book-header h1 a,
+.book-header h1 a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 1000px) {
+  .book-header h1 {
+    display: none;
+  }
+}
+.book-header h1 i {
+  display: none;
+}
+.book-header:hover h1 {
+  opacity: 1;
+}
+/*SUMMARY*/
+.book.with-summary .book-summary {
+  left: 0px;
+}
+.book.without-animation .book-summary {
+  @include transition(none !important);
+}
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 600px) {
+  .book.with-summary .book-body {
+    left: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .book.with-summary {
+    overflow: hidden;
+  }
+  .book.with-summary .book-body {
+    @include transform(translate(calc( 100% - 60px ), 0px));
+  }
+}
+.book.without-animation .book-body {
+  @include transition(none !important);
+}
+.book-body {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  overflow-y: auto;
+  color: var(--dark);
+  background: white;
+  @include transition(left 250ms ease);
+}
+.book-body .body-inner {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  overflow-y: auto;
+}
+@media (max-width: 1240px) {
+  .book-body {
+    @include transition(transform 250ms ease);
+    padding-bottom: 20px;
+  }
+  .book-body .body-inner {
+    position: static;
+    min-height: calc(100% - 50px);
+  }
+}
+.page-wrapper {
+  position: relative;
+  outline: none;
+}
+.page-inner {
+  position: relative;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 20px 15px 40px 15px;
+}
+.page-inner .btn-group .btn {
+  border-radius: 0px;
+  background: #eee;
+  border: 0px;
+}
+/*
+    Right/Left buttons to change page
+*/
+.navigation {
+  position: absolute;
+  top: 50px;
+  bottom: 0px;
+  margin: 0;
+  max-width: 150px;
+  min-width: 90px;
+  @include flex();
+  @include flex-column();
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--gray-light);
+  text-align: center;
+  @include transition(all 0.35s ease);
+}
+.navigation:hover {
+  text-decoration: none;
+  color: var(--gray);
+}
+.navigation.navigation-next {
+  right: 0px;
+}
+.navigation.navigation-prev {
+  left: 0px;
+}
+@media (max-width: 1240px) {
+  .navigation {
+    position: static;
+    top: auto;
+    max-width: 50%;
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
+  .navigation.navigation-unique {
+    max-width: 100%;
+    width: 100%;
+  }
+}

@@ -20,6 +20,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yexiqingxi.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: erlzhang
 
+sass:
+  sass_dir: _sass
+
 # Build settings
 markdown: kramdown
 plugins:
