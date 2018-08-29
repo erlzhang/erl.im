@@ -13,6 +13,18 @@
   -moz-transition: left 250ms ease;
   -o-transition: left 250ms ease;
   transition: left 250ms ease;
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--light);
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: var(--lightest);
+  }
 }
 .book-summary ul.summary {
   list-style: none;

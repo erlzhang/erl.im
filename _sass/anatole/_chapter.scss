@@ -105,9 +105,10 @@
     min-height: calc(100% - 50px);
   }
 }
-.chapter {
+.chapter__wrapper {
   position: relative;
   outline: none;
+  padding-top: 5rem;
 }
 .chapter__inner {
   position: relative;

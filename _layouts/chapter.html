@@ -1,6 +1,12 @@
 <html>
   {% include book/head.html %}
   <title>{{ page.title }} - {{ page.book.title }} | {{ site.title }}</title>
+  {% if page.book.highlight %}
+  <link rel="stylesheet" href="{{ "/assets/css/prism.css" | relative_url }}" />
+  {% endif %}
+  {% if page.book.latex %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.css" integrity="sha384-JwmmMju6Z7M9jiY4RXeJLoNb3aown2QCC/cI7JPgmOLsn3n33pdwAj0Ml/CMMd1W" crossorigin="anonymous">
+  {% endif %}
 </head>
   <body>
     <div class="book__wrapper sidebar-right" id="bookMain">
@@ -8,7 +14,7 @@
       <div class="book__body">
         <div class="body__inner">
           {% include book/header.html %}
-          <main class="chapter" tabindex="-1" role="main">
+          <main class="chapter__wrapper" tabindex="-1" role="main">
               <div class="chapter__inner">
                 <article class="chapter__content">
                   {{ content }}
@@ -29,5 +35,11 @@
       </div>
       {% include archive.html %}
     </div>
+    {% if page.book.highlight %}
+    <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
+    {% endif %}
+    {% if page.book.latex %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    {% endif %}
   </body>
 </html>
