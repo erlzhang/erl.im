@@ -1,6 +1,14 @@
 var galleryLinks = document.getElementsByClassName("gallery__link");
 
-console.log(galleryLinks)
+var options = {
+  buttons: [
+    "zoom",
+    "slideShow",
+    "fullScreen",
+    "thumbs",
+    "close"
+  ]
+}
 
 if( galleryLinks.length > 0 ) {
   for( var i = 0, len = galleryLinks.length; i < len; i ++ ) {
@@ -21,10 +29,16 @@ if( galleryLinks.length > 0 ) {
             for( var i = 0, len = data.length; i < len; i ++ ) {
               images.push({src: ele.href + data[i]});
             }
-            $.fancybox.open(images);
+            $.fancybox.open(images, options);
           }
         }
       });
     }
   }
 }
+
+new AnimOnScroll( document.getElementById( 'grid' ), {
+  minDuration : 0.4,
+  maxDuration : 0.7,
+  viewportFactor : 0.2
+});

@@ -1,8 +1,8 @@
-function bindBookEvent () {
-  var toggler = document.getElementById("summaryToggler"),
-        main = document.getElementById("bookMain"),
-        isOpen = false;
+var toggler = document.getElementById("summaryToggler"),
+      main = document.getElementById("bookMain"),
+      isOpen = false;
 
+if( toggler ) {
   toggler.onclick = function (event) {
     event.preventDefault();
     if( isOpen ) {
@@ -16,7 +16,3 @@ function bindBookEvent () {
     }
   }
 }
-
-document.addEventListener("turbolinks:load", function () {
-  bindBookEvent();
-});

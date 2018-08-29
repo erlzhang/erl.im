@@ -7,15 +7,15 @@ layout: default
 {% include archive.html %}
 
 <main class="gallery">
-  <div class="gallery__list">
+  <ul class="gallery__list" id="grid">
     {% for gallery in page.galleries %}
       <li class="gallery__item">
         <a href="{{ gallery['link'] }}" class="gallery__link">
-            <img class="gallery__image" src="{{ gallery['link'] }}/thumbs/front_{{ gallery['best_image'] }}">
+            <img class="gallery__image" src="{{ gallery['link'] }}thumbs/front_{{ gallery['best_image'] }}">
         </a>
       </li>
     {% endfor %}
-  </div>
+  </ul>
 
   {% include gallery_footer.html%}
 

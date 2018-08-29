@@ -20,7 +20,7 @@
                   {{ content }}
                 </article>
               </div>
-          </div>
+          </main>
         </div>
         {% if page.prev and page.prev.path %}
           <a href="/{{ page.prev.link }}" class="navigation navigation-prev" aria-label="Previous page: {{ page.prev.title }}">
@@ -35,6 +35,7 @@
       </div>
       {% include archive.html %}
     </div>
+
     {% if page.book.highlight %}
     <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
     {% endif %}

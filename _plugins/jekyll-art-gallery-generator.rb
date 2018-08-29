@@ -218,7 +218,7 @@ module Jekyll
         @site.static_files << GalleryFile.new(site, base, @dir, dest_image)
 
         # make a thumbnail
-        makeThumb(image_path, dest_image, config["thumbnail_size"]["x"] || 400, config["thumbnail_size"]["y"] || 400, scale_method)
+        # makeThumb(image_path, dest_image, config["thumbnail_size"]["x"] || 400, config["thumbnail_size"]["y"] || 400, scale_method)
         #@site.static_files << GalleryFile.new(site, base, File.join(@dir, "thumbs"), dest_image)
       end
 
@@ -253,7 +253,7 @@ module Jekyll
       self.data["best_image"] = best_image
 
       # generate best image thumb for the gallery super-index page
-      # makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "front_"+best_image, config["front_thumb_size"]["x"] || 400, config["front_thumb_size"]["y"] || 400,"crop")
+      makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "front_"+best_image, config["front_thumb_size"]["x"] || 400, config["front_thumb_size"]["y"] || 400,"fit")
 
       # generate best image thumb for the header of a gallery index page
       # makeThumb(site.in_dest_dir(File.join(@dir, best_image)), "header_"+best_image, config["header_thumb_size"]["x"] || 400, config["header_thumb_size"]["y"] || 400,"crop")
@@ -275,6 +275,7 @@ module Jekyll
           m_image = ImageList.new(image_path)
           # m_image.auto_orient!
           #m_image.send("resize_to_#{scale_method}!", max_size_x, max_size_y)
+          puts scale_method
           if scale_method == "crop"
             m_image.resize_to_fill!(thumb_x, thumb_y)
           elsif scale_method == "crop_bottom"
@@ -286,7 +287,8 @@ module Jekyll
           elsif scale_method == "crop_top"
               m_image.resize_to_fill!(thumb_x, thumb_y, SouthGravity)
           else
-              m_image.resize_to_fit!(thumb_x, thumb_y)
+            puts thumb_x
+              m_image.resize_to_fit!(thumb_x, nil)
             end
           # strip EXIF from thumbnails. Some browsers, notably, Safari on iOS will try to rotate images according to the 'orientation' tag which is no longer valid in case of thumbnails
           m_image.strip!

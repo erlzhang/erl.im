@@ -16,6 +16,9 @@
   margin-top: -20px;
   z-index: 10;
 }
+.logo, .sidebar__toggler {
+  @include transition(all 0.35s ease-out);
+}
 .sidebar-right .logo, .sidebar-right .sidebar__toggler {
   right: 3rem;
   left: auto;

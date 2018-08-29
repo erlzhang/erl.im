@@ -1,6 +1,5 @@
 .sidebar {
   width: 0;
-  transform: translateX(-100%);
   opacity: 0;
   min-height: 100vh;
   overflow-y: auto;
@@ -8,21 +7,23 @@
   left: 0;
   top: 0;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
+  @include flex();
+  @include flex-middle();
+  @include flex-column();
   z-index: 9;
+  @include transition(all 0.35s ease-out);
+  @include transform(translateX(-100%));
 }
 .sidebar-right .sidebar {
-  transform: translateX(100%);
+  @include transform(translateX(100%));
   left: auto;
   right: 0;
 }
 .sidebar.active {
   width: 100%;
   opacity: 1;
-  transform: translateX(0);
+  @include transform(translateX(0));
 }
 .sidebar__title {
   margin-bottom: 1.5rem;
