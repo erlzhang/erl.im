@@ -34,6 +34,7 @@
 	background-size: 100% 100%;
   translateY: -100%;
   opacity: 0;
+  @include transition(all 0.35s ease);
 }
 .slide__img .slide__link:hover ~ .slide__img_placehold {
   transform: scale(1.1);

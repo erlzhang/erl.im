@@ -9,18 +9,3 @@
     tranform: rotate(360deg);
   }
 }
-@keyframes fallPerspective {
-  100% { 
-    transform: translateZ(0px) translateY(0px) rotateX(0deg);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-	0% { }
-	100% { opacity: 1; }
-}
-
-@keyframes fadeIn {
-	0% { }
-	100% { opacity: 1; }
-}

@@ -10,28 +10,17 @@
   margin: 3rem auto;
   width: 100%;
   padding: 0;
-  //@include column(3, 1rem);
   .gallery__item {
-    //display: inline-block;
     list-style: none;
-    //width: 100%;
-    //margin-bottom: 1rem;
-    transform-style: preserve-3d;
     display: block;
     float: left;
     padding: 7px;
     width: 33%;
-    opacity: 0;
-    &.shown {
-      opacity: 1;
-    }
-    &.animate {
-      animation: fadeIn .65s ease forwards;
-    }
     .gallery__link {
       display: inline-block;
       width: 100%;
       overflow: hidden;
+      opacity: 0;
       .gallery__image {
         width: 100%;
         vertical-align: bottom;
@@ -51,9 +40,7 @@
   }
 }
 @media screen and ( max-width: 650px ) {
-  .gallery-list {
-  }
-  .gallery__item {
+  .gallery__list .gallery__item {
     width: 50%;
   }
 }
