@@ -102,12 +102,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .logo, .logo.active {
+  .logo, .logo.active, .sidebar-right .logo, .sidebar-right .logo.active {
     left: 1.5rem;
     top: 1rem;
     margin: 0;
   }
-  .sidebar__toggler, .sidebar__toggler.active {
+  .sidebar__toggler, .sidebar__toggler.active, .sidebar-right .sidebar__toggler, .sidebar-right .sidebar__toggler.active {
     bottom: auto;
     top: 1rem;
     right: 1rem;

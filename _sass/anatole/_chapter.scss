@@ -1,4 +1,7 @@
 .book__wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
 }
 .summary__toggler {
   position: absolute;
@@ -60,9 +63,6 @@
 .book__wrapper.with-summary .book-summary {
   left: 0px;
 }
-.book.without-animation .book-summary {
-  @include transition(none !important);
-}
 @media (min-width: 600px) {
   .book__wrapper.with-summary .book__body {
     left: 300px;
@@ -73,7 +73,7 @@
     overflow: hidden;
   }
   .book__wrapper.with-summary .book__body {
-    @include transform(translate(calc( 100% - 60px ), 0px));
+    transform: translate( calc(100% - 60px) );
   }
 }
 .book__body {
@@ -159,4 +159,27 @@
     max-width: 100%;
     width: 100%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .book__wrapper.sidebar-right .logo, .book_wrapper.sidebar-right.logo {
+    left: 50%;
+    margin-left: -20px;
+  }
+  .book-summary {
+    z-index: 12;
+  }
+  .summary__toggler {
+    left: 1.5rem;
+    top: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .summary__toggler.active {
+    left: 45px;
+  }
+  .book-header {
+    right: auto;
+  }
+
 }
