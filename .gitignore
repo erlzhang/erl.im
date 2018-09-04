@@ -10,3 +10,4 @@ _site
 
 /img/*
 !/img/.keep
+/node_modules/

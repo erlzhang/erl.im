@@ -1,0 +1,32 @@
+{
+  "name": "persephone",
+  "version": "1.0.0",
+  "description": "persephone theme js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erlzhang/persephone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erlzhang/persephone/issues"
+  },
+  "homepage": "https://github.com/erlzhang/persephone#readme",
+  "devDependencies": {
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.4.1",
+    "animejs": "^2.2.0",
+    "fancybox": "^3.0.1",
+    "gsap": "^2.0.2",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.3.1"
+  }
+}

@@ -40,3 +40,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - new.sh
+  - src
