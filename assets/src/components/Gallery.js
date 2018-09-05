@@ -1,5 +1,6 @@
-import $ from "jquery"
-require('fancybox')($)
+const $ = require("jquery");
+window.jQuery = $;
+require("@fancyapps/fancybox");
 
 export default class {
   constructor () {
@@ -17,34 +18,35 @@ export default class {
       link.url = link.href + "index.json"
 
       link.addEventListener("click", (event) => {
-        showGallery(event);
+        event.preventDefault()
+        this.showGallery(event);
       });
     
     }
   }
 
   showGallery (event) {
-    event.preventDefault()
 
     let ele = event.target
     while( ele.tagName != "A" ) {
       ele = ele.parentNode
     }
 
+    let options = this.options;
+
     $.ajax({
-      url: url,
+      url: ele.url,
       type: "get",
       dataType: "JSON",
       success: function(data) {
         if( data.length >= 0 ) {
-          images = []
-          for( let d of data ) {
-            images.push({src: ele.href + d});
+          let images = []
+          for( let datum of data ) {
+            images.push({src: ele.href + datum});
           }
-          $.fancybox.open(images, this.options);
+          $.fancybox.open(images, options);
         }
       }
     })
-  
   }
 }

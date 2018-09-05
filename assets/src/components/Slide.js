@@ -62,23 +62,23 @@ export default class Slide {
     });
     
     this.timeLine.eventCallback('onStart', function() {
-      self.slider.inAnimation = true;
+      self.slider.inAnimation = true
     });
     
     this.timeLine.eventCallback('onComplete', function() {
-      self.slider.inAnimation = false;
+      self.slider.inAnimation = false
     })
   }
 
   hide () {
     this.control.classList.remove("current")
-    this.ele.style.opacity = '0';
-    this.ele.style.zIndex = '1';
+    this.ele.style.opacity = '0'
+    this.ele.style.zIndex = '1'
   }
 
   show () {
-    this.ele.style.opacity = '1';
-    this.ele.style.zIndex = '5';
+    this.ele.style.opacity = '1'
+    this.ele.style.zIndex = '5'
     this.ele.classList.add("current") 
   }
   
