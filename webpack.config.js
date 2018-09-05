@@ -2,12 +2,12 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './assets/src/index.js',
-    gallery: './assets/src/gallery.js',
-    book: './assets/src/book.js'
+    main: './src/index.js',
+    gallery: './src/gallery.js',
+    book: './src/book.js'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'assets')
+    path: path.resolve(__dirname, 'assets/js')
   }
 };

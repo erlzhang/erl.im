@@ -79,7 +79,7 @@ export default class Slide {
   show () {
     this.ele.style.opacity = '1'
     this.ele.style.zIndex = '5'
-    this.ele.classList.add("current") 
+    this.control.classList.add("current") 
   }
   
 }

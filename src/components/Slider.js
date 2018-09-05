@@ -9,7 +9,6 @@ export default class Slider {
     this.prevBtn = document.getElementById('prevBtn')
     this.loading = document.getElementById("loading")
 
-    this.len = this.slides.length
     this.current = 0
 
     this.mainContainer = document.getElementById("sectionContainer")
@@ -94,6 +93,7 @@ export default class Slider {
       i++
     }
     this.controls[this.current].classList.add("current")
+    this.len = this.slides.length
   }
 
   move () {

@@ -162,6 +162,7 @@
   background-color: var(--gray-light);
   display: inline-block;
   margin: 10px 0;
+  @include transition(width 0.35s linear);
 }
 .slide__control.current {
   background-color: var(--dark);
