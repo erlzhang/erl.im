@@ -275,7 +275,6 @@ module Jekyll
           m_image = ImageList.new(image_path)
           # m_image.auto_orient!
           #m_image.send("resize_to_#{scale_method}!", max_size_x, max_size_y)
-          puts scale_method
           if scale_method == "crop"
             m_image.resize_to_fill!(thumb_x, thumb_y)
           elsif scale_method == "crop_bottom"
@@ -287,7 +286,6 @@ module Jekyll
           elsif scale_method == "crop_top"
               m_image.resize_to_fill!(thumb_x, thumb_y, SouthGravity)
           else
-            puts thumb_x
               m_image.resize_to_fit!(thumb_x, nil)
             end
           # strip EXIF from thumbnails. Some browsers, notably, Safari on iOS will try to rotate images according to the 'orientation' tag which is no longer valid in case of thumbnails

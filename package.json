@@ -28,6 +28,7 @@
     "gsap": "^2.0.2",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
-    "masonry-layout": "^4.2.2"
+    "masonry-layout": "^4.2.2",
+    "uglifycss": "0.0.29"
   }
 }

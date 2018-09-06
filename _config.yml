@@ -39,5 +39,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - new.sh
-  - _src
+  - build.sh
+  - src
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - README.md
