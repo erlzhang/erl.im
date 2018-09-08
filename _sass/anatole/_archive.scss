@@ -1,0 +1,217 @@
+.posts-archive {
+  max-width: $max-content-width;
+  width: 100%; 
+  margin: 3rem auto;
+  padding: 0 1rem;
+  .archive-header {
+    margin: 5rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-weight: 300;
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+      text-transform: capitalize;
+      &:before, &:after {
+        @include pseudo();
+        width: 30px;
+        height: 1px;
+        top: 50%;
+        background-color: $gray-600;
+      }
+      &:before {
+        left: -40px;
+      }
+      &:after {
+        right: -40px;
+      }
+    }
+    p {
+      color: $gray-600;
+    }
+  }
+  .post-entry {
+    margin: 0 0 3rem 0;
+    .post-link {
+      display: block;
+    }
+    h2 {
+      margin-bottom: 0.75rem;
+    }
+    .post-meta {
+    
+    }
+    .post-except {
+      color: $gray-600;
+    } 
+    .more-arrow {
+      margin-top: 2rem;
+      width: 30%;
+      height: 1px;
+      background-color: $gray-300;
+      position: relative;
+      transition: all 0.35s ease-out;
+      display: inline-block;
+      &:after, &:before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 1px;
+        background-color: $gray-300;
+        right: -2.5px;
+        opacity: 0;
+        transition: all 0.35s ease-out;
+      }
+      &:after {
+        transform: rotate(45deg);
+        top: -5px;
+      }
+      &:before {
+        transform: rotate(-45deg);
+        top: 5px;
+      }
+    }
+    .post-link:hover {
+      .more-arrow {
+        width: 30px;
+        background-color: $gray-600;
+        &:before, &:after {
+          opacity: 1;
+          background-color: $gray-700;
+        }
+      }
+    }
+    .post-link.emit {
+      .more-arrow {
+        margin-left: 30%;
+        opacity:  0;
+      }
+    }
+  }
+  /*
+  .paginiation {
+    padding: 3rem 0;
+    text-align: center;
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 10px 10px;
+      transition: all 0.2s ease-in-out;
+      &:before, &:after {
+        @include pseudo();
+        width: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: $gray-300;
+        transition: all 0.25s ease-in-out;
+      }
+      &:before {
+        left: 0
+      }
+      &:after {
+        right: 0;
+      }
+    }
+    &:hover {
+      a {
+        font-size: 1.25rem; 
+      }
+      a:before, a:after {
+        width: 72%;
+        background-color: $gray-600;
+      }
+      a:before {
+        transform-origin: left top;
+        transform: rotate(45deg);
+      }
+      a:after {
+        transform-origin: right top;
+        transform: rotate(-45deg);
+      }
+    }
+  }*/
+  .paginiation {
+    text-align: center;
+    li {
+      list-style: none;
+      display: inline-block;
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 0 5px;
+        border-bottom: 1px solid transparent;
+        color: $gray-500;
+        position: relative;
+        &:hover, &.pagi-link.emit {
+          border-color: $gray-400;
+        }
+        &.pagi-link:after {
+          @include pseudo();
+          left: 0;
+          bottom: -1px;
+          width: 0;
+          height: 1px;
+          transition: all 0.35s ease-out;
+          background-color: $gray-600;
+        }
+        &.pagi-link.emit {
+          &:after {
+            width: 100%; 
+          }  
+        }
+        &.active {
+          color: $gray-600;
+          border-color: $gray-600;
+        }
+        &.pagi-icon {
+          width: 24px;
+          height: 24px;
+          position: relative;
+          vertical-align: middle;
+          border-bottom: 0;
+          transition: all 0.35s ease-out;
+          &:before, &:after {
+            @include pseudo();
+            height: 1px;
+            width: 60%;
+            top: 60%;
+            right: 0;
+            background-color: $gray-600;
+            transition: all 0.2s ease-out;
+          }
+          &.next:hover, &.next.emit {
+            &:before {
+              transform-origin: right bottom;
+              transform: rotate(40deg);
+            }
+            &:after {
+              transform-origin: right top;
+              transform: rotate(-40deg);
+            }
+          }
+          &.next.emit {
+            transform: translate3d( 200%, 0, 0);
+            opacity: 0;  
+          }
+          &.prev:hover, &.prev.emit {
+            &:before {
+              transform-origin: left bottom;
+              transform: rotate(40deg);
+            }
+            &:after {
+              transform-origin: left top;
+              transform: rotate(-40deg);
+            }
+          }
+          &.prev.emit {
+            transform: translate3d( -200%, 0, 0);
+            opacity: 0;  
+          }
+        }
+      }
+    }
+  }
+}
+
