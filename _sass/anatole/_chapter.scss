@@ -3,22 +3,6 @@
   min-height: 100vh;
   width: 100%;
 }
-.summary__toggler {
-  position: absolute;
-  top: 1.5rem;
-  left: 3rem;
-  z-index: 8;
-  transition: transform 0.25s linear;
-  transform-origin: top left;
-  color: var(--gray);
-}
-.summary__toggler {
-  width: 30px;
-  height: 30px;
-}
-.summary__toggler.active {
-  transform: rotate(90deg);
-}
 .book-header {
   position: fixed;
   top: 0;
@@ -34,7 +18,6 @@
   font-size: 20px;
   font-weight: 200;
   text-align: center;
-  line-height: 50px;
   opacity: 0;
   padding-left: 200px;
   padding-right: 200px;
@@ -48,6 +31,20 @@
   color: inherit;
   text-decoration: none;
 }
+.summary__toggler {
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
+  width: 30px;
+  height: 30px;
+  z-index: 8;
+  transition: transform 0.25s linear;
+  transform-origin: top left;
+  color: var(--gray);
+}
+.summary__toggler.active {
+  transform: rotate(90deg);
+}
 @media (max-width: 1000px) {
   .book-header h1 {
     display: none;
@@ -60,22 +57,6 @@
   opacity: 1;
 }
 /*SUMMARY*/
-.book__wrapper.with-summary .book-summary {
-  left: 0px;
-}
-@media (min-width: 600px) {
-  .book__wrapper.with-summary .book__body {
-    left: 300px;
-  }
-}
-@media (max-width: 600px) {
-  .book__wrapper.with-summary {
-    overflow: hidden;
-  }
-  .book__wrapper.with-summary .book__body {
-    transform: translate( calc(100% - 60px) );
-  }
-}
 .book__body {
   position: absolute;
   top: 0px;
@@ -95,6 +76,12 @@
   bottom: 0px;
   overflow-y: auto;
 }
+.book__wrapper.with-summary .book-summary {
+  left: 0px;
+}
+.book__wrapper.with-summary .book__body {
+  left: 300px;
+}
 @media (max-width: 1240px) {
   .book__body {
     @include transition(transform 250ms ease);
@@ -103,6 +90,18 @@
   .book__body .body__inner {
     position: static;
     min-height: calc(100% - 50px);
+  }
+}
+@media (max-width: 600px) {
+  .book__wrapper.with-summary {
+    overflow: hidden;
+  }
+  .book__wrapper.with-summary .book__body {
+    left: calc(100% - 60px);
+    right: auto;
+  }
+  .book__wrapper.with-summary .sidebar__toggler {
+    display: none;
   }
 }
 .chapter__wrapper {

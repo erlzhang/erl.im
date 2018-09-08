@@ -57,21 +57,20 @@ export default class Slider {
   }
 
   bindTouchEvent () {
-    let self = this
-    self.touchtimes = 0
-    self.touchx = []
+    this.touchtimes = 0
+    this.touchx = []
     document.addEventListener("touchstart", (event) => {
-      self.touchtimes ++ ;
-      self.touchx[self.touchtimes] = event.changedTouches[0].clientY;  
+      this.touchtimes ++ ;
+      this.touchx[this.touchtimes] = event.changedTouches[0].clientY;  
     })
 
-    document.addEventListener("toushend", (event) => {
-      self.touchtimes ++ ;
-      self.touchx[self.touchtimes] = event.changedTouches[0].clientY;
+    document.addEventListener("touchend", (event) => {
+      this.touchtimes ++ ;
+      this.touchx[this.touchtimes] = event.changedTouches[0].clientY;
 
-      if( ( Math.abs(self.touchx[self.touchtimes] - self.touchx[self.touchtimes-1]) > 50 ) && ( event.target.id != "sidebarToggler" ) ) {
-        self.direction = touchx[touchtimes] > touchx[touchtimes - 1];
-        self.changeSlide();
+      if( ( Math.abs(this.touchx[this.touchtimes] - this.touchx[this.touchtimes-1]) > 50 )) {
+        this.direction = this.touchx[this.touchtimes] > this.touchx[this.touchtimes - 1];
+        this.changeSlide();
       }
     
     })
