@@ -1,4 +1,4 @@
-.chapter__content {
+.content {
   display: block;
   word-wrap: break-word;
   overflow: hidden;
@@ -18,73 +18,73 @@
   /* Blockquote */
   /* Description Lists */
 }
-.chapter__content * {
+.content * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   font-size: inherit;
 }
-.chapter__content > *:first-child {
+.content > *:first-child {
   margin-top: 0 !important;
 }
-.chapter__content > *:last-child {
+.content > *:last-child {
   margin-bottom: 0 !important;
 }
-.chapter__content pre,
-.chapter__content code,
-.chapter__content blockquote,
-.chapter__content tr,
-.chapter__content img,
-.chapter__content table,
-.chapter__content figure {
+.content pre,
+.content code,
+.content blockquote,
+.content tr,
+.content img,
+.content table,
+.content figure {
   page-break-inside: avoid;
 }
-.chapter__content p,
-.chapter__content h2,
-.chapter__content h3,
-.chapter__content h4,
-.chapter__content h5 {
+.content p,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
   orphans: 3;
   widows: 3;
 }
-.chapter__content h1,
-.chapter__content h2,
-.chapter__content h3,
-.chapter__content h4,
-.chapter__content h5 {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
   page-break-after: avoid;
 }
-.chapter__content strong,
-.chapter__content b {
+.content strong,
+.content b {
   font-weight: bold;
 }
-.chapter__content em {
+.content em {
   font-style: italic;
 }
-.chapter__content p,
-.chapter__content blockquote,
-.chapter__content ul,
-.chapter__content ol,
-.chapter__content dl,
-.chapter__content table {
+.content p,
+.content blockquote,
+.content ul,
+.content ol,
+.content dl,
+.content table {
   margin-top: 0;
   margin-bottom: 0.85em;
 }
-.chapter__content a {
+.content a {
   color: var(--blue);
   text-decoration: none;
   background: transparent;
 }
-.chapter__content a:hover,
-.chapter__content a:focus,
-.chapter__content a:active {
+.content a:hover,
+.content a:focus,
+.content a:active {
   outline: 0;
   text-decoration: underline;
 }
-.chapter__content img {
+.content img {
   border: 0;
   max-width: 100%;
 }
-.chapter__content hr {
+.content hr {
   height: 4px;
   padding: 0;
   margin: 1.7em 0;
@@ -92,47 +92,47 @@
   background-color: #e7e7e7;
   border: none;
 }
-.chapter__content hr:before,
-.chapter__content hr:after {
+.content hr:before,
+.content hr:after {
   display: table;
   content: " ";
 }
-.chapter__content hr:after {
+.content hr:after {
   clear: both;
 }
-.chapter__content h1,
-.chapter__content h2,
-.chapter__content h3,
-.chapter__content h4,
-.chapter__content h5,
-.chapter__content h6 {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   margin-top: 1.275em;
   margin-bottom: 0.85em;
   font-weight: bold;
 }
-.chapter__content h1 {
+.content h1 {
   font-size: 2.3em;
   font-weight: 500;
   margin-bottom: 1em;
 }
-.chapter__content h2 {
+.content h2 {
   font-size: 1.75em;
 }
-.chapter__content h3 {
+.content h3 {
   font-size: 1.5em;
 }
-.chapter__content h4 {
+.content h4 {
   font-size: 1.25em;
 }
-.chapter__content h5 {
+.content h5 {
   font-size: 1em;
 }
-.chapter__content h6 {
+.content h6 {
   font-size: 1em;
   color: #777;
 }
-.chapter__content code,
-.chapter__content pre {
+.content code,
+.content pre {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   direction: ltr;
   margin: 0px;
@@ -140,7 +140,7 @@
   border: none;
   color: inherit;
 }
-.chapter__content pre {
+.content pre {
   overflow: auto;
   word-wrap: normal;
   margin: 0px;
@@ -148,7 +148,7 @@
   margin-bottom: 1.275em;
   background: var(--lightest);
 }
-.chapter__content pre > code {
+.content pre > code {
   display: inline;
   max-width: initial;
   padding: 0;
@@ -159,87 +159,87 @@
   white-space: pre;
   background: transparent;
 }
-.chapter__content pre > code:before,
-.chapter__content pre > code:after {
+.content pre > code:before,
+.content pre > code:after {
   content: normal;
 }
-.chapter__content code {
+.content code {
   padding: 0.2em;
   margin: 0;
   font-size: 0.85em;
   background-color: var(--lighter);
   border-radius: 3px;
 }
-.chapter__content code:before,
-.chapter__content code:after {
+.content code:before,
+.content code:after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
-.chapter__content table {
+.content table {
   display: table;
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   overflow: auto;
 }
-.chapter__content table td,
-.chapter__content table th {
+.content table td,
+.content table th {
   padding: 6px 13px;
   border: 1px solid #ddd;
 }
-.chapter__content table tr {
+.content table tr {
   background-color: #fff;
   border-top: 1px solid var(--gray-light);
 }
-.chapter__content table tr:nth-child(2n) {
+.content table tr:nth-child(2n) {
   background-color: var(--light);
 }
-.chapter__content table th {
+.content table th {
   font-weight: bold;
 }
-.chapter__content ul,
-.chapter__content ol {
+.content ul,
+.content ol {
   padding: 0;
   margin: 0;
   margin-bottom: 0.85em;
   padding-left: 2em;
 }
-.chapter__content ul ol,
-.chapter__content ol ol,
-.chapter__content ul ul,
-.chapter__content ol ul {
+.content ul ol,
+.content ol ol,
+.content ul ul,
+.content ol ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-.chapter__content ol ol {
+.content ol ol {
   list-style-type: lower-roman;
 }
-.chapter__content blockquote {
+.content blockquote {
   margin: 0;
   margin-bottom: 0.85em;
   padding: 0 15px;
   color: var(--gray);
   border-left: 4px solid var(--light);
 }
-.chapter__content blockquote:first-child {
+.content blockquote:first-child {
   margin-top: 0;
 }
-.chapter__content blockquote:last-child {
+.content blockquote:last-child {
   margin-bottom: 0;
 }
-.chapter__content dl {
+.content dl {
   padding: 0;
 }
-.chapter__content dl dt {
+.content dl dt {
   padding: 0;
   margin-top: 0.85em;
   font-style: italic;
   font-weight: bold;
 }
-.chapter__content dl dd {
+.content dl dd {
   padding: 0 0.85em;
   margin-bottom: 0.85em;
 }
-.chapter__content dd {
+.content dd {
   margin-left: 0;
 }

@@ -30,6 +30,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.10.0)
       jekyll (~> 3.3)
+    jekyll-paginate-v2 (2.0.0)
+      jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-watch (2.0.0)
@@ -67,6 +69,7 @@ DEPENDENCIES
   exifr
   jekyll (~> 3.7.3)
   jekyll-feed (~> 0.6)
+  jekyll-paginate-v2
   nokogiri
   rmagick
   tzinfo-data

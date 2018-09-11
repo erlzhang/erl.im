@@ -11,3 +11,6 @@ _site
 /img/*
 !/img/.keep
 /node_modules/
+
+/_posts/*
+!/_posts/.keep

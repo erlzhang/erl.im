@@ -1,12 +1,13 @@
-.post-wrapper {
-  max-width: $max-content-width;
+.post__wrapper {
+  max-width: 840px;
   width: 100%;
   margin: 3rem auto;
   padding: 0 1rem;
 }
 
-.archive-path {
-  .archive-path-icon {
+.post__archive_path {
+  margin: 3rem 0 1.5rem 0;
+  .post__archive_icon {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -15,25 +16,25 @@
     margin-right: 10px;
     position: relative;
     .circle-progress {
-      stroke: $gray-600;
+      stroke: var(--gray);
       fill: none;
       stroke-width: 1;
       stroke-dasharray: 0 120;
       transition: all 0.45s ease-in;
     }
-    .archive-path-arrow {
+    .post__archive_icon {
       position: absolute; 
       width: 60%;
       left: 20%;
       top: 50%;
       height: 1px;
-      background-color: $gray-600;
+      background-color: var(--gray);
       transition: all 0.25s ease-in;
       &:after, &:before {
         @include pseudo();
         height: 1px;
         width: 50%;
-        background-color: $gray-600; 
+        background-color: var(--gray); 
         top: 0;
         left: 0;
       }
@@ -61,7 +62,7 @@
       }    
     }
     &.emit {
-      .archive-path-arrow {
+      .post__archive_icon {
         left: -150%;
         opacity: 0;
       }
@@ -69,58 +70,14 @@
   }
 }
 
-.post-header {
-  h1 {
+.post__header {
+  .post__title {
     margin-bottom: 1.33rem;
   }
-  .post-meta {
-    color: $gray-600;
+  .post__meta {
+    color: var(--gray);
   }
 }
-
-.post-content {
-  margin: 3rem 0;
-  p{
-    margin-bottom: 1rem;
-    line-height: 1.5rem;
-  }
-  a {
-    color: $gray-700;
-    text-decoration: underline;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  code {
-    padding: 2px 4px;
-    font-size: 90%;
-    border-radius: 4px;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    background-color: $gray-100;
-    color: $gray-700;
-  }
-  pre {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: $gray-100;
-    border-radius: 3px;
-    code {
-      background: none;
-    }
-  }
-  blockquote {
-    padding: 0 1rem 0 1rem;
-    border-left: 3px solid $gray-300;
-    color: $gray-700;
-    margin: 0 0 1rem 0;
-  }
-  img + em {
-    text-align: center;
-    color: $gray-600;
-    display: block;
-    width: 100%;
-    margin-top: 0.5rem;
-    font-weight: normal;
-  }
-} 
+.post__content {
+  padding: 1.5rem 0;
+}

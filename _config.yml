@@ -45,3 +45,12 @@ exclude:
   - package-lock.json
   - webpack.config.js
   - README.md
+
+pagination:
+  enabled: true
+  per_page: 5
+  indexpage: 'blog'
+  title: ':title'
+  trail: 
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page

@@ -1,11 +1,11 @@
-.posts-archive {
-  max-width: $max-content-width;
+.post__archive {
+  max-width: 840px;
   width: 100%; 
   margin: 3rem auto;
   padding: 0 1rem;
-  .archive-header {
+  .post__archive__header {
     margin: 5rem 0 5rem 0;
-    display: flex;
+    @include flex();
     flex-direction: column;
     align-items: center;
     h1 {
@@ -19,7 +19,7 @@
         width: 30px;
         height: 1px;
         top: 50%;
-        background-color: $gray-600;
+        background-color: var(--gray);
       }
       &:before {
         left: -40px;
@@ -29,28 +29,29 @@
       }
     }
     p {
-      color: $gray-600;
+      color: var(--gray);
     }
   }
-  .post-entry {
+  .post__entry {
     margin: 0 0 3rem 0;
-    .post-link {
+    .post__link {
       display: block;
     }
     h2 {
       margin-bottom: 0.75rem;
     }
-    .post-meta {
-    
-    }
-    .post-except {
-      color: $gray-600;
+    .post__excerpt {
+      color: var(--gray);
+      margin: 0.5rem 0 0 0;
+      p {
+        line-height: 1.5rem;
+      }
     } 
-    .more-arrow {
+    .post__more_arrow {
       margin-top: 2rem;
       width: 30%;
       height: 1px;
-      background-color: $gray-300;
+      background-color: var(--light);
       position: relative;
       transition: all 0.35s ease-out;
       display: inline-block;
@@ -59,7 +60,7 @@
         position: absolute;
         width: 15px;
         height: 1px;
-        background-color: $gray-300;
+        background-color: var(--light);
         right: -2.5px;
         opacity: 0;
         transition: all 0.35s ease-out;
@@ -73,13 +74,16 @@
         top: 5px;
       }
     }
-    .post-link:hover {
-      .more-arrow {
+    .post__entry__link {
+      display: block;
+    }
+    .post__entry__link:hover {
+      .post__more_arrow {
         width: 30px;
-        background-color: $gray-600;
+        background-color: var(--gray);
         &:before, &:after {
           opacity: 1;
-          background-color: $gray-700;
+          background-color: var(--gray);
         }
       }
     }
@@ -104,7 +108,7 @@
         width: 50%;
         bottom: 0;
         height: 1px;
-        background-color: $gray-300;
+        background-color: var(--light);
         transition: all 0.25s ease-in-out;
       }
       &:before {
@@ -120,7 +124,7 @@
       }
       a:before, a:after {
         width: 72%;
-        background-color: $gray-600;
+        background-color: var(--gray-light);
       }
       a:before {
         transform-origin: left top;
@@ -142,10 +146,10 @@
         padding: 5px 10px;
         margin: 0 5px;
         border-bottom: 1px solid transparent;
-        color: $gray-500;
+        color: var(--gray-light);
         position: relative;
         &:hover, &.pagi-link.emit {
-          border-color: $gray-400;
+          border-color: var(--gray-light);
         }
         &.pagi-link:after {
           @include pseudo();
@@ -154,7 +158,7 @@
           width: 0;
           height: 1px;
           transition: all 0.35s ease-out;
-          background-color: $gray-600;
+          background-color: var(--gray);
         }
         &.pagi-link.emit {
           &:after {
@@ -162,8 +166,8 @@
           }  
         }
         &.active {
-          color: $gray-600;
-          border-color: $gray-600;
+          color: var(--gray);
+          border-color: var(--gray);
         }
         &.pagi-icon {
           width: 24px;
@@ -178,7 +182,7 @@
             width: 60%;
             top: 60%;
             right: 0;
-            background-color: $gray-600;
+            background-color: var(--gray);
             transition: all 0.2s ease-out;
           }
           &.next:hover, &.next.emit {

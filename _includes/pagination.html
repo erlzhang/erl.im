@@ -1,0 +1,19 @@
+<div class="paginiation">
+  {% if paginator.previous_page %}
+    <li>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagi-icon prev" id="btnPrev"></a>
+    </li>
+  {% endif %}
+  {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <li>
+          <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}" class="pagi-link{% if page.url == trail.path %} active{% endif %}">{{ trail.num }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
+  {% if paginator.next_page %}
+    <li>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagi-icon next" id="btnNext"></a>
+    </li>
+  {% endif %}
+</div>
