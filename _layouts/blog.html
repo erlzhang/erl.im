@@ -2,16 +2,11 @@
 layout: default
 ---
 
+{% include header.html %}
+
+{% include archive.html %}
+
 <main class="post__archive">
-
-  {% include header.html %}
-
-  {% include archive.html %}
-
-  <div class="post__archive__header">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.desc }}</p>
-  </div>
 
   {% for post in paginator.posts %}
     <article class="post__entry">
