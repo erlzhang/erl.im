@@ -4,7 +4,8 @@ module.exports = {
   entry: {
     main: './src/index.js',
     gallery: './src/gallery.js',
-    book: './src/book.js'
+    book: './src/book.js',
+    post: './src/post.js'
   },
   output: {
     filename: '[name].js',

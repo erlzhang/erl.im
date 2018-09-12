@@ -1,7 +1,7 @@
 <html>
   {% include book/head.html %}
   <title>{{ page.title }} - {{ page.book.title }} | {{ site.title }}</title>
-  {% if page.book.highlight %}
+  {% if page.book.code %}
   <link rel="stylesheet" href="{{ "/assets/css/prism.css" | relative_url }}" />
   {% endif %}
   {% if page.book.latex %}
@@ -36,7 +36,7 @@
       {% include archive.html %}
     </div>
 
-    {% if page.book.highlight %}
+    {% if page.book.code %}
     <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
     {% endif %}
     {% if page.book.latex %}

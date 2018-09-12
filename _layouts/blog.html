@@ -2,11 +2,12 @@
 layout: default
 ---
 
-{% include header.html %}
-
-{% include archive.html %}
-
 <main class="post__archive">
+
+  {% include header.html %}
+
+  {% include archive.html %}
+
   <div class="post__archive__header">
     <h1>{{ page.title }}</h1>
     <p>{{ page.desc }}</p>
@@ -30,3 +31,5 @@ layout: default
   {% include pagination.html %}
 
 </main>
+
+<script src="{{ "/assets/js/post.js" | relative_url }}"></script>

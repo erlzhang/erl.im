@@ -4,7 +4,7 @@
   overflow: hidden;
   color: var(--dark);
   line-height: 1.7;
-  @include text_size_adjust(100%);
+  font-size: 16px;
   /* Printing */
   /* Typography */
   /* Spacing */
@@ -192,7 +192,7 @@
   border-top: 1px solid var(--gray-light);
 }
 .content table tr:nth-child(2n) {
-  background-color: var(--light);
+  background-color: var(--lightest);
 }
 .content table th {
   font-weight: bold;

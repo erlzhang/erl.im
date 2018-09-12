@@ -27,6 +27,7 @@ sass:
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -49,8 +50,10 @@ exclude:
 pagination:
   enabled: true
   per_page: 5
-  indexpage: 'blog'
+  indexpage: 'index'
   title: ':title'
+  sort_field: 'date'
+  sort_reverse: true
   trail: 
     before: 2 # The number of links before the current page
     after: 2  # The number of links after the current page

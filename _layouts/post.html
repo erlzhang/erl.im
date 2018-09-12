@@ -2,11 +2,11 @@
 layout: default
 ---
 
-{% include header.html %}
-
-{% include archive.html %}
-
 <main class="post__wrapper">
+
+  {% include header.html %}
+
+  {% include archive.html %}
 
   <nav class="post__archive_path">
     <a href="/blog" id="archiveBtn">
@@ -36,6 +36,15 @@ layout: default
 
     </div>
 
+    {% if page.code %}
+    <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
+    {% endif %}
+    {% if page.latex %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    {% endif %}
+
   </article>
 
 </main>
+
+<script src="{{ "/assets/js/post.js" | relative_url }}"></script>
