@@ -29,6 +29,7 @@
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
     "masonry-layout": "^4.2.2",
+    "mermaid": "^8.0.0-rc.8",
     "uglifycss": "0.0.29"
   }
 }

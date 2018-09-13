@@ -2,6 +2,7 @@
 layout: post
 title: 利用Scrapy + gitbook做kindle电子报推送
 code: true
+mermaid: true
 ---
 
 kindle刚买来没多久的时候，用过狗耳朵日报做每日电子报推送。后来觉得没什么用途，便弃之不用了。前一阵子忽然觉得我的生活过于与世隔绝了，于是便想再启用kindle的电子报推送功能。对比了一下决定用kindle4rss，买了一年的付费版。
