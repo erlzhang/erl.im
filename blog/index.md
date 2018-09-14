@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Blog
+title: 博客
 pagination: 
   enabled: true
 ---
