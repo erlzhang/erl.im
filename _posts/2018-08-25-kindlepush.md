@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 利用Scrapy + gitbook做kindle电子报推送
+lang: zh
+ref: kindlepush
 code: true
 mermaid: true
 ---

@@ -8,18 +8,30 @@ layout: default
 
 <main class="post__wrapper">
 
-  <nav class="post__archive_path">
-    <a href="/blog" id="archiveBtn">
-      <div class="post__archive_icon">
-        <svg width="40" height="40">
-          <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" >
-          </cricle>
-        </svg>
-        <span class="post__archive_icon"></span>
-      </div>
-      Blog
-    </a>
-  </nav>
+  <div class="post__top_navs">
+    <nav class="post__archive_path">
+      <a href="/blog" id="archiveBtn">
+        <div class="post__archive_icon">
+          <svg width="40" height="40">
+            <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" >
+            </cricle>
+          </svg>
+          <span class="post__archive_icon"></span>
+        </div>
+        Blog
+      </a>
+    </nav>
+
+    <nav class="post__langs">
+      {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+      {% for post in posts %}
+        {% if post.lang != page.lang %}
+          <a href="{{ post.url }}" class="{{ post.lang }}"> {{ post.lang }}</a>
+        {% endif %}
+      {% endfor %}
+      </a>
+    </nav>
+  </div>
 
   <article class="post">
 
@@ -31,11 +43,8 @@ layout: default
     </header>
 
     <div class="post__content content">
-
       {{ content }}
-
     </div>
-
   </article>
 
 </main>

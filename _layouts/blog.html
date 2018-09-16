@@ -7,8 +7,18 @@ layout: default
 {% include archive.html %}
 
 <main class="post__archive">
-
-  {% for post in paginator.posts %}
+  <div class="post__top_navs">
+    <nav class="post__langs">
+        {% if page.lang == 'zh' %}
+          <a href="/blog/en/"> en</a>
+        {% else %}
+          <a href="/blog/">zh</a>
+        {% endif %}
+      </a>
+    </nav>
+  </div>
+  {% assign posts=paginator.posts | where:"lang", page.lang %}
+  {% for post in posts %}
     <article class="post__entry">
       <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post__entry__link">
         <h2>{{ post.title }}</h2>

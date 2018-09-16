@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: 博客
-pagination: 
+lang: zh
+pagination:
   enabled: true
 ---

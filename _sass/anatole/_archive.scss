@@ -1,8 +1,11 @@
 .post__archive {
   max-width: 840px;
-  width: 100%; 
+  width: 100%;
   margin: 3rem auto;
   padding: 1.5rem 1rem;
+  .post__top_navs {
+    margin-bottom: 2rem;
+  }
   .post__archive__header {
     margin: 5rem 0 5rem 0;
     @include flex();
@@ -51,7 +54,7 @@
       p {
         line-height: 1.5rem;
       }
-    } 
+    }
     .post__more_arrow {
       margin-top: 2rem;
       width: 30%;
@@ -125,7 +128,7 @@
     }
     &:hover {
       a {
-        font-size: 1.25rem; 
+        font-size: 1.25rem;
       }
       a:before, a:after {
         width: 72%;
@@ -167,8 +170,8 @@
         }
         &.pagi-link.emit {
           &:after {
-            width: 100%; 
-          }  
+            width: 100%;
+          }
         }
         &.active {
           color: var(--gray);
@@ -202,7 +205,7 @@
           }
           &.next.emit {
             transform: translate3d( 200%, 0, 0);
-            opacity: 0;  
+            opacity: 0;
           }
           &.prev:hover, &.prev.emit {
             &:before {
@@ -216,11 +219,10 @@
           }
           &.prev.emit {
             transform: translate3d( -200%, 0, 0);
-            opacity: 0;  
+            opacity: 0;
           }
         }
       }
     }
   }
 }
-

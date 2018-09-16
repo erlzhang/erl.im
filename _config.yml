@@ -54,6 +54,6 @@ pagination:
   title: ':title'
   sort_field: 'date'
   sort_reverse: true
-  trail: 
+  trail:
     before: 2 # The number of links before the current page
     after: 2  # The number of links after the current page

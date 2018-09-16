@@ -4,14 +4,19 @@
   margin: 3rem auto;
   padding: 1.5rem 1rem;
 }
-
+.post__top_navs::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .post__archive_path {
   margin: 0 0 1.5rem 0;
+  float: left;
   .post__archive_icon {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border-radius: 50%; 
+    border-radius: 50%;
     float: left;
     margin-right: 10px;
     position: relative;
@@ -23,7 +28,7 @@
       transition: all 0.45s ease-in;
     }
     .post__archive_icon {
-      position: absolute; 
+      position: absolute;
       width: 60%;
       left: 20%;
       top: 50%;
@@ -34,7 +39,7 @@
         @include pseudo();
         height: 1px;
         width: 50%;
-        background-color: var(--gray); 
+        background-color: var(--gray);
         top: 0;
         left: 0;
       }
@@ -59,7 +64,7 @@
     &:hover {
       .circle-progress {
         stroke-dasharray: 120 120;
-      }    
+      }
     }
     &.emit {
       .post__archive_icon {
@@ -69,7 +74,9 @@
     }
   }
 }
-
+.post__langs {
+  float: right;
+}
 .post__header {
   margin-bottom: 1rem;
   .post__title {

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+{% include archive.html %}
+
+<main class="post__wrapper">
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">{{ page.title | escape }}</h1>
+    </header>
+
+    <div class="post__content content">
+
+      {{ content }}
+
+    </div>
+
+  </article>
+
+</main>
