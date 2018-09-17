@@ -48,3 +48,25 @@
   font-size: 0.9rem;
   color: var(--gray);
 }
+.icon__list {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}
+.icon__link svg {
+  margin: 0 5px;
+  width: 18px;
+  height: 18px;
+}
+.icon__fill {
+  fill: var(--gray);
+}
+.icon__stroke {
+  stroke: var(--gray);
+}
+.icon__list a:hover .icon__fill {
+  fill: var(--dark);
+}
+.icon__list a:hover .icon__stroke {
+  stroke: var(--dark);
+}
+

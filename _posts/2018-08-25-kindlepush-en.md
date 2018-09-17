@@ -1,12 +1,38 @@
 ---
 layout: post
-title: Kindle Push made with Scrapy and Gitbook
+title: push self-made magazines with Scrapy and Gitbook
 lang: en
 ref: kindlepush
 code: true
 mermaid: true
-excerpt: After analysing some pages of the column of cankaoxiaoxi.com, I found that the multipage is powered by AJAX. The site send an asynchronous request to get a json file, in whitch json.data is what we want.
+excerpt: About four years ago, I used Gouerduo Daily Report for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I find my isolation tree monthes ago. And I want to get more information from outside world. I searched and compared with some productions for news subscription. I finally choose Kindle4rss and ordered for one year.
 ---
+
+About four years ago, I used *Gouerduo Daily Report* for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I find my isolation tree monthes ago. And I want to get more information from outside world. I searched and compared with some productions for news subscription. I finally choose Kindle4rss and ordered for one year.
+
+I'm so careless that I didn't find that a lot of articles are uncomplete until nearly one month later. Some of them contain only first one of the multiple pages in the article of webiste. I took for the invalid news from *CanKaoXiaoXi* for there is no hint of that. I also sent a email to *Kindle4rss* but there is no result. As a programmer, I decided to do it by myself.
+
+**Principle:** Simple, easy to develope. It should be completed within a week during my lunch break.
+
+The thread is simple:
+
+```mermaid
+graph LR;
+  id1(fetch articles)-->id2(write them into a ebook);
+  id2(write them into a ebook)-->id3(push to my Kindle);
+```
+
+According to above, I find some tools:
+
+```mermaid
+graph LR;
+  id1(Scrapy for the fetching of articles)-->id2(Gitbook for ebook);
+  id2(Gitbook for ebook)-->id3(send an email to my Kindle);
+```
+
+### Fetching of Articles
+
+I plan to fetch articles from the *World News* column
 
 ### Fetch
 

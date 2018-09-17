@@ -69,7 +69,7 @@ module Jekyll
       newname = basename + ".html"
       self.data["link"] = File.join(@dir, newname)
 
-      self.data["title"] = config["title"] 
+      self.data["title"] = config["title"]
       self.data["level"] = config["level"]
     end
   end
@@ -156,7 +156,7 @@ module Jekyll
         site.pages << book_index
       rescue Exception => e
         puts e
-      end 
+      end
     end
 
     def parse_summary(summary)

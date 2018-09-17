@@ -1,32 +1,28 @@
-<html>
-  {% include book/head.html %}
-  <title>{{ page.title }} | {{ site.title }}</title>
-</head>
-  <body>
-    <div class="book sidebar-right">
-      {% include header.html %}
-      <div class="book__cover">
-        <img src="/assets/images/{{ page.slug }}.jpg" class="book__img">
-      </div>
-      <div class="book__content">
-        <h1 class="book__title">{{ page.title }}</h1>
-        <div class="book__date">
-        </div>
-        <div class="book__desc">
-          {{ content }}
-        </div>
-        {% if page.next and page.next.path %}
-          <a href="/{{ page.next.link }}" class="book__more">
-            <div class="book__icon">
-              <svg width="80" height="80">
-                <circle class="circle-progress" r="36" cy="40" cx="40"  stroke-linejoin="round" stroke-linecap="round" ></cricle>
-              </svg>
-              <span class="book__icon_arrow"></span>
-            </div>
-          </a>
-        {% endif %}
-      </div>
-      {% include archive.html %}
+---
+layout: default
+---
+<div class="book sidebar-right">
+  {% include header.html %}
+  <div class="book__cover">
+    <img src="/assets/images/{{ page.slug }}.jpg" class="book__img">
+  </div>
+  <div class="book__content">
+    <h1 class="book__title">{{ page.title }}</h1>
+    <div class="book__date">
     </div>
-  </body>
-</html>
+    <div class="book__desc">
+      {{ content }}
+    </div>
+    {% if page.next and page.next.path %}
+      <a href="/{{ page.next.link }}" class="book__more">
+        <div class="book__icon">
+          <svg width="80" height="80">
+            <circle class="circle-progress" r="36" cy="40" cx="40"  stroke-linejoin="round" stroke-linecap="round" ></cricle>
+          </svg>
+          <span class="book__icon_arrow"></span>
+        </div>
+      </a>
+    {% endif %}
+  </div>
+  {% include archive.html %}
+</div>

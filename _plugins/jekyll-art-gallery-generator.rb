@@ -48,6 +48,7 @@ module Jekyll
       self.read_yaml(File.dirname(gallery_index), File.basename(gallery_index))
       self.data["title"] = config["title"] || "Photos"
       self.data["galleries"] = []
+      self.data["layout"] = "gallery"
 
       begin
         sort_field = config["sort_field"] || "name"
