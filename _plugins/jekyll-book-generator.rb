@@ -12,8 +12,8 @@ module Jekyll
       book_index = File.join(base, "_layouts", "home.html")
       read_yaml(File.dirname(book_index), File.basename(book_index))
 
+      self.data["layout"] = "home"
       self.data["title"] = "首页"
-
       self.data["books"] = books
 
     end

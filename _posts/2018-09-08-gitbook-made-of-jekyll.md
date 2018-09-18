@@ -1,6 +1,9 @@
 ---
 layout: post
 title: 用jekyll模拟gitbook实现多书籍页面生成器
+lang: zh
+code: true
+ref: multibooks
 ---
 
 我一直觉得，博客的表达方式是不完整的。它方便处理一些零散的思想和记录，但对于小说以及可以依据某一主题归纳为文集的内容难以承载。
