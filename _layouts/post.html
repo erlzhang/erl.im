@@ -10,7 +10,11 @@ layout: default
 
   <div class="post__top_navs">
     <nav class="post__archive_path">
+      {% if page.lang == "zh" %}
       <a href="/blog" id="archiveBtn">
+      {% else %}
+      <a href="/blog/en" id="archiveBtn">
+      {% endif %}
         <div class="post__archive_icon">
           <svg width="40" height="40">
             <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" >

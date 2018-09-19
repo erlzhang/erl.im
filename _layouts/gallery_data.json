@@ -1,8 +1,7 @@
 ---
-# individual pages for each gallery
 header:
-    title: Some Title
-    background-color: "#6B8A78"
+  title: Some Title
+  background-color: "#6B8A78"
 ---
 
 [

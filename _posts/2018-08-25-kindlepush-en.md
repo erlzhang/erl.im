@@ -1,11 +1,15 @@
 ---
-layout: post
 title: Make Subscription to Daily News with Scrapy and Gitbook and Push it to Kindle
+date: 2018-08-25 00:00:00 Z
+layout: post
 lang: en
 ref: kindlepush
 code: true
 mermaid: true
-excerpt: About four years ago, I used *Gouerduo Daily Report* for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I found my isolation three months ago. However, about three months ago, I found my isolation and want to get more information about outside world.
+excerpt: About four years ago, I used *Gouerduo Daily Report* for subscriptions to
+  daily news for a period of time after I bought Kindle. I canceled it because of
+  its uselessness. I found my isolation three months ago. However, about three months
+  ago, I found my isolation and want to get more information about outside world.
 ---
 
 About four years ago, I used *Gouerduo Daily Report* for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I found my isolation three months ago. However, about three months ago, I found my isolation and want to get more information about outside world.

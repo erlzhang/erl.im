@@ -1,59 +1,45 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+---
 title: 叶夕青兮
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: zhangshiyu1992@hotmail.com
 author: Erl
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yexiqingxi.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ''
+url: http://yexiqingxi.com
 github_username: erlzhang
-
 sass:
   sass_dir: _sass
-
-# Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
-  - jekyll-paginate-v2
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
+- jekyll-feed
+- jekyll-paginate-v2
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - build.sh
-  - src
-  - package.json
-  - package-lock.json
-  - webpack.config.js
-  - README.md
-
+- Gemfile
+- Gemfile.lock
+- node_modules
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+- build.sh
+- src
+- package.json
+- package-lock.json
+- webpack.config.js
+- README.md
 pagination:
   enabled: true
   per_page: 5
-  indexpage: 'index'
-  title: ':title'
-  sort_field: 'date'
+  indexpage: index
+  title: ":title"
+  sort_field: date
   sort_reverse: true
   trail:
-    before: 2 # The number of links before the current page
-    after: 2  # The number of links after the current page
+    before: 2
+    after: 2

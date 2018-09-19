@@ -4,6 +4,8 @@
   <meta name="author" content="{{ site.author }}">
 	{% if page.layout == "chapter" %}
 	<title>{{ page.title }} - {{ page.book.title }} | {{ site.title }}</title>
+	{% elsif page.layout == "home" %}
+		<title>{{ site.title }}</title>
 	{% else %}
 	<title>{{ page.title }} | {{ site.title }}</title>
 	{% endif %}
