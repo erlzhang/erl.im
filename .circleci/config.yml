@@ -6,50 +6,24 @@ defaults: &defaults
   working_directory: ~/repo
 version: 2
 jobs:
+  <<: *defaults
   deploy:
     machine:
       enabled: true
+    docker:
+      - image: circleci/ruby:2.5
     steps:
+      - checkout
       - run:
           name: Deploy Over SSH
           command: |
-            ssh erl@96.45.183.112 -p 28801 "cd /home/erl/workspace/persephone; git pull"
-  build:
-    <<: *defaults
-    docker:
-      - image: circleci/ruby:2.5
-    environment:
-      BUNDLE_PATH: ~/repo/vendor/bundle
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./_site \
-              --allow-hash-href \
-              --check-favicon  \
-              --check-html \
-              --disable-external
-      - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
+            ssh erl@96.45.183.112 -p 28801 "cd /home/erl/workspace/persephone; git pull; sh build.sh"
 
 workflows:
   version: 2
-  build-and-deploy:
+  deploy:
     jobs:
-      - build
       - deploy:
-          requires:
-            - build
           filters:
             branches:
               only: master
