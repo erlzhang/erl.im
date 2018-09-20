@@ -2,16 +2,11 @@
 #
 # Check https://circleci.com/docs/2.0/language-ruby/ for more details
 #
-defaults: &defaults
-  working_directory: ~/repo
 version: 2
 jobs:
-  <<: *defaults
   build:
     machine:
       enabled: true
-    docker:
-      - image: circleci/ruby:2.5
     steps:
       - checkout
       - run:
