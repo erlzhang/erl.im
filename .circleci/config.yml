@@ -18,12 +18,3 @@ jobs:
           name: Deploy Over SSH
           command: |
             ssh erl@96.45.183.112 -p 28801 "cd /home/erl/workspace/persephone; git pull; sh build.sh"
-
-workflows:
-  version: 2
-  desploy:
-    jobs:
-      - deploy:
-          filters:
-            branches:
-              only: master
