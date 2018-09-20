@@ -6,6 +6,14 @@ defaults: &defaults
   working_directory: ~/repo
 version: 2
 jobs:
+  desploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh erl@96.45.183.112 -p 28801 "cd /home/erl/workspace/persephone; git pull"
   build:
     <<: *defaults
     docker:
@@ -33,18 +41,15 @@ jobs:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - run:
-          name: npm build
-          command: npm run build
-      - run:
-          name: Jekyll build
-          command: bundle exec jekyll build
-      - run:
-          name: uglify css
-          command: |
-            uglifycss _site/assets/main.css > _site/assets/style.css
-            mv _site/assets/style.css _site/assets/main.css
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - _site
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
