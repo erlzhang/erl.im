@@ -6,7 +6,7 @@ defaults: &defaults
   working_directory: ~/repo
 version: 2
 jobs:
-  desploy:
+  deploy:
     machine:
       enabled: true
     steps:
