@@ -5,7 +5,6 @@ let codes = document.getElementsByClassName("language-mermaid");
 while( codes.length > 0 ) {
   let code = codes[0];
   let content = code.innerText;
-  console.log(content)
 
   let chart = document.createElement("div");
   chart.className = "mermaid";  

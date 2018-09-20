@@ -36,3 +36,33 @@ a:hover, a:visited, a:linked, a:active {
   text-decoration: none!important;
   color: var(--dark);
 }
+
+.loading {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 15;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+.loading__icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 30px;
+  border: 2px solid var(--gray-light);
+}
+.loading__icon:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  border-top-color: var(--gray);
+  animation: spin 1s linear infinite;
+}
