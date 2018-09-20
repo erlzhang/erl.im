@@ -7,7 +7,7 @@ defaults: &defaults
 version: 2
 jobs:
   <<: *defaults
-  deploy:
+  build:
     machine:
       enabled: true
     docker:
