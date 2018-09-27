@@ -6,12 +6,7 @@ lang: en
 ref: kindlepush
 code: true
 mermaid: true
-excerpt: About four years ago, I used Gouerduo Daily Report for subscriptions to
-  daily news for a period of time after I bought Kindle. I canceled it because of
-  its uselessness. I found my isolation three months ago. However, about three months
-  ago, I found my isolation and want to get more information about outside world.
 ---
-
 About four years ago, I used *Gouerduo Daily Report* for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I found my isolation three months ago. However, about three months ago, I found my isolation and want to get more information about outside world.
 
 I searched and compared with some productions for news subscription. I finally choose *Kindle4rss* and ordered it for one year.
