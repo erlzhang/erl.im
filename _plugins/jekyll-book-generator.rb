@@ -138,14 +138,22 @@ module Jekyll
           end
         end
 
+        blog = Hash.new
+        blog["date"] = "2018至今"
+        blog["slug"] = "blog"
+        blog["title"] = "博客"
+        blog["odd"] = true
+        blog["current"] = true
+
         archive.sort! { |x, y|
           y.data["end"].to_i <=> x.data["end"].to_i
         }
 
         archive.each_with_index do |book, index|
-          book.data["current"] = ( index == 0 )
-          book.data["odd"] = ( index % 2 == 0 )
+          book.data["odd"] = ( index % 2 > 0 )
         end
+
+        archive.unshift(blog)
 
         site.config["archive"] = archive
 
