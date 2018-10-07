@@ -26,7 +26,7 @@ excerpt: 电脑的选购理由有很多，有人追求性能，有人追求外�
 
 ## 系统：Ubuntu 18.04
 
-![ubuntu in windows](/img/ubuntu_in_windows.png)
+![ubuntu in windows](/img/surface/ubuntu_in_windows.png)
 
 我的开发环境就是Linux。办公电脑是Ubuntu + Windows10双系统，但windows基本不用。我的SurfacePro是低配版，128G的SSD装双系统是不现实的。在微软没有搞出Linux子系统这个鬼东西之前，只能上虚拟机了，虚拟机太耗内存。子系统很好，消耗低，在windows下图形界面挺鸡肋的。就单纯开发而言，bash足够了。
 
@@ -36,7 +36,7 @@ excerpt: 电脑的选购理由有很多，有人追求性能，有人追求外�
 
 ## 编辑器：Atom
 
-![Atom](/img/atom.png)
+![Atom](/img/surface/atom.png)
 
 工作中开发用编辑器就是vim，子系统一开始也是用vim，但子系统bash的高亮颜色实在是接受不了，改不成低饱和度的，反应也慢。还是改用windows的编辑器。先后用过Nodepad++和Sublime，都还好，除了一点：windows10下输入中文，输入法提示框跑到了编辑器左上角，两款编辑器都有这个问题，很奇怪。
 
@@ -46,7 +46,7 @@ excerpt: 电脑的选购理由有很多，有人追求性能，有人追求外�
 
 ## 远程终端：Termius
 
-![Termius](/img/termius.png)
+![Termius](/img/surface/termius.png)
 
 前一阵子为了做Kindle电子报推送租了个服务器玩儿，需要一个远程终端管理。Ubuntu下用的是Remmina，windows下用过putty。但putty还未支持高清屏，界面有点发虚。
 
@@ -56,7 +56,7 @@ excerpt: 电脑的选购理由有很多，有人追求性能，有人追求外�
 
 ## 文件传输：FileZilla
 
-![FileZilla](/img/filezilla.png)
+![FileZilla](/img/surface/filezilla.png)
 
 最早接触虚拟主机的时候都是用FTP传输，商家只给一个ip、端口号和ftp登录名密码。但是总所周知，ftp不安全，很容易被攻击。ssh可以远程连终端，但是文件传输怎么办？有sftp呀！基于ssl的文件传输，很好。
 
@@ -64,6 +64,6 @@ excerpt: 电脑的选购理由有很多，有人追求性能，有人追求外�
 
 ## 项目管理：Trello
 
-![Trello](/img/trello.png)
+![Trello](/img/surface/trello.png)
 
 Trello的大名早有耳闻，但我是在win10商店随便点出来玩儿一玩儿的，这一玩儿就上瘾了。项目管理、阅读管理、学习管理、写作管理、生活习惯管理、旅游计划管理乃是人生管理。只要是带上“计划”或“管理”这几个字的，估计没什么是它做不了的。它让我养成了哪怕开发一个小小的功能，也要做好计划做好排期的习惯。

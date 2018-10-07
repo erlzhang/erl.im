@@ -1,3 +1,3 @@
 # 万物有灵且美
 
-![万物有灵且美](/img/part1.jpg)
+![万物有灵且美](/img/leaf/part1.jpg)
