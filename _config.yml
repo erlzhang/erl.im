@@ -35,7 +35,7 @@ exclude:
 - README.md
 pagination:
   enabled: true
-  per_page: 5
+  per_page: 10
   indexpage: index
   title: ":title"
   sort_field: date

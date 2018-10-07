@@ -5,6 +5,7 @@ date: 2018-09-08 00:00:00 Z
 lang: en
 code: true
 ref: multibooks
+excerpt: I don't think I can express my thought by a blog completely. I can use it to record some fragments conveniently. However, I can't put my novels and books, which contain multiple articles of one topic, in it perfectly.
 ---
 I don't think I can express my thought by a blog completely. I can use it to record some fragments conveniently. However, I can't put my novels and books, which contain multiple articles of one topic, in it perfectly.
 
