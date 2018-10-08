@@ -157,7 +157,7 @@ module Jekyll
 
         site.config["archive"] = archive
 
-        book_index = IndexPage.new(site, site.source, "", archive[0..4])
+        book_index = IndexPage.new(site, site.source, "", archive[0..3])
         book_index.render(site.layouts, site.site_payload)
         book_index.write(site.dest)
 

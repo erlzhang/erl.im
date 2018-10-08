@@ -1,19 +1,48 @@
 .sidebar {
   width: 0;
   opacity: 0;
-  min-height: 100vh;
+  height: 100vh;
   overflow-y: auto;
   position: fixed;
+  padding: 5rem 0;
   left: 0;
   top: 0;
   background-color: #fff;
-  justify-content: center;
+  /*justify-content: center;*/
   @include flex();
   @include flex-middle();
   @include flex-column();
   z-index: 9;
   @include transition(all 0.35s ease-out);
   @include transform(translateX(-100%));
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--light);
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: var(--lightest);
+  }
+  &:before, &:after {
+    content: "";
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 5rem;
+    left: 0;
+    background-color: #fff;
+    z-index: 9.5;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
 }
 .sidebar-right .sidebar {
   @include transform(translateX(100%));
@@ -32,6 +61,7 @@
   color: var(--gray);
   font-size: 14px;
   text-align: center;
+  padding-bottom: 5rem;
 }
 .archive {
   margin-bottom: 2rem;
