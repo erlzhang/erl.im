@@ -2,7 +2,7 @@
   position: fixed;
   left: 3rem;
   top: 2rem;
-  z-index: 10;
+  z-index: 11;
   fill: var(--gray);
 }
 .sidebar__toggler {
@@ -14,7 +14,7 @@
   left: 3rem;
   bottom: 2rem;
   margin-top: -20px;
-  z-index: 10;
+  z-index: 11;
 }
 .logo, .sidebar__toggler {
   @include transition(all 0.35s ease-out);
