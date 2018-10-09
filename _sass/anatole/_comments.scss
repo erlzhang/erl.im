@@ -1,0 +1,120 @@
+.comment__title {
+  margin: 3rem 0 1.5rem;
+}
+.form__group {
+  margin-bottom: 1rem;
+  display: block;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.input-label {
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  z-index: 3333;
+  transition: all .25s linear;
+  color: var(--light);
+}
+.form__inputs__group {
+  margin-bottom: 1rem;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.form__inputs__group .input-group {
+  width: 48%;
+  float: left;
+  margin-right: 2%;
+}
+.form-control {
+  border-bottom: 1px solid var(--lighter);
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: transparent;
+}
+textarea.form-control {
+  height: 6rem;
+}
+.form-group-focus {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--blue);
+  transition: width .25s linear;
+  display: inline-block;
+  z-index: 22222;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+.form-control:focus ~ .form-group-focus {
+  width: 100%;
+}
+.form-control:focus ~ .input-label, .form-control:valid ~ .input-label {
+  font-size: 14px;
+  color: var(--light);
+  margin-top: -25px;
+}
+.form-control:focus ~ .input-label {
+  color: var(--blue);
+}
+.submit-btn {
+  width: 180px;
+  display: inline-block;
+  line-height: 45px;
+  background: none;
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 0.35rem;
+  margin-top: 1rem;
+}
+
+.comment__list {
+  margin: 3rem 0;
+}
+.comment {
+  margin: 1.5rem 0;
+}
+.comment__meta {
+  margin-bottom: 0.5rem;
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.comment__avatar {
+  float: left;
+  margin-right: 1rem;
+  img {
+    border-radius: 50%;
+  }
+}
+.comment__author {
+  line-height: 50px;
+  font-weight: 700;
+  float: left;
+}
+.comment__content {
+  padding: 0.5rem 0.5rem 0.5rem calc(50px + 1rem);
+  color: var(--gray);
+}
+.comment__date {
+  float: right;
+  color: var(--grayer);
+  font-size: 0.875rem;
+  line-height: 50px;
+}

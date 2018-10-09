@@ -1,0 +1,22 @@
+<h2 class="comment__title">Leave a Comment!</h2>
+<form method="POST" action="http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/master/comments" class="comment__form">
+  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <div class="form__inputs__group">
+    <div class="input-group">
+      <input type="text" name="fields[name]" placeholder="" class="form-control" type="email" required>
+      <label class="input-label">Your Name</label>
+      <span class="form-group-focus"></span>
+    </div>
+    <div class="input-group">
+      <input type="text" placeholder="" class="form-control" type="email" required name="fields[email]">
+      <label class="input-label">E-mail</label>
+      <span class="form-group-focus"></span>
+    </div>
+  </div>
+  <div class="input-group">
+    <textarea name="fields[message]" class="form-control" required></textarea>
+    <label class="input-label">Some Messages here!</label>
+    <span class="form-group-focus"></span>
+  </div>
+  <button type="submit" class="submit-btn">Go!</button>
+</form>

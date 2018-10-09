@@ -16,12 +16,12 @@ comments:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add Staticman data"
+  commitMessage: "New comment by {fields.name}"
 
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "entry{@timestamp}"
+  filename: "comment-{@timestamp}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -40,10 +40,10 @@ comments:
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
   # Otherwise, entries will be published to the main branch automatically.
-  moderation: true
+  moderation: false
 
   # Name of the site. Used in notification emails.
-  name: "eduardoboucas.com"
+  name: "erl.im"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
