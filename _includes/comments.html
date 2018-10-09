@@ -1,5 +1,5 @@
 {% if site.data.comments[page.slug] %}
-  <div class="comment__list">
+  <div class="comment__list" id="comments">
     {% assign comments = site.data.comments[page.slug] %}
     {% for comment in comments %}
     <div class="comment">
