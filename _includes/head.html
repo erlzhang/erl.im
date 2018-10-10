@@ -33,6 +33,7 @@
 	<link rel="stylesheet" href="{{ "/assets/css/jquery.fancybox.min.css" | relative_url }}" />
 	<script src="{{ "/assets/js/gallery.js" | relative_url }}" defer></script>
 	{% endif %}
+  {% if site.production %}
 	<script>
 		var _hmt = _hmt || [];
 		(function() {
@@ -42,4 +43,5 @@
 		  s.parentNode.insertBefore(hm, s);
 		})();
 	</script>
+  {% endif %}
 </head>

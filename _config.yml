@@ -8,10 +8,11 @@ collections:
   uploads:
     title: Uploads
     output: true
+production: false
 email: zhangshiyu1992@hotmail.com
 author: Erl
 baseurl: ''
-url: http://yexiqingxi.com
+url: https://erl.im
 github_username: erlzhang
 sass:
   sass_dir: _sass
