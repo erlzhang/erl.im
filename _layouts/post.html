@@ -50,8 +50,11 @@ layout: default
       {{ content }}
     </div>
 
+  {% if site.comment.enabled %}
     {% include new_comment.html %}
     {% include comments.html %}
+  {% endif %}
+
   </article>
 
 </main>
