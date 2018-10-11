@@ -20,8 +20,6 @@ markdown: kramdown
 plugins:
 - jekyll-feed
 - jekyll-paginate-v2
-comment:
-  enabled: false
 exclude:
 - Gemfile
 - Gemfile.lock
