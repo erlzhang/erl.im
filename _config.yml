@@ -8,7 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-production: false
+production: true
 email: zhangshiyu1992@hotmail.com
 author: Erl
 baseurl: ''
@@ -21,7 +21,8 @@ plugins:
 - jekyll-feed
 - jekyll-paginate-v2
 comment:
-  enabled: false
+  enabled: true
+  postUrl: "http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/comment_dev/comments"
 exclude:
 - Gemfile
 - Gemfile.lock

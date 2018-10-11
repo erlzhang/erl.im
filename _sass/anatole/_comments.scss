@@ -80,13 +80,21 @@ textarea.form-control {
   color: #fff;
   border-radius: 0.35rem;
   margin-top: 1rem;
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .comment__list {
   margin: 3rem 0;
 }
 .comment {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.35rem;
+}
+.comment_new {
+  background-color: var(--lightest);
 }
 .comment__meta {
   margin-bottom: 0.5rem;
