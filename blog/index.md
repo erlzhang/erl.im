@@ -1,8 +1,9 @@
 ---
 title: 博客
 layout: blog
-lang: zh
+locale: zh
 pagination:
   enabled: true
+  locale: zh
 ---
 

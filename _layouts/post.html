@@ -10,11 +10,7 @@ layout: default
 
   <div class="post__top_navs">
     <nav class="post__archive_path">
-      {% if page.lang == "zh" %}
-      <a href="/blog" id="archiveBtn">
-      {% else %}
-      <a href="/blog/en" id="archiveBtn">
-      {% endif %}
+      <a href="{{ site.locales[page.locale].index }}" id="archiveBtn">
         <div class="post__archive_icon">
           <svg width="40" height="40">
             <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" >
@@ -22,15 +18,15 @@ layout: default
           </svg>
           <span class="post__archive_icon"></span>
         </div>
-        Blog
+        {{ site.locales[page.locale].blog_title }}
       </a>
     </nav>
 
     <nav class="post__langs">
-      {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+      {% assign posts=site.posts | where:"ref", page.ref | sort: 'locale' %}
       {% for post in posts %}
-        {% if post.lang != page.lang %}
-          <a href="{{ post.url }}" class="{{ post.lang }}"> {{ post.lang }}</a>
+        {% if post.locale != page.locale %}
+          <a href="{{ post.url }}" class="{{ post.locale}}"> {{ post.locale }}</a>
         {% endif %}
       {% endfor %}
       </a>

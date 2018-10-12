@@ -1,8 +1,9 @@
 ---
 title: Blog
 layout: blog
-lang: en
+locale: en
 pagination:
   enabled: true
+  locale: en
 ---
 

@@ -2,7 +2,7 @@
 title: 用jekyll模拟gitbook实现多书籍页面生成器
 date: 2018-09-08 00:00:00 Z
 layout: post
-lang: zh
+locale: zh
 code: true
 ref: multibooks
 ---

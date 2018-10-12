@@ -36,7 +36,7 @@ exclude:
 - README.md
 pagination:
   enabled: true
-  per_page: 10
+  per_page: 5
   indexpage: index
   title: ":title"
   sort_field: date
@@ -44,3 +44,17 @@ pagination:
   trail:
     before: 2
     after: 2
+
+locales:
+  zh:
+    index: "/blog"
+    blog_title: "博客"
+    langs:
+      zh: "中文"
+      en: "英文"
+  en:
+    index: "/blog/en"
+    blog_title: "Blog"
+    langs:
+      zh: "Chinese"
+      en: "English"

@@ -2,7 +2,7 @@
 title: 利用Scrapy + gitbook做kindle电子报推送
 date: 2018-08-25 00:00:00 Z
 layout: post
-lang: zh
+locale: zh
 ref: kindlepush
 code: true
 mermaid: true

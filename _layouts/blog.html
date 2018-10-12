@@ -9,7 +9,7 @@ layout: default
 <main class="post__archive">
   <div class="post__top_navs">
     <nav class="post__langs">
-        {% if page.lang == 'zh' %}
+        {% if page.locale == 'zh' %}
           <a href="/blog/en/"> en</a>
         {% else %}
           <a href="/blog/">zh</a>
@@ -17,7 +17,7 @@ layout: default
       </a>
     </nav>
   </div>
-  {% assign posts=paginator.posts | where:"lang", page.lang %}
+  {% assign posts=paginator.posts %}
   {% for post in posts %}
     <article class="post__entry">
       <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post__entry__link">
