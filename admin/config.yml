@@ -15,7 +15,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Lang", name: "lang", widget: "select", options: ["zh", "en"]}
+      - {label: "Locale", name: "locale", widget: "select", options: ["zh", "en"]}
       - {label: "Ref", name: "ref", widget: "string"}
       - {label: "Code", name: "code", widget: "boolean", default: false}
       - {label: "mermaid", name: "mermaid", widget: "boolean", default: false}
