@@ -23,7 +23,7 @@ layout: default
       <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post__entry__link">
         <h2>{{ post.title }}</h2>
         <div class="post__meta">
-          <time>{{ post.date | date_to_string }}</time>
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
         </div>
         <div class="post__excerpt">
           <p>{{ post.excerpt }}</p>

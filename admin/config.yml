@@ -14,6 +14,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Locale", name: "locale", widget: "select", options: ["zh", "en"]}
       - {label: "Ref", name: "ref", widget: "string"}
