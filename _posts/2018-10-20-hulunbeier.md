@@ -1,6 +1,6 @@
 ---
 layout: post
-title: “呼伦贝尔
+title: 呼伦贝尔
 locale: zh
 ref: hulunbeier
 ---
