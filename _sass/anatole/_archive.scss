@@ -102,64 +102,23 @@
       }
     }
   }
-  /*
-  .paginiation {
-    padding: 3rem 0;
-    text-align: center;
-    a {
-      display: inline-block;
-      position: relative;
-      padding: 10px 10px;
-      transition: all 0.2s ease-in-out;
-      &:before, &:after {
-        @include pseudo();
-        width: 50%;
-        bottom: 0;
-        height: 1px;
-        background-color: var(--light);
-        transition: all 0.25s ease-in-out;
-      }
-      &:before {
-        left: 0
-      }
-      &:after {
-        right: 0;
-      }
-    }
-    &:hover {
-      a {
-        font-size: 1.25rem;
-      }
-      a:before, a:after {
-        width: 72%;
-        background-color: var(--gray-light);
-      }
-      a:before {
-        transform-origin: left top;
-        transform: rotate(45deg);
-      }
-      a:after {
-        transform-origin: right top;
-        transform: rotate(-45deg);
-      }
-    }
-  }*/
   .paginiation {
     text-align: center;
     li {
       list-style: none;
       display: inline-block;
-      a {
+      margin: 0 5px;
+      .pagi__link, .pagi__icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        vertical-align: bottom;
         display: inline-block;
-        padding: 5px 10px;
-        margin: 0 5px;
-        border-bottom: 1px solid transparent;
-        color: var(--gray-light);
         position: relative;
-        &:hover, &.pagi-link.emit {
-          border-color: var(--gray-light);
-        }
-        &.pagi-link:after {
+      }
+      .pagi__link {
+        &:after {
           @include pseudo();
           left: 0;
           bottom: -1px;
@@ -168,58 +127,67 @@
           transition: all 0.35s ease-out;
           background-color: var(--gray);
         }
-        &.pagi-link.emit {
-          &:after {
-            width: 100%;
-          }
-        }
         &.active {
           color: var(--gray);
           border-color: var(--gray);
         }
-        &.pagi-icon {
-          width: 24px;
-          height: 24px;
-          position: relative;
-          vertical-align: middle;
-          border-bottom: 0;
-          transition: all 0.35s ease-out;
+        &:hover {
+          border-color: var(--gray-light);
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      .pagi__icon {
+        border-radius: 50%;
+        .circle-progress {
+          stroke: var(--gray);
+          stroke-width: 1;
+        }
+        &:hover .circle-progress {
+          stroke-dasharray: 120 120;
+        }
+        .pagi__icon_arrow {
+          position: absolute;
+          width: 60%;
+          height: 1px;
+          top: calc(50% - 1px);
+          left: 20%;
+          background-color: var(--gray);
+          transition: all 0.25s ease-in;
           &:before, &:after {
             @include pseudo();
+            width: 50%;
             height: 1px;
-            width: 60%;
-            top: 60%;
-            right: 0;
             background-color: var(--gray);
-            transition: all 0.2s ease-out;
           }
-          &.next:hover, &.next.emit {
-            &:before {
-              transform-origin: right bottom;
-              transform: rotate(40deg);
-            }
-            &:after {
-              transform-origin: right top;
-              transform: rotate(-40deg);
-            }
+        }
+        &.next .pagi__icon_arrow {
+          &:before, &:after {
+            right: 0;
+            top: 0;
+          }  
+          &:before {
+            transform-origin: bottom right;
+            transform: rotate(45deg);
           }
-          &.next.emit {
-            transform: translate3d( 200%, 0, 0);
-            opacity: 0;
+          &:after {
+            transform-origin: top right;
+            transform: rotate(-45deg);
           }
-          &.prev:hover, &.prev.emit {
-            &:before {
-              transform-origin: left bottom;
-              transform: rotate(40deg);
-            }
-            &:after {
-              transform-origin: left top;
-              transform: rotate(-40deg);
-            }
+        }
+        &.prev .pagi__icon_arrow {
+          &:before, &:after {
+            left: 0;
+            top: 0;
+          }  
+          &:before {
+            transform-origin: bottom left;
+            transform: rotate(45deg);
           }
-          &.prev.emit {
-            transform: translate3d( -200%, 0, 0);
-            opacity: 0;
+          &:after {
+            transform-origin: top left;
+            transform: rotate(-45deg);
           }
         }
       }
