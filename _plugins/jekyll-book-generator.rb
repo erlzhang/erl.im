@@ -15,7 +15,6 @@ module Jekyll
       self.data["layout"] = "home"
       self.data["title"] = "首页"
       self.data["books"] = books
-
     end
   end
 
@@ -39,7 +38,6 @@ module Jekyll
       end
 
       self.data["link"] = @dir
-
       self.data["slug"] = @dir
     end
   end
@@ -67,10 +65,14 @@ module Jekyll
 
       basename = File.basename(@name, '.md')
       newname = basename + ".html"
-      self.data["link"] = File.join(@dir, newname)
 
+      self.data["link"] = File.join(@dir, newname)
       self.data["title"] = config["title"]
       self.data["level"] = config["level"]
+    end
+
+    def is_top_level?
+      self.data["level"] == 1
     end
   end
 
@@ -82,7 +84,6 @@ module Jekyll
       archive = []
 
       begin
-
         Dir.foreach(dir) do |book_dir|
           book_path = File.join(dir, book_dir)
           if File.directory?(book_path) and book_dir.chars.first != "."
@@ -90,76 +91,33 @@ module Jekyll
 
             # 创建书籍页面
             summary = File.read(File.join(book_path, "SUMMARY.md"))
-            parts = self.parse_summary(summary)
 
-            chapters = []
+            parts = get_parts_from_summary(summary)
 
-            book.data["parts"] = []
-            current = nil
+            chapters = create_chapters(site, parts, book_dir, book)
 
-            # 生成章节页面
-            parts.each do |part|
-              chapter = ChapterPage.new(site, site.source, book_dir, part["link"], book, part)
+            add_prev_and_next_to_every_chapter(chapters)
 
-              # 构建层级关系
-              if part["level"] == 1
-                book.data["parts"].push(chapter)
-                current = chapter
-                chapter.data["parts"] = []
-              else
-                current.data["parts"].push(chapter)
-              end
+            push_chapters_to_site_pages(site, chapters)
 
-              chapters.push(chapter)
-            end
+            add_next_to_book_and_prev_to_chapter(book, chapters.first)
 
-            # 给章节设定上一页及下一页
-            chapters.each_with_index do |chapter, index|
-              if index > 0
-                chapter.data["prev"] = chapters[index - 1]
-              else
-                chapter.data["prev"] = book
-              end
-              if index < chapters.size - 1
-                chapter.data["next"] = chapters[index + 1]
-              end
-              site.pages << chapter
-            end
-
-            book.data["next"] = chapters.first
-
-            # 首页仅显示开放状态书籍
-            if book.data["open"]
-              archive << book
-            end
-
+            archive << book
             site.pages << book
-
           end
         end
 
-        blog = Hash.new
-        blog["date"] = "2018至今"
-        blog["slug"] = "blog"
-        blog["title"] = "博客"
-        blog["odd"] = true
-        blog["current"] = true
+        blog = init_blog_page_data
 
-        archive.sort! { |x, y|
-          y.data["end"].to_i <=> x.data["end"].to_i
-        }
+        sort_archive_by_date(archive)
 
-        archive.each_with_index do |book, index|
-          book.data["odd"] = ( index % 2 > 0 )
-        end
+        add_is_odd_to_every_book(archive)
 
-        archive.unshift(blog)
+        unshift_blog_page_to_archive(archive, blog)
 
         site.config["archive"] = archive
 
-        book_index = IndexPage.new(site, site.source, "", archive[0..3])
-        book_index.render(site.layouts, site.site_payload)
-        book_index.write(site.dest)
+        book_index = create_index_page(site, archive)
 
         site.pages << book_index
       rescue Exception => e
@@ -167,37 +125,109 @@ module Jekyll
       end
     end
 
-    def parse_summary(summary)
-      require "nokogiri"
+    private
+      def get_parts_from_summary(summary)
+        require "nokogiri"
 
-      html = Kramdown::Document.new(summary).to_html
+        html = Kramdown::Document.new(summary).to_html
+        parsed_html = Nokogiri::HTML(html)
 
-      parsed_html = Nokogiri::HTML(html)
+        chapters = []
 
-      chapters = []
+        list = parsed_html.xpath("//body/ul/li")
+        list.each do |li|
+          chapters.push( get_chapter_from_li(li, 1) )
 
-      list = parsed_html.xpath("//body/ul/li")
+          li.xpath("ul/li").each do |sub_li|
+            chapters.push( get_chapter_from_li(sub_li, 2) )
+          end
+        end
+        return chapters
+      end
 
-      list.each do |li|
+      def get_chapter_from_li(li, level)
         chapter = Hash.new
-
         chapter["link"] = li.xpath("a/@href").to_s
         chapter["title"] = li.xpath("a/text()").to_s
-        chapter["level"] = 1
-        chapters.push(chapter)
-
-        li.xpath("ul/li").each do |sub_li|
-          sub_chapter = Hash.new
-
-          sub_chapter["link"] = sub_li.xpath("a/@href").to_s
-          sub_chapter["title"] = sub_li.xpath("a/text()").to_s
-          sub_chapter["level"] = 2
-
-          chapters.push(sub_chapter)
-        end
-
+        chapter["level"] = level
+        return chapter
       end
-      return chapters
-    end
+
+      def add_prev_and_next_to_every_chapter(chapters)
+        chapters.each_with_index do |chapter, index|
+          if index > 0
+            chapter.data["prev"] = chapters[index - 1]
+          end
+          if index < chapters.size - 1
+            chapter.data["next"] = chapters[index + 1]
+          end
+        end
+      end
+
+      def push_chapters_to_site_pages(site, chapters)
+        chapters.each do |chapter|
+          site.pages << chapter
+        end
+      end
+
+      def add_next_to_book_and_prev_to_chapter(book, chapter)
+        book.data["next"] = chapter
+        chapter.data["prev"] = book
+      end
+
+      def init_blog_page_data
+        blog = Hash.new
+        blog["date"] = "2018至今"
+        blog["slug"] = "blog"
+        blog["title"] = "博客"
+        blog["odd"] = true
+        blog["current"] = true
+        return blog
+      end
+
+      def add_is_odd_to_every_book(books)
+        books.each_with_index do |book, index|
+          book.data["odd"] = ( index % 2 > 0 )
+        end
+      end
+
+      def create_index_page(site, books)
+        book_index = IndexPage.new(site, site.source, "", books[0..3])
+        book_index.render(site.layouts, site.site_payload)
+        book_index.write(site.dest)
+        return book_index
+      end
+
+      def create_chapters(site, parts, book_dir, book)
+        chapters = []
+        book.data["parts"] = []
+
+        current = nil
+
+        parts.each do |part|
+          chapter = ChapterPage.new(site, site.source, book_dir, part["link"], book, part)
+
+          if chapter.is_top_level?
+            book.data["parts"].push(chapter)
+            current = chapter
+            chapter.data["parts"] = []
+          else
+            current.data["parts"].push(chapter)
+          end
+
+          chapters.push(chapter)
+        end
+        return chapters
+      end
+
+      def sort_archive_by_date(archive)
+        archive.sort! { |x, y|
+          y.data["end"].to_i <=> x.data["end"].to_i
+        }
+      end
+
+      def unshift_blog_page_to_archive(archive, blog)
+        archive.unshift(blog)
+      end
   end
 end
