@@ -1,7 +1,7 @@
 .post__wrapper {
   max-width: 840px;
   width: 100%;
-  margin: 3rem auto;
+  margin: 3rem auto 4.5rem auto;
   padding: 1.5rem 1rem;
 }
 .post__top_navs::after {
@@ -10,7 +10,7 @@
   clear: both;
 }
 .post__archive_path {
-  margin: 0 0 1.5rem 0;
+  margin: 3rem 0;
   float: left;
   .post__archive_icon {
     display: inline-block;
@@ -88,4 +88,36 @@
 }
 .post__content {
   padding: 1.5rem 0;
+  margin-bottom: 4rem;
+}
+
+.contact {
+  margin: 0;
+  padding: 1.5rem 0;
+  position: relative;
+  color: var(--gray);
+  text-align: right;
+  width: 60%;
+  float: right;
+  &:after {
+    @include pseudo();
+    right: 0;
+    background-color: var(--light);
+    width: 150px;
+    top: 0;
+    height: 1;
+
+  }
+  h4 {
+    font-weight: normal;
+    font-size: 1.15rem;
+  }
+  p {
+    font-size: 0.875rem;
+    margin: 3px 0 0.875rem 0;
+  }
+  a {
+    display: inline-block;
+    border-bottom: 1px dashed var(--gray);
+  }
 }
