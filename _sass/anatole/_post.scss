@@ -105,8 +105,7 @@
     background-color: var(--light);
     width: 150px;
     top: 0;
-    height: 1;
-
+    height: 1px;
   }
   h4 {
     font-weight: normal;
@@ -119,5 +118,17 @@
   a {
     display: inline-block;
     border-bottom: 1px dashed var(--gray);
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact, .post__archive_path {
+    width: 100%; 
+  }
+  .contact {
+    text-align: left;
+    &:after {
+      left: 0;
+      right: auto;
+    }
   }
 }
