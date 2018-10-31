@@ -6,8 +6,11 @@
 @import "anatole/common";
 @import "anatole/minxins";
 @import "anatole/header";
-@import "anatole/sidebar";
+//@import "anatole/sidebar";
 @import "anatole/content";
+
+// archive
+@import "anatole/archive";
 
 // home
 @import "anatole/slides";
@@ -22,5 +25,4 @@
 
 //blog
 @import "anatole/post";
-@import "anatole/archive";
-@import "anatole/comments";
+@import "anatole/blog";
