@@ -29,28 +29,27 @@ export default class Slide {
     this.timeLine = new TimelineLite();
 
     this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.75, {
-      height: '100%',
-      translateY: 0,
+      transform: 'scaleY(1)',
       opacity: 1
     }));
     this.timeLine.add( TweenMax.to( this.desc, 0.5, {
-      translateY: 0,
+      transform: 'translateY(0)',
       opacity: 1
     }), '-=0.3');
-    this.timeLine.add( TweenMax.to( this.titleInner, 0.35, {
+    this.timeLine.add( TweenMax.to( this.titleInner, 0.45, {
       width: '100%',
       opacity: 1
-    }), '-=0.7');
-    this.timeLine.add( TweenMax.to( this.titleText, 0.35, {
-      translateX: 0,
+    }), '-=0.5');
+    this.timeLine.add( TweenMax.to( this.titleText, 0.45, {
+      transform: 'translateX(0)',
       opacity: 1
     }), '-=0.3');
-    this.timeLine.add( TweenMax.to( this.timeInner, 0.35, {
+    this.timeLine.add( TweenMax.to( this.timeInner, 0.45, {
       width: '100%',
       opacity: 1
     }), '-=0.3')
-    this.timeLine.add( TweenMax.to( this.timeText, 0.35, {
-      translateX: 0,
+    this.timeLine.add( TweenMax.to( this.timeText, 0.45, {
+      transform: 'translateX(0)',
       opacity: 1
     }));
 

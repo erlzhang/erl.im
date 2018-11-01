@@ -88,25 +88,42 @@ export default class Slider {
     for ( let section of sections ) {
       let slide = new Slide(section, this)
       this.slides.push(slide)
-      slide.control = this.controls[i]
+
+      let control = this.controls[i]
+      slide.control = control
+      control.slideIndex = i
+
+      this.bindEventToControl(control)
+
       i++
     }
     this.controls[this.current].classList.add("current")
     this.len = this.slides.length
   }
 
-  move () {
-    if( this.direction ) {
+  bindEventToControl (control) {
+    let self = this;
+    control.addEventListener("click", function() {
+      self.direction = this.slideIndex;
+      self.changeSlide();
+    });
+  }
+
+  move (index) {
+    if( this.direction == true ) {
       this.current ++
       if( this.current > this.len - 1 ) {
         this.current = 0
       }
-    } else {
+    } else if ( this.direction == false ) {
       this.current -- 
       if( this.current < 0 ) {
         this.current = this.len - 1
       }
+    } else if ( typeof(this.direction) ) {
+      this.current = this.direction
     }
+
     this.revealSlide()
   }
 
