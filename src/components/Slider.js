@@ -26,7 +26,7 @@ export default class Slider {
 
       this.bindControlsEvent()
       this.bindKeyEvent()
-      this.bindMouseEvent()
+      //this.bindMouseEvent()
       this.bindTouchEvent()
     })
 

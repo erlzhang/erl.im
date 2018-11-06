@@ -7,7 +7,6 @@ export default class Slide {
     this.slider = slider
 
     this.imgPlaceholder = this.ele.getElementsByClassName("slide__img_placehold")[0]
-    this.desc = this.ele.getElementsByClassName("slide__desc")[0]
     this.titleInner = this.ele.getElementsByClassName("slide__title_inner")[0]
     this.titleText = this.ele.getElementsByClassName("slide__title_text")[0]
     this.timeInner = this.ele.getElementsByClassName("slide__time_inner")[0]
@@ -28,27 +27,23 @@ export default class Slide {
 
     this.timeLine = new TimelineLite();
 
-    this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.75, {
+    this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.2, {
       transform: 'scaleY(1)',
       opacity: 1
     }));
-    this.timeLine.add( TweenMax.to( this.desc, 0.5, {
-      transform: 'translateY(0)',
-      opacity: 1
-    }), '-=0.3');
-    this.timeLine.add( TweenMax.to( this.titleInner, 0.45, {
+    this.timeLine.add( TweenMax.to( this.titleInner, 0.3, {
       width: '100%',
       opacity: 1
-    }), '-=0.5');
-    this.timeLine.add( TweenMax.to( this.titleText, 0.45, {
+    }), '-=0.4');
+    this.timeLine.add( TweenMax.to( this.titleText, 0.3, {
       transform: 'translateX(0)',
       opacity: 1
     }), '-=0.3');
-    this.timeLine.add( TweenMax.to( this.timeInner, 0.45, {
+    this.timeLine.add( TweenMax.to( this.timeInner, 0.3, {
       width: '100%',
       opacity: 1
-    }), '-=0.3')
-    this.timeLine.add( TweenMax.to( this.timeText, 0.45, {
+    }), '-=0.2')
+    this.timeLine.add( TweenMax.to( this.timeText, 0.3, {
       transform: 'translateX(0)',
       opacity: 1
     }));
