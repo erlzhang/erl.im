@@ -79,7 +79,6 @@ export default class Slider {
   bindControlsEvent () {
     this.nextBtn.addEventListener("click", () => this.nextSlide())
     this.prevBtn.addEventListener("click", () => this.prevSlide())
-  
   }
 
   initSlides () {

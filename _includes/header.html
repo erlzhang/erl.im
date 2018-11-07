@@ -1,5 +1,8 @@
 {% include icons/logo.html %}
+
+{% if page.layout != "archive" %}
 {% include icons/toggler.html %}
+{% endif %}
 
 {% if page.layout == "chapter" %}
 <div class="book-header" role="navigation">
