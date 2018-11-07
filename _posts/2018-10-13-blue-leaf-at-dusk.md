@@ -7,6 +7,8 @@ ref: blueleaf
 code: false
 mermaid: false
 latex: false
+keywords: 叶夕青兮, 独立博客, 写作, 文艺
+description: 我为什么要起“叶夕青兮”这样一个博客名及笔名。
 ---
 叶夕青兮这四个字，源于13年某日，读楚辞有感。
 

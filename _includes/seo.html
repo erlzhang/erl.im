@@ -1,0 +1,7 @@
+{% if page.layout == "home" or page.layout == "archive" %}
+<meta name="keywords" content="{{ site.keywords }}">
+<meta name="description" content="{{ site.description }}">
+{% else %}
+<meta name="keywords" content="{{ page.keywords }}">
+<meta name="description" content="{{ page.description }}">
+{% endif %}

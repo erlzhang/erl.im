@@ -7,12 +7,11 @@ layout: default
 <main class="post__archive">
   <div class="post__top_navs">
     <nav class="post__langs">
-        {% if page.locale == 'zh' %}
-          <a href="/blog/en/">English</a>
-        {% else %}
-          <a href="/blog/">中文</a>
-        {% endif %}
-      </a>
+      {% if page.locale == 'zh' %}
+      <a href="/blog/en/">English</a>
+      {% else %}
+      <a href="/blog/">中文</a>
+      {% endif %}
     </nav>
   </div>
   {% assign posts=paginator.posts %}
@@ -24,7 +23,7 @@ layout: default
           <time>{{ post.date | date: "%Y-%m-%d" }}</time>
         </div>
         <div class="post__excerpt">
-          <p>{{ post.excerpt }}</p>
+          {{ post.excerpt }}
         </div>
         <div class="post__more_arrow"></div>
       </a>

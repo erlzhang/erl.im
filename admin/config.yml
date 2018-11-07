@@ -15,6 +15,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Keywords", name: "keywords", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Locale", name: "locale", widget: "select", options: ["zh", "en"]}
       - {label: "Ref", name: "ref", widget: "string"}

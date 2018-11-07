@@ -8,6 +8,8 @@ ref: surfacepro4
 code: false
 mermaid: false
 latex: false
+keywords: Surface Pro 4, windows编程工具, Linux子系统, Ubuntu in windows10, Termius
+description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的体验与常用工具。
 ---
 电脑的选购理由有很多，有人追求性能，有人追求外观，有人追求便携性，也有人追求折衷。合理的电脑选购应当依据目标使用场景而定。
 
