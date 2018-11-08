@@ -1,10 +1,15 @@
 ---
 layout: post
 title: 博客之路
+name: the road of blog
+keywords: 'emlog, Jekyll, 独立博客, wordpress, wordpress主题'
+description: 从Emlog到WordPress再到Jekyll，回顾六年博客搭建及写作生涯。
+date: 2018-11-08T03:36:04.725Z
 locale: zh
 ref: blog
-keywords: emlog, Jekyll, 独立博客, wordpress, wordpress主题
-description: 从Emlog到WordPress再到Jekyll，回顾六年博客搭建及写作生涯。 
+code: false
+mermaid: false
+latex: false
 ---
 2012年，我还在大学读国际政治学，凭着在大学网页设计与制作课上学到的一点零星的html和css知识，开始搭建博客。那时所知道的web编程语言还是JSP、ASP和PHP，PHP和JavaScript是注定学不懂的东西。
 
@@ -36,15 +41,15 @@ wordpress用了四年多，期间曾切换过typecho，当初谁说我会后悔�
 
 忽而有一天，对过去写下的内容感觉到厌倦，对过去做过的东西感觉到厌倦。想要卸下一切，重新开始。于是我把博客清空，域名搁置，还写了一篇矫情的告别文。
 
-还是用我最熟悉的wordpress，参考了国内外无数wordpress主题风格，设计并制作出了Dysis。
+还是用我最熟悉的wordpress，参考了国内外无数wordpress主题风格，设计并制作出了[Dysis](https://github.com/erlzhang/dysis)。
 
 ![Dysis](/img/blog/dysis.png)
 
-在此之前的ErlSimple是从一款非常极简的Tumblr主题扒的源码，虽然已被我改得面目全非，终究没有多少自己的想法在里面。页面动效都是插件加上网上扒来的代码拼凑出来的，bug跌出，不忍直视。后来我找时间把它的代码重构了一遍，单是CSS就精简了50%。
+在此之前的[ErlSimple](https://github.com/erlzhang/erlsimple)是从一款非常极简的Tumblr主题扒的源码，虽然已被我改得面目全非，终究没有多少自己的想法在里面。页面动效都是插件加上网上扒来的代码拼凑出来的，bug跌出，不忍直视。后来我找时间把它的代码重构了一遍，单是CSS就精简了50%。
 
 ![Dysis](/img/blog/erlsimple.png)
 
-Dysis是我倾注了很多心血的成品，我至今仍旧喜欢它，哪怕它并不完美，哪怕它一眼就能被看出来是业余者的产物。完成它之后我的js水平至少进了一阶，我强迫自己尽量不用插件，只用原生js实现我想要的交互和功能，无论实现成什么样子。
+[Dysis](https://github.com/erlzhang/dysis)是我倾注了很多心血的成品，我至今仍旧喜欢它，哪怕它并不完美，哪怕它一眼就能被看出来是业余者的产物。完成它之后我的js水平至少进了一阶，我强迫自己尽量不用插件，只用原生js实现我想要的交互和功能，无论实现成什么样子。
 
 内容上，从第一篇文章开始，不再随便写写。对自己的文字负责。
 
