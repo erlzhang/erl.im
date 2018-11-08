@@ -4,7 +4,7 @@ title: 博客之路
 name: the road of blog
 keywords: 'emlog, Jekyll, 独立博客, wordpress, wordpress主题'
 description: 从Emlog到WordPress再到Jekyll，回顾六年博客搭建及写作生涯。
-date: 2018-11-08T03:36:04.725Z
+date: 2018-10-27T03:36:04.725Z
 locale: zh
 ref: blog
 code: false
