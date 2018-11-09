@@ -8,6 +8,7 @@ ref: jamstack
 code: true
 mermaid: false
 latex: false
+toc: true
 keywords: JAMstack, Jekyll, Netlify CMS, 静态网页生成器, serverless, GitHub
 description: 基于JAMstack搭建serverless静态博客理念及方法分享。
 ---

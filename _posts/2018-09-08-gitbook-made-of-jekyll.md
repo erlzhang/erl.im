@@ -5,7 +5,8 @@ layout: post
 locale: zh
 code: true
 ref: multibooks
-keywords: Jekyll, Gitbook, Jekyll插件, 多书籍网站生成器 
+toc: true
+keywords: Jekyll, Gitbook, Jekyll插件, 多书籍网站生成器
 description: 分享一个Jekyll插件的写作思路和示例代码，功能是模拟gitbook生成书籍的功能做成多书籍网站生成器。
 ---
 我一直觉得，博客的表达方式是不完整的。它方便处理一些零散的思想和记录，但对于小说以及可以依据某一主题归纳为文集的内容难以承载。
@@ -23,7 +24,7 @@ jekyll我在gitbook前就试用过，开发插件很方便。ruby是我们公司
 
 **原则：** 静态资源结构和gitbook差别不要太大，方便迁移。
 
-### gitbook的文件结构
+## gitbook的文件结构
 
 - `README.md` 基本是首页，生成之后是 `index.html`;
 - `SUMMARY.md` 是目录页，用来确定章节顺序及层级关系;
@@ -72,7 +73,7 @@ def parse_summary(summary)
 end
 ```
 
-### 生成器
+## 生成器
 
 一个book生成器生成三个页面（首页、书籍页、文章页），继承jekyll的 `Page` 类。文件结构如下：
 

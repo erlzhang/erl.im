@@ -125,9 +125,32 @@
     border-bottom: 1px dashed var(--gray);
   }
 }
+.section-nav {
+  position: fixed;
+  left: 50%;
+  top: 8rem;
+  margin-left: calc(var(--content-width) / 2 + 30px)!important;
+  list-style: none;
+  max-width: calc(100vh / 2 - 60px);
+  li {
+    margin: 10px 0;
+    line-height: 1.35rem;
+  }
+  li > a {
+    color: var(--gray);
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-nav {
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   .contact, .post__archive_path {
-    width: 100%; 
+    width: 100%;
   }
   .contact {
     text-align: left;

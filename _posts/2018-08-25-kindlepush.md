@@ -6,6 +6,7 @@ locale: zh
 ref: kindlepush
 code: true
 mermaid: true
+toc: true
 keywords: kindle, Python, kindle推送, Scrapy, Gitbook
 description: 基于python、scrapy、gitbook制作新闻电子报并定时推送到kindle的过程方法分享。
 ---
@@ -31,11 +32,11 @@ graph LR;
   Gitbook制作电子书-->发送email;
 ```
 
-### 内容抓取
+## 内容抓取
 
 第一版，只抓参考消息国际频道。
 
-#### 抓取
+### 抓取
 
 分析一下页面，翻页是js效果实现的，请求的 `json` 数据里，`data` 是列表的html。
 
@@ -89,7 +90,7 @@ def parse_article(self, response):
         # 进入管道处理
         yield item
 ```
-#### 管道处理
+### 管道处理
 
 Scrapy抓取到的内容都扔进管道，在`pipeline`中处理。通常抓取都是用数据库存储，这里为了配合后面制作电子书，按gitbook规定的格式，创建md文件即可 *（md文件里带有html标签，markdown是可以正常解析的）*。
 
@@ -120,7 +121,7 @@ class KindlePipeline(object):
 return
 ```
 
-### 制作电子书
+## 制作电子书
 
 gitbook一行命令搞定：
 
@@ -128,7 +129,7 @@ gitbook一行命令搞定：
 $ gitbook mobi ./ book.mobi
 ```
 
-### 推送
+## 推送
 
 `mutt` 加 `msmtp` 代理邮箱向kindle发送邮件。
 
@@ -157,7 +158,7 @@ cd ../..
 echo "kindle推送-${ls_date}" | mutt -s "kindle推送-${ls_date}" icily0719@kindle.cn -a "ebooks/${ls_date}.mobi"
 ```
 
-### 问题
+## 问题
 
 没有异常处理机制——懒得做！
 

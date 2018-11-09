@@ -6,6 +6,7 @@ locale: en
 ref: kindlepush
 code: true
 mermaid: true
+toc: true
 excerpt: About four years ago, I used Gouerduo Daily Report for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I found my isolation three months ago. However, about three months ago, I found my isolation and want to get more information about outside world.
 ---
 About four years ago, I used *Gouerduo Daily Report* for subscriptions to daily news for a period of time after I bought Kindle. I canceled it because of its uselessness. I found my isolation three months ago. However, about three months ago, I found my isolation and want to get more information about outside world.
@@ -32,7 +33,7 @@ graph LR;
   id2(Gitbook for ebook)-->id3(send an email to my Kindle);
 ```
 
-### Fetching of Articles
+## Fetching of Articles
 
 I plan to fetch articles from the *World News* column only in the first version.
 

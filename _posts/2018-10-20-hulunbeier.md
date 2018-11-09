@@ -3,7 +3,8 @@ layout: post
 title: 呼伦贝尔
 locale: zh
 ref: hulunbeier
-keywords: 呼伦贝尔, 旅行随笔, 海拉尔, 莫日格勒河, 临江屯 
+toc: true
+keywords: 呼伦贝尔, 旅行随笔, 海拉尔, 莫日格勒河, 临江屯
 description: 呼伦贝尔七日游旅行随笔。
 ---
 火车向西向北，蜿蜒而去。时而颠簸缓行，透过着着污渍的车窗向外一瞥，望得见红黄相间的车头，便知这是在爬坡了。
