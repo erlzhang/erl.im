@@ -3,13 +3,33 @@
   left: 3rem;
   top: 2rem;
   z-index: 11;
-  fill: var(--gray);
+  display: block;
+  color: var(--gray);
+  svg {
+    fill: var(--gray);
+  }
+  h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 400;
+    transform: translateX(-20px);
+    opacity: 0;
+    position: absolute;
+    left: calc(30px + 1rem);
+    top: 0;
+    line-height: 30px;
+    width: 100px;
+    @include transition(all 0.3s ease-in);
+  }
+  &:hover h1 {
+    opacity: 1;
+    transform: none;
+  }
 }
 .sidebar__toggler {
   width: 40px;
   height: 40px;
   margin: 10px;
-  cursor: pointer;
   position: fixed;
   left: 3rem;
   bottom: 2rem;
@@ -23,17 +43,15 @@
   right: 3rem;
   left: auto;
 }
-.sidebar__toggler.active, .logo.active {
-  left: 50%;
-  margin-left: -20px;
-}
-.sidebar-right .sidebar__toggler.active, .sidebar-right .logo.active {
+.sidebar-right .logo h1 {
   left: auto;
-  right: 50%;
-  margin-left: 0;
-  margin-right: -20px;
+  right: calc(30px + 1rem);
+  transform: translateX(20px);
+  text-align: right;
 }
-
+.sidebar-right .logo:hover h1 {
+  transform: none;
+}
 .sidebar__toggler span {
   display: inline-block;
   position: absolute;

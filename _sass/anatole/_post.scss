@@ -3,6 +3,11 @@
   width: 100%;
   margin: 3rem auto 4.5rem auto;
   padding: 1.5rem 1rem;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 .post__top_navs::after {
   content: "";
@@ -99,7 +104,7 @@
   text-align: right;
   width: 60%;
   float: right;
-  &:after {
+  &:before {
     @include pseudo();
     right: 0;
     background-color: var(--light);
