@@ -1,4 +1,4 @@
-import { TweenMax, TimelineLite } from 'gsap/TweenMax'
+import { TweenMax, TimelineLite, Sine} from 'gsap/TweenMax'
 
 export default class Slide {
 
@@ -27,26 +27,33 @@ export default class Slide {
 
     this.timeLine = new TimelineLite();
 
-    this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.35, {
+    let easeType = Sine.easeInOut;
+
+    this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.45, {
       height: 0,
-      transform: 'translateY(-100%)'
+      transform: 'translateY(-100%)',
+      ease: easeType,
     }));
     this.timeLine.add( TweenMax.to( this.titleInner, 0.35, {
+      ease: easeType,
       width: '100%',
       opacity: 1
     }), '-=0.4');
     this.timeLine.add( TweenMax.to( this.titleText, 0.35, {
+      ease: easeType,
       transform: 'translateX(0)',
       opacity: 1
     }), '-=0.3');
     this.timeLine.add( TweenMax.to( this.timeInner, 0.35, {
+      ease: easeType,
       width: '100%',
       opacity: 1
     }), '-=0.2')
     this.timeLine.add( TweenMax.to( this.timeText, 0.35, {
+      ease: easeType,
       transform: 'translateX(0)',
       opacity: 1
-    }));
+    }), '-=0.15');
 
     let self = this
 
