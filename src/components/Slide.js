@@ -27,9 +27,9 @@ export default class Slide {
 
     this.timeLine = new TimelineLite();
 
-    this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.3, {
-      transform: 'scaleY(1)',
-      opacity: 1
+    this.timeLine.add( TweenMax.to( this.imgPlaceholder, 0.35, {
+      height: 0,
+      transform: 'translateY(-100%)'
     }));
     this.timeLine.add( TweenMax.to( this.titleInner, 0.35, {
       width: '100%',

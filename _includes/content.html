@@ -4,9 +4,8 @@
       {% if book.odd %}
         <div class="slide__img">
           <a href="/{{ book.slug }}/" class="slide__link"></a>
-          <img src="/assets/images/{{ book.slug }}.jpg">
-          <div class="slide__img_placehold" style="background-image: url('/assets/images/{{ book.slug }}.jpg');">
-          </div>
+          <div class="slide__img_placehold"></div>
+          <img src="/assets/images/{{ book.slug }}.jpg" class="slide__img_entity">
         </div>
       {% endif %}
       {% if book.odd %}
@@ -29,9 +28,8 @@
       {% unless book.odd %}
         <div class="slide__img">
           <a href="/{{ book.slug }}/" class="slide__link"></a>
+          <div class="slide__img_placehold"></div>
           <img src="/assets/images/{{ book.slug }}.jpg">
-          <div class="slide__img_placehold" style="background-image: url('/assets/images/{{ book.slug }}.jpg');">
-          </div>
         </div>
       {% endunless %}
     </div>
