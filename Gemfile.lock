@@ -9,6 +9,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
+    execjs (2.7.0)
     exifr (1.3.4)
     ffi (1.9.25)
     forwardable-extended (2.6.0)
@@ -30,6 +31,9 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.10.0)
       jekyll (~> 3.3)
+    jekyll-katex (0.3.0)
+      execjs (~> 2.7)
+      jekyll (~> 3.8)
     jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
@@ -71,6 +75,7 @@ DEPENDENCIES
   exifr
   jekyll (>= 3.7.4)
   jekyll-feed (~> 0.6)
+  jekyll-katex
   jekyll-paginate-v2
   jekyll-toc
   nokogiri
