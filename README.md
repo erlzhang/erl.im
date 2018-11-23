@@ -1,10 +1,10 @@
 # Persephone
 
-个人网站
+个人网站 [https://erl.im](https://erl.im)
 
 *Powered by [Jekyll](https://jekyllrb.com/)*
 
-## 更新历史记录
+## 更新记录
 
 ### v3
 - **v3.0** *(20180912)*  增加博客功能
