@@ -1,5 +1,5 @@
 ---
-title: A Multiple Books Generator Inspired by Gitbook and Made of Jekyll
+title: A Multiple Books Generator Inspired by GitBook and Made of Jekyll
 layout: post
 date: 2018-09-08 00:00:00 Z
 locale: en
@@ -19,17 +19,17 @@ I migrated from *wordpress* to *static site generator*. There is a better contai
 
 *Gitbook* can be extended by plugins, but there are limitations. It is also hard to be further developed for  I'm not familiar with `nodejs`. So I made a website powered by both of *Gitbook* and *Jekyll*.
 
-I have used *Jekyll* before *Gitbook*. It's convenient to write a plugin. And I'm a *Ruby* programmer. I write a `shell` to combine the function of these two generator mechanically. However, it is a waste of the disk memory and not convenient to mange the files. I finally decided to copy the functions of *Gitbook* with a *Jekyll*  plugin.
+I have used *Jekyll* before *Gitbook*. It's convenient to write a plugin. And I'm a *Ruby* programmer. I write a `shell` to combine the function of these two generators mechanically. However, it is a waste of the disk memory and not convenient to manage the files. I finally decided to copy the functions of *Gitbook* with a *Jekyll* plugin.
 
 **Principles:** The construction of the source files should be in consonance with those in *Gitbook*,  so that my site can be migrated from *Gitbook* to *Jekyll* perfectly.
 
 ## The construction of source files in Gitbook
 
 - `README.md` is the index page of the book, which should be generated to `index.html`.
-- `SUMMARY.md` is the categlog and contains the order and hierarchies of chapters.
-- Others are chapters written in `markdown` files and should be parsed nomally.
+- `SUMMARY.md` is the catalogue and contains the order and hierarchies of chapters.
+- Others are chapters written in `markdown` files and should be parsed normally.
 
-It could be hard to parse the `SUMMARY.md`. I can open the file and read for each line to match with titles and links by `RegExp`. But it's not easy to get the hierarchies and there may be other exceptions. I thought is for a while and found that I can convert the `markdown` file to a `html` file by the converter powerd by *Jekyll*. Then I can extract what I want with `xpath`.
+It could be hard to parse the `SUMMARY.md`. I can open the file and read for each line to match with titles and links by `RegExp`. But it's not easy to get the hierarchies and there may be other exceptions. I thought is for a while and found that I can convert the `markdown` file to a `html` file by the converter powered by *Jekyll*. Then I can extract what I want with `xpath`.
 
 ```ruby
 def parse_summary(summary)
@@ -92,9 +92,9 @@ module jekyll
 end
 ```
 
-The original files should be stored in the dir `_books`.
+The original files should be stored in the directory `_books`.
 
-Frist, iterate the directories in `_books` and create instances of `BookPage` with the dir names.
+Frist, iterate the directories in `_books` and create instances of `BookPage` with the directory names.
 
 ```ruby
 dir = "_books"
@@ -136,7 +136,7 @@ end
 chapters.push(chapter)
 ```
 
-Then, iterate the instances of `ChapterPage` to assign a *next page* and a *prev page* to each of the chapters.（There may be better to do that without iteration. But I got none.）
+Then, iterate the instances of `ChapterPage` to assign a *next page* and a *prev page* to each of the chapters. (There may be better to do that without iteration. But I got none.)
 
 ```ruby
 chapters.each_with_index do |chapter, index|

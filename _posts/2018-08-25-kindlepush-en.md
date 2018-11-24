@@ -13,9 +13,9 @@ About four years ago, I used *Gouerduo Daily Report* for subscriptions to daily 
 
 I searched and compared with some productions for news subscription. I finally choose *Kindle4rss* and ordered it for one year.
 
-I'm so careless to find that a lot of articles are uncomplete until nearly one month later. Some of them contain only first one of the multiple pages in the article of webiste. I mistook it for the invalid news from *CanKaoXiaoXi* for there is no hint of that. I also sent a email to *Kindle4rss* but there is no result. As a programmer, I decided to make it by myself.
+I'm so careless to find that a lot of articles are uncomplete until nearly one month later. Some of them contain only first one of the multiple pages in the article of website. I mistook it for the invalid news from *CanKaoXiaoXi* for there is no hint of that. I also sent an email to *Kindle4rss* but there is no result. As a programmer, I decided to make it by myself.
 
-**Principle:** Simple, easy to develope. It should be completed within a week during my lunch break.
+**Principles:** Simple, easy to be developed. It should be completed within a week during my lunch break.
 
 The thread is simple:
 
@@ -25,7 +25,7 @@ graph LR;
   id2(write them into an ebook)-->id3(push to my Kindle);
 ```
 
-I find some tools according to above, :
+I find some tools according to above:
 
 ```mermaid
 graph LR;
@@ -39,13 +39,13 @@ I plan to fetch articles from the *World News* column only in the first version.
 
 ### Fetch
 
-After parsing some pages of the column of *cankaoxiaoxi.com*, I found that the multipage is powered by `AJAX`. The site send an asynchronous request to get a `json` file, in whitch `json.data` is what we want.
+After parsing some pages of the column of *cankaoxiaoxi.com*, I found that the multipage is powered by `AJAX`. The site sends an asynchronous request to get a `json` file, in which `json.data` is what we want.
 
 ```python
 start_urls = ['http://app.cankaoxiaoxi.com/?app=shlist&controller=milzuixin&action=world&page=1&pagesize=20']
 ```
 
-I want to deal with it simpily. So just extract all links of the list.
+I want to deal with it simply. So just extract all links of the list.
 
 ```python
 body = response.body[1:-1]
@@ -54,7 +54,7 @@ data = body["data"]
 links = Selector(text=data).xpath("//a/@href").extract()
 ```
 
-What I realy want is the news that is published most recently. Old ones are not needed. Just fetch the first page, and filter with their published date.
+What I really want is the news that is published most recently. Old ones are not needed. Just fetch the first page, and filter with their published date.
 
 ```python
 date = datetime.datetime.strftime(datetime.datetime.now(), "%Y%m%d")
@@ -65,7 +65,7 @@ for link in links:
     yield scrapy.Request(link, self.parse_article, dont_filter=False)
 ```
 
-Get the links and put them in the fetching links stack. Then parse them by the  method `parse_article`. There is a challenge here which caused the problems in subscriptions of *Kindle4rss*. Some articles have more than one page. I also need to fetch the rest of the pages. Some of the these pages belong to *Extra Readings* which are not useful for me and need to be cutted.
+Get the links and put them in the fetching links stack. Then parse them by the method `parse_article`. There is a challenge here which caused the problems in subscriptions of *Kindle4rss*. Some articles have more than one page. I also need to fetch the rest of the pages. Some of these pages belong to *Extra Readings* which are not useful for me and need to be cut.
 
 ```python
 def parse_article(self, response):
@@ -93,7 +93,7 @@ def parse_article(self, response):
 
 ### Pipeline
 
-The items extracted will be put into pipelines for further processing. What we usually do is storing them with database. However, we can just write them into `markdown` pages here for making an ebook according to the specification of the *Gitbok*. *What we get here is with markup of `HTML`, which can be parsed correctly in a `markdown` file.*
+The items extracted will be put into pipelines for further processing. What we usually do is storing them with database. However, we can just write them into `markdown` pages here for making an e-book according to the specification of the *Gitbook*. *What we get here is with markup of `HTML`, which can be parsed correctly in a `markdown` file.*
 
 ```python
 class KindlePipeline(object):
@@ -123,7 +123,7 @@ class KindlePipeline(object):
             f.close()
 return
 ```
-## Make an ebook
+## Make an e-book
 
 That can be done with one line of command with the power of *Gitbook*.
 
@@ -135,7 +135,7 @@ $ gitbook mobi ./ book.mobi
 
 Send an email with the attachment by `mutt` and `msmtp` to *Kindle*.
 
-Then I need to integrate all those scripts with a `shell` file. The `shell` file will be excuted every day with `crontab`.
+Then I need to integrate all those scripts with a `shell` file. The `shell` file will be executed every day with `crontab`.
 
 ```sh
 #!/bin/bash
@@ -163,6 +163,5 @@ echo "kindle推送-${ls_date}" | mutt -s "kindle推送-${ls_date}" icily0719@kin
 ## Problem
 
 There is no exceptional handling here for I'm too lazy to do that!
-
 
 **Complete code and files can be found here:** [kindlepush](https://github.com/erlzhang/kindlepush)
