@@ -30,7 +30,7 @@ description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的�
 
 **解决方案：Linux in Windows10**
 
-## 系统：Ubuntu 18.04
+## 系统：[Ubuntu 18.04](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot%3Aoverviewtab)
 
 ![ubuntu in windows](/img/surface/ubuntu_in_windows.png)
 
@@ -40,7 +40,7 @@ description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的�
 
 办公电脑Ubuntu14不能随便乱升，这里用一用高版本尝尝鲜。
 
-## 编辑器：Atom
+## 编辑器：[Atom](https://atom.io/)
 
 ![Atom](/img/surface/atom.png)
 
@@ -50,7 +50,7 @@ description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的�
 
 目前唯一发现的问题：中英文混打的时候，有时候英文输入法切换不了中文。这应当不是输入法的问题，我在windows下和Ubuntu下测试都有这个问题。
 
-## 远程终端：Termius
+## 远程终端：[Termius](http://www.termius.com/)
 
 ![Termius](/img/surface/termius.png)
 
@@ -60,7 +60,7 @@ description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的�
 
 缺点：tmux自定义的快捷键用不了，不知道为什么。
 
-## 文件传输：FileZilla
+## 文件传输：[FileZilla](https://filezilla-project.org/)
 
 ![FileZilla](/img/surface/filezilla.png)
 
@@ -68,7 +68,7 @@ description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的�
 
 无论ftp还是sftp，FileZilla都是最佳选择。有windows版和Linux版，功能强大，界面在高清屏下也不会失真。
 
-## 项目管理：Trello
+## 项目管理：[Trello](https://trello.com/)
 
 ![Trello](/img/surface/trello.png)
 

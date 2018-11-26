@@ -26,7 +26,7 @@ There is a lack of consideration, which is I couldn't predict that I would be a 
 
 **The solution: Linux in Windows10**
 
-## System: Ubuntu 18.04
+## System: [Ubuntu 18.04](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot%3Aoverviewtab)
 
 ![ubuntu in windows](/img/surface/ubuntu_in_windows.png)
 
@@ -36,7 +36,7 @@ The speed and efficiency is lower than that in pure Linux. There is obvious dela
 
 I can't update the system of my work laptop casually, so I have a try of the version of 18.04 on Surface.
 
-## Editor: Atom
+## Editor: [Atom](https://atom.io/)
 
 ![Atom](/img/surface/atom.png)
 
@@ -46,7 +46,7 @@ I finally choose the Atom, which is open source and full of functions. I can typ
 
 There is one limit ( and maybe bug ): Sometimes I can't switch to Chinese while typing in English. It is not the fault of the IME for I found that problem in both in Windows and Ubuntu with Atom.
 
-## The Remote Terminal: Termius
+## The Remote Terminal: [Termius](http://www.termius.com/)
 
 ![Termius](/img/surface/termius.png)
 
@@ -56,13 +56,13 @@ I found the Termius in the Microsoft Store and it hit my heart. The functions ar
 
 The shortage: The shortcuts of I configured in Termiux doesn't work and I don't know why.
 
-## File Transmission: FileZilla
+## File Transmission: [FileZilla](https://filezilla-project.org/)
 
 I used to use FTP for transferring files into the server when I used Virtual Host early years. What the seller gave me are the IP, the port and the username and password of the FTP. It is unsafe to use ftp which is easily attacked. I can fetch my server with SSH, but what about file e? The answer is SFTP, which is based on SSL and safe in transferring.
 
 FileZilla is the best choice both for FTP and SFTP. It can be used in Windows and Linux with full of functions.
 
-## Project Management: Trello
+## Project Management: [Trello](https://trello.com/)
 
 ![Trello](/img/surface/trello.png)
 

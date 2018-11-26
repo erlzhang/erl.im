@@ -24,7 +24,7 @@ description: 基于JAMstack搭建serverless静态博客理念及方法分享。
 
 ## SSG
 
-在放弃了Wordpress之后，我首先转向了Jekyll。Jekyll是最流行的SSG，它的流行与GitPage密不可分。不论是Jekyll、Hexo或是Huge，它们都代表了JAM中的M，即Markup。
+在放弃了Wordpress之后，我首先转向了[Jekyll](https://jekyllrb.com/)。Jekyll是最流行的SSG，它的流行与GitPage密不可分。不论是Jekyll、Hexo或是Huge，它们都代表了JAM中的M，即Markup。
 
 SSG就是通过一些约定俗成的标记和转换规则构建静态网页，耗费资源少，访问速度快，再加上GitPage等平台的兴起使得网站可以做到serverless，引得大批程序员的青睐。
 
@@ -34,7 +34,7 @@ SSG就是通过一些约定俗成的标记和转换规则构建静态网页，�
 
 ## CMS
 
-基于SSG的cms系统如今已经不少了，Jekyll就有一个官方的JekyllAdmin，不算很好用，且缺少开箱即用的登陆方案。
+基于SSG的cms系统如今已经不少了，Jekyll就有一个官方的[JekyllAdmin](https://github.com/jekyll/jekyll-admin)，不算很好用，且缺少开箱即用的登陆方案。
 
 有一些第三方平台也做到了和市面上流行的SSG做无缝对接，例如Contentful和Site Leaf，但第三方平台终究不像cms，还需要从一个网站跳到另一个网站，多麻烦！且有资源量限制，超过就要收费了。
 
@@ -118,7 +118,7 @@ end
 
 我一开始就没考虑过第三方。第三方的即便用起来方便，看上去就不是自己的。和自己的博客放在一起总有些违和感。而且最关键的一点：它的评论内容与博客本身是分离的。
 
-有一个叫Staticman的东西，将评论和Jekyll很好地结合在了一起。它的原理仍旧是利用API访问GitHub上的代码仓库，过程如下：
+有一个叫[Staticman](https://staticman.net/)的东西，将评论和Jekyll很好地结合在了一起。它的原理仍旧是利用API访问GitHub上的代码仓库，过程如下：
 
 * 在你的博客文章页面里加一个评论提交表单，表单的`action`设置为Staticman提供的API；
 * 提交表单时，Staticman会将你的评论内容写在一个`yml`文件，并提交到你的代码仓库里；
