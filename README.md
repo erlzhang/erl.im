@@ -1,6 +1,6 @@
 # Persephone
 
-个人网站 [https://erl.im](http://yexiqingxi.com)
+个人网站 [http://yexiqingxi.com](http://yexiqingxi.com)
 
 *Powered by [Jekyll](https://jekyllrb.com/)*
 
