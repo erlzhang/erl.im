@@ -8,34 +8,34 @@ toc: true
 ref: multibooks
 excerpt: I don't think I can express my thought by a blog completely. I can use it to record some fragments conveniently. However, I can't put my novels and books, which contain multiple articles of one topic, in it perfectly.
 ---
-I don't think I can express my thought by a blog completely. I can use it to record some fragments conveniently. However, I can't put my novels and books, which contain multiple articles of one topic, in it perfectly.
+I don't think I can express my thought with a blog entirely. A blog can be used to record some fragments conveniently. However, I can't publish my novels and books, which contain multiple articles of one topic, well with it.
 
-I have searching a lot of ways to publish novels in my old blog powered by *wordpress* . I made a book module in the theme [Dysis](https://github.com/erlzhang/dysis). The chapters were written in `txt` files and rendered by `AJAX`.
+I have searched a lot of ways to publish novels in my old blog powered by *WordPress*. I made a book module in the theme [Dysis](https://github.com/erlzhang/dysis). The chapters were written in `txt` files and rendered by `AJAX`.
 
-I migrated from *wordpress* to *static site generator*. There is a better container for my novels and books which called *gitbook*. I used *gitbook* to generate static book pages, and then write a static home page. Then I found some inconveniences:
+I migrated from *WordPress* to *static site generator* then. There is a better container for my novels and books which called *GitBook*. I used the *GitBook* to generate static book pages, and then write a static home page. Then I found some inconveniences:
 
 - If I want to publish a new book, I have to edit the home page first.
 - It's hard to be extended. What if I want a blog?
 
 *Gitbook* can be extended by plugins, but there are limitations. It is also hard to be further developed for  I'm not familiar with `nodejs`. So I made a website powered by both of *Gitbook* and *Jekyll*.
 
-I have used *Jekyll* before *Gitbook*. It's convenient to write a plugin. And I'm a *Ruby* programmer. I write a `shell` to combine the function of these two generators mechanically. However, it is a waste of the disk memory and not convenient to manage the files. I finally decided to copy the functions of *Gitbook* with a *Jekyll* plugin.
+I have used *Jekyll* before *Gitbook*. It's convenient to write a plugin. And I'm a *Ruby* programmer. I write a `shell` to combine the functions of both two generators mechanically. However, it is a waste of the disk memory and inconvenient to manage the files. I finally decided to copy the functions of *Gitbook* into a *Jekyll* plugin.
 
-**Principles:** The construction of the source files should be in consonance with those in *Gitbook*,  so that my site can be migrated from *Gitbook* to *Jekyll* perfectly.
+**Principles:** The construction of the source files should be in consonance with those in *Gitbook* so that my site can be migrated from *Gitbook* to *Jekyll* perfectly.
 
 ## The construction of source files in Gitbook
 
 - `README.md` is the index page of the book, which should be generated to `index.html`.
-- `SUMMARY.md` is the catalogue and contains the order and hierarchies of chapters.
+- `SUMMARY.md` is the catalog and contains the order and hierarchies of chapters.
 - Others are chapters written in `markdown` files and should be parsed normally.
 
-It could be hard to parse the `SUMMARY.md`. I can open the file and read for each line to match with titles and links by `RegExp`. But it's not easy to get the hierarchies and there may be other exceptions. I thought is for a while and found that I can convert the `markdown` file to a `html` file by the converter powered by *Jekyll*. Then I can extract what I want with `xpath`.
+It could be hard to parse the `SUMMARY.md`. I can open the file and read for each line to match with titles and links by `RegExp`. But it's not easy to get the hierarchies and there may be other exceptions. I thought is for a while and found that I can convert the `markdown` file to an `HTML` file by the converter powered by *Jekyll*. Then I can extract what I want with `XPath`.
 
 ```ruby
 def parse_summary(summary)
   require "nokogiri"
 
-  # Convert the markdown file to html by kramdown.
+  # Convert the markdown file to HTML by kramdown.
   html = Kramdown::Document.new(summary).to_html
 
   # Parse it in xpath with nokogiri.
@@ -67,17 +67,17 @@ def parse_summary(summary)
     end
 
   end
-  # Return a Hash containing the titles, links and hierarchies.
+  # Return a Hash containing the titles, links, and hierarchies.
   return chapters
 end
 ```
 
 ## Generator
 
-A `BookGenerator` should contains three page types(home index, book index and chapters ) which are subclasses of `Page`. Here is the construction of the plugin:
+A `BookGenerator` should contain three types of pages(including home index, book index, and chapters ) which are subclasses of `Page`. Here is the construction of the plugin:
 
 ```ruby
-module jekyll
+module Jekyll
   class IndexPage < Page
   end
 
@@ -94,7 +94,7 @@ end
 
 The original files should be stored in the directory `_books`.
 
-Frist, iterate the directories in `_books` and create instances of `BookPage` with the directory names.
+First, iterate the directories in `_books` and create a instance of `BookPage` with each directory's name.
 
 ```ruby
 dir = "_books"
@@ -106,21 +106,21 @@ Dir.foreach(dir) do |book_dir|
 end
 ```
 
-Second, parse the `SUMMARY.md` and get the chapters order and hierarchies.
+Second, parse the `SUMMARY.md` and get the chapters' orders and hierarchies.
 
 ```ruby
 summary = File.read(File.join(book_path, "SUMMARY.md"))
 parts = self.parse_summary(summary)
 ```
 
-Iterate the chapters returned and create instances of `ChapterPage`.
+Iterate the returned chapters and create instances of `ChapterPage`.
 
 ```ruby
 chapters = []
 book.data["parts"] = []
 current = nil
 
-# Create the instances of chapters.
+# Create instances of chapters.
 parts.each do |part|
   chapter = ChapterPage.new(site, site.source, book_dir, part["link"], book, part)
 
@@ -136,7 +136,7 @@ end
 chapters.push(chapter)
 ```
 
-Then, iterate the instances of `ChapterPage` to assign a *next page* and a *prev page* to each of the chapters. (There may be better to do that without iteration. But I got none.)
+Then, iterate the instances of `ChapterPage` to assign a *next page* and a *prev page* to each chapter. (There may be better way to do that without iteration. But I got none.)
 
 ```ruby
 chapters.each_with_index do |chapter, index|
@@ -148,7 +148,7 @@ chapters.each_with_index do |chapter, index|
   if index < chapters.size - 1
     chapter.data["next"] = chapters[index + 1]
   end
-  # Push the instances of ChapterPage to the page generating queue.
+  # Push the instances of ChapterPage to the pages generating queue.
   site.pages << chapter
 end
 
@@ -156,7 +156,7 @@ end
 book.data["next"] = chapters.first
 ```
 
-Push the instance of `BookPage` to queue.
+Push the instance of `BookPage` to the queue.
 
 ```ruby
 site.pages << book
@@ -171,7 +171,7 @@ book_index.write(site.dest)
 site.pages << book_index
 ```
 
-There is nothing important to be metioned in the constructor method of the subclasses of `Page`. Just assign the `layout`, the file names and the names of the directories and whatever you want. Here is an example of `BookPage`:
+There is nothing important to be mentioned in the constructor method of the subclasses of `Page`. Just assign the `layout`, the file names, the names of the directories, and whatever you want. Here is an example of `BookPage`:
 
 ```ruby
 class BookPage < Page
