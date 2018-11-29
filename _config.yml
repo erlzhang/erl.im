@@ -26,6 +26,7 @@ plugins:
   - jekyll-toc
   - jekyll-katex
   - jekyll-extlinks
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
@@ -69,3 +70,10 @@ locales:
 
 extlinks:
   attributes: {rel: nofollow, target: _blank}
+
+defaults:
+  -
+    scope:
+      path: "admin/*"
+    values:
+      sitemap: false

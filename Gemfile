@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem 'jekyll-katex'
   gem 'jekyll-extlinks'
+  gem 'jekyll-sitemap'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

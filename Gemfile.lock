@@ -41,6 +41,8 @@ GEM
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-sitemap (1.2.0)
+      jekyll (~> 3.3)
     jekyll-toc (0.9.0)
       nokogiri (~> 1.8)
     jekyll-watch (2.1.2)
@@ -81,6 +83,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-katex
   jekyll-paginate-v2
+  jekyll-sitemap
   jekyll-toc
   nokogiri
   rmagick
