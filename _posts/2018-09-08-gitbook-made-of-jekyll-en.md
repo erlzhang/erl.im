@@ -201,3 +201,6 @@ end
 ```
 
 **Complete Plugin File:** [jekyll-book-generator.rb](https://github.com/erlzhang/persephone/blob/master/_plugins/jekyll-book-generator.rb)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTgwOTAzMjE4XX0=
+-->
