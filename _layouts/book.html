@@ -9,6 +9,18 @@ layout: default
   </div>
   <div class="book__content">
     <h1 class="book__title">{{ page.title }}</h1>
+    <div class="book__meta">
+      {% assign count = 0 %}
+      {% for part in page.parts %}
+          {% assign single_count = part.content | strip_html | strip_newlines | remove: " " | size %}
+          {% for sub_part in part.parts %}
+            {% assign sub_count = sub_part.content | strip_html | strip_newlines | remove: " " | size %}
+            {% assign count = count | plus: sub_count %}
+          {% endfor %}
+          {% assign count = count | plus: single_count %}
+      {% endfor %}
+      总字数：{{ count }}
+    </div>
     <div class="book__desc">
       {{ content }}
     </div>
