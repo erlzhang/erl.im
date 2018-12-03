@@ -10,7 +10,7 @@ author: Erl
 baseurl: ''
 url: http://yexiqingxi.com
 github_username: erlzhang
-version: v3.3.20181130
+version: v3.3.20181203
 sass:
   sass_dir: _sass
 markdown: kramdown
