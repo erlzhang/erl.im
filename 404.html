@@ -1,24 +1,29 @@
 ---
 layout: default
+title: Page not found
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+  .error-container {
+		display: flex;
+		width: 100vw;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+	.error-title {
+		font-size: 4rem;
+	}
+	.error-hint {
+		margin: 0.5rem 0 1.5rem 0;
+		font-size: 1.35rem;
+		text-decoration: none;
+	}
 </style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="error-container">
+  <h1 class="error-title">404</h1>
+  <p class="error-hint"><strong>Page not found :(</strong></p>
+  <a href="{{site.url}}" class="error-link">点击返回首页</a>
 </div>
