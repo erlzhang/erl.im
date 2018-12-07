@@ -34,9 +34,6 @@ GEM
       nokogiri (~> 1.6)
     jekyll-feed (0.10.0)
       jekyll (~> 3.3)
-    jekyll-katex (0.3.0)
-      execjs (~> 2.7)
-      jekyll (~> 3.8)
     jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
@@ -77,11 +74,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  execjs
   exifr
   jekyll (>= 3.7.4)
   jekyll-extlinks
   jekyll-feed (~> 0.6)
-  jekyll-katex
   jekyll-paginate-v2
   jekyll-sitemap
   jekyll-toc
