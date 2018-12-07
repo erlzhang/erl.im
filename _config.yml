@@ -19,7 +19,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-toc
-  - jekyll-katex
   - jekyll-extlinks
   - jekyll-sitemap
 
