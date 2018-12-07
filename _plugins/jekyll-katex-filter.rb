@@ -13,6 +13,8 @@ module Jekyll
         parsed_html = html.to_s.gsub(/(?<!\\)([$]{1})(.+?)(?<!\\)\1/) do |match|
           katex_js.call('katex.renderToString', Regexp.last_match(2), { displayMode: false })
         end
+      else
+        html
       end
     end
   end
