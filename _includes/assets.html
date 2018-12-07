@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="/assets/main.css?v={{site.version}}"" />
+<link rel="stylesheet" href="{{ "/assets/main.css" | asset_version }}" />
+<script src="{{ "/assets/js/main.js" | asset_version }}" defer></script>
 {% if page.code %}
 <link rel="stylesheet" href="{{ "/assets/css/tomorrow.css" | relative_url }}" />
 <script src="{{ "/assets/js/highlight.js" | relative_url }}"></script>
@@ -7,15 +8,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.css" integrity="sha384-JwmmMju6Z7M9jiY4RXeJLoNb3aown2QCC/cI7JPgmOLsn3n33pdwAj0Ml/CMMd1W" crossorigin="anonymous">
 {% endif %}
 {% if page.mermaid %}
-<script src="{{ "/assets/js/chart.js" | relative_url }}" defer></script>
-{% endif %}
-{% if page.layout == "chapter" %}
-<script src="{{ "/assets/js/book.js" | relative_url }}" defer></script>
-{% endif %}
-{% if page.layout == "home" %}
-<script src="{{ "/assets/js/home.js" | relative_url }}" defer></script>
-{% endif %}
-{% if page.layout == "gallery" %}
-<link rel="stylesheet" href="{{ "/assets/css/jquery.fancybox.min.css" | relative_url }}" />
-<script src="{{ "/assets/js/gallery.js" | relative_url }}" defer></script>
+<script src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js" defer></script>
 {% endif %}

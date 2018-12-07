@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,6 @@
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
     "masonry-layout": "^4.2.2",
-    "mermaid": "^8.0.0-rc.8",
     "uglifycss": "0.0.29"
   }
 }

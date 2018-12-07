@@ -1,4 +1,13 @@
-import mermaid from 'mermaid'
+import Slider from './components/Slider.js'
+import Summary from './components/Summary.js'
+
+if ( document.getElementById("bookSummary") ) {
+  const summary = new Summary()
+}
+
+if ( document.getElementById("sectionContainer") ) {
+  const slider = new Slider()
+}
 
 let codes = document.getElementsByClassName("language-mermaid");
 
