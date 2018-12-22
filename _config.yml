@@ -10,6 +10,7 @@ author: Erl
 url: http://yexiqingxi.com
 github_username: erlzhang
 version: v3.3.20181207
+talkyard_server_url: https://comments-for-yexiqingxi-com.talkyard.net
 sass:
   sass_dir: _sass
 markdown: kramdown

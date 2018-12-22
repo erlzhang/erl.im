@@ -29,6 +29,8 @@ layout: default
     </div>
   </article>
 
+  {% include comment.html %}
+
   {% include contact.html %}
 
   <nav class="post__archive_path">
@@ -42,7 +44,6 @@ layout: default
       {{ site.locales[page.locale].blog_title }}
     </a>
   </nav>
-
 </main>
 
 {% if page.code %}
