@@ -14,28 +14,29 @@ export default class {
     this.form = document.getElementById("newComment")
 
     this.postURL = this.form.action 
-    this.nameInput = document.getElementByName("fields[name]")
-    this.emailInput = document.getElementByName("fields[email]")
+    this.nameInput = document.getElementsByName("fields[name]")[0]
+    this.emailInput = document.getElementsByName("fields[email]")[0]
     this.messageArea = document.getElementsByName("fields[message]")[0]
+
     this.submitBtn = document.getElementById("submitBtn")
 
     this.visitor = this.getVisitor()
     if ( this.visitor ) {
-      this.initVisitorInfos()
+      this.initVisitorInfo()
     }
 
     this.disableBtn()
 
     this.messageArea.addEventListener("input", (e) => {
-      if ( this.messageArea.innerHTML.length > 0 && this.submitBtn.disabled ) {
+      if ( this.messageArea.value.length > 0 && this.submitBtn.disabled ) {
         this.enableBtn()
-      } else if ( this.messageArea.innerHTML.length == 0 && !this.submitBtn.disabled ) {
+      } else if ( this.messageArea.value.length == 0 && !this.submitBtn.disabled ) {
         this.disableBtn()
       }
     })
 
-    this.form.addEventListener("submit", (e) => {
-      e.preventDefault()
+    this.form.addEventListener("submit", (event) => {
+      event.preventDefault()
 
       if ( this.visitor ) {
         this.checkVisitorInfo() 
@@ -44,7 +45,7 @@ export default class {
       }
 
       this.disableBtn(true)
-
+      const data = $(this.form).serialize()
       this.sendRequest(data)
     })
   }
@@ -56,11 +57,10 @@ export default class {
 
   getVisitor () {
     let name = Cookies.get("name"),
-        email = Cookies.get("email"),
-        comments = Cookies.get("comments")
+        email = Cookies.get("email")
 
     if ( name ) {
-      return new Visitor(name, email, comments)
+      return new Visitor(name, email)
     }
   }
 
@@ -75,7 +75,7 @@ export default class {
 
   initVisitorInfo () {
     this.nameInput.value = this.visitor.name
-    this.emailInput.value = this.visitor.email
+    this.emailInput.value = this.visitor.email || ""
   }
 
   sendRequest (data) {
