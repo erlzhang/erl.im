@@ -1,5 +1,6 @@
 import Slider from './components/Slider.js'
 import Summary from './components/Summary.js'
+import Comment from './components/Comment.js'
 
 if ( document.getElementById("bookSummary") ) {
   const summary = new Summary()
@@ -29,4 +30,8 @@ while( codes.length > 0 ) {
 
 if( codes.length > 0 ) {
   mermaid.initialize({startOnLoad:true});
+}
+
+if ( document.getElementById("commentContainer") ) {
+  const comment = new Comment()
 }

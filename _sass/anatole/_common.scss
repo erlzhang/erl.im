@@ -84,3 +84,8 @@ a:hover, a:visited, a:linked, a:active {
 .error-link {
 	text-decoration: underline;
 }
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block; 
+}

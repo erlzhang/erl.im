@@ -29,19 +29,25 @@ layout: default
     </div>
   </article>
 
-  {% include contact.html %}
+  <div class="clearfix">
+    {% include contact.html %}
 
-  <nav class="post__archive_path">
-    <a href="{{ site.locales[page.locale].index }}" id="archiveBtn">
-      <div class="post__archive_icon">
-        <svg width="40" height="40">
-          <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" />
-        </svg>
-        <span class="post__archive_icon"></span>
-      </div>
-      {{ site.locales[page.locale].blog_title }}
-    </a>
-  </nav>
+    <nav class="post__archive_path">
+      <a href="{{ site.locales[page.locale].index }}" id="archiveBtn">
+        <div class="post__archive_icon">
+          <svg width="40" height="40">
+            <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" />
+          </svg>
+          <span class="post__archive_icon"></span>
+        </div>
+        {{ site.locales[page.locale].blog_title }}
+      </a>
+    </nav>
+  </div>
+
+  {% if site.comment.enabled %}
+  {% include comments.html %}
+  {% endif %}
 </main>
 
 {% if page.code %}
