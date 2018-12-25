@@ -9,13 +9,7 @@
     clear: both;
   }
 }
-.post__top_navs::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 .post__archive_path {
-  margin: 3rem 0;
   float: left;
   .post__archive_icon {
     display: inline-block;
@@ -96,21 +90,20 @@
   margin-bottom: 4rem;
 }
 
-.contact {
+.post__contact {
   margin: 0;
   padding: 1.5rem 0;
   position: relative;
   color: var(--gray);
+  width: 100%;
   text-align: right;
-  width: 60%;
-  float: right;
   &:before {
     @include pseudo();
     right: 0;
     background-color: var(--light);
     width: 150px;
-    top: 0;
     height: 1px;
+    top: 0;
   }
   h4 {
     font-weight: normal;

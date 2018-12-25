@@ -17,6 +17,7 @@ export default class {
     this.nameInput = document.getElementsByName("fields[name]")[0]
     this.emailInput = document.getElementsByName("fields[email]")[0]
     this.messageArea = document.getElementsByName("fields[message]")[0]
+    this.avatarImg = document.getElementById("visitorAvatar")
 
     this.submitBtn = document.getElementById("submitBtn")
 
@@ -59,6 +60,8 @@ export default class {
     let name = Cookies.get("name"),
         email = Cookies.get("email")
 
+    console.log(name)
+
     if ( name ) {
       return new Visitor(name, email)
     }
@@ -76,6 +79,7 @@ export default class {
   initVisitorInfo () {
     this.nameInput.value = this.visitor.name
     this.emailInput.value = this.visitor.email || ""
+    this.avatarImg.src = this.visitor.avatar
   }
 
   sendRequest (data) {

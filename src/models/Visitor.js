@@ -1,10 +1,11 @@
 import Cookies from 'js-cookie'
 
 export default class {
-  constructor (name, email, website) {
+  constructor (name, email) {
     this.name = name
     this.email = email
-    this.website = website
+    this.avatar = this.get_avatar()
+    console.log(this.avatar)
 
     this.EXPIRE_DAYS = 365
   }
@@ -21,7 +22,14 @@ export default class {
 
   set_email () {
     this.email = email
+    this.avatar = this.get_avatar()
     Cookies.set('email', this.email, { expires: this.EXPIRE_DAYS })  
   }
 
+  get_avatar () {
+    var src = "https://www.gravatar.com/avatar/"
+    src += this.email
+    src += "?d=mm&s=54"
+    return src;
+  }
 }

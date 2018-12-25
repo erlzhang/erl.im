@@ -1,23 +1,36 @@
-<h2 class="comment__title">Leave a Comment!</h2>
-<form method="POST" action="{{ site.comment.postUrl }}" class="comment__form" id="newComment">
+<form method="POST" action="{{ site.comment.postUrl }}" class="comment__form clearfix" id="newComment">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <input name="fields[parent]" type="hidden" value="">
-  <div class="form__inputs__group">
-    <div class="input-group">
-      <input type="text" name="fields[name]" placeholder="" class="form-control" type="email" required autocomplete="true">
-      <label class="input-label">Your Name</label>
-      <span class="form-group-focus"></span>
-    </div>
-    <div class="input-group">
-      <input type="text" placeholder="" class="form-control" type="email" required name="fields[email]" autocomplete="true">
-      <label class="input-label">E-mail</label>
-      <span class="form-group-focus"></span>
+  <div class="comment-left">
+    <div class="comment__avatar">
+      <img src="https://www.gravatar.com/avatar/?d=mm&s=54"  id="visitorAvatar"/>
     </div>
   </div>
-  <div class="input-group">
-    <textarea name="fields[message]" class="form-control"></textarea>
-    <label class="input-label">Some Messages here!</label>
-    <span class="form-group-focus"></span>
+  <div class="comment-right new-comment-right">
+     <div class="comment__box">
+       <div class="comment__box_top hide" id="visitorInfo">
+         <div class="input-group">
+            <input type="text" name="fields[name]" placeholder="Name" class="form-control" type="email" required autocomplete="true">
+            <label class="input-label">
+            {% include icons/user.html %}
+            </label>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="E-mail" class="form-control" type="email" required name="fields[email]" autocomplete="true">
+            <label class="input-label">
+            {% include icons/mail.html %}
+            </label>
+          </div>
+        </div>
+      <div class="comment__box_center">
+        <textarea name="fields[message]" class="form-control message-text" placeholder="说点什么吧..."></textarea>
+        <span class="message-arrow"></span>
+      </div>
+      <div class="comment__box_bottom">
+        <button type="submit" class="submit-btn" id="submitBtn">
+          评论
+        </button>
+      </div>
+    </div>
   </div>
-  <button type="submit" class="submit-btn" id="submitBtn">Go!</button>
 </form>

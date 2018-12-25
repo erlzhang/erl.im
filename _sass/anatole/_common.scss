@@ -2,7 +2,7 @@
 	border: 0;
 	padding: 0;
 	margin: 0;
-  outline: none;
+  //outline: none;
 	box-sizing: border-box;
 }
 @font-face{font-family:'OpenSans';src:url('fonts/OpenSans-Regular.ttf') format('truetype');font-weight:normal;font-style:normal}
@@ -87,5 +87,5 @@ a:hover, a:visited, a:linked, a:active {
 .clearfix:after {
   content: "";
   clear: both;
-  display: block; 
+  display: block;
 }

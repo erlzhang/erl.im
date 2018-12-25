@@ -5,33 +5,7 @@ layout: default
 {% include header.html %}
 
 <main class="post__wrapper">
-
-    <nav class="post__langs">
-    {% assign posts=site.posts | where:"ref", page.ref | sort: 'locale' %}
-    {% for post in posts %}
-      {% if post.locale != page.locale %}
-      <a href="{{ post.url }}" class="{{ post.locale}}"> {{ post.locale }}</a>
-      {% endif %}
-    {% endfor %}
-    </nav>
-
-  <article class="post">
-
-    <header class="post__header">
-      <h1 class="post__title">{{ page.title | escape }}</h1>
-      <div class="post__meta">
-        <time>{{ page.date | date: "%Y-%m-%d %H:%M" }}</time>
-      </div>
-    </header>
-
-    <div class="post__content content">
-      {{ content | toc | extlinks | katex }}
-    </div>
-  </article>
-
-  <div class="clearfix">
-    {% include contact.html %}
-
+  <div class="post__top_navs clearfix">
     <nav class="post__archive_path">
       <a href="{{ site.locales[page.locale].index }}" id="archiveBtn">
         <div class="post__archive_icon">
@@ -43,8 +17,27 @@ layout: default
         {{ site.locales[page.locale].blog_title }}
       </a>
     </nav>
+    <nav class="post__langs">
+    {% assign posts=site.posts | where:"ref", page.ref | sort: 'locale' %}
+    {% for post in posts %}
+      {% if post.locale != page.locale %}
+      <a href="{{ post.url }}" class="{{ post.locale}}"> {{ post.locale }}</a>
+      {% endif %}
+    {% endfor %}
+    </nav>
   </div>
-
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">{{ page.title | escape }}</h1>
+      <div class="post__meta">
+        <time>{{ page.date | date: "%Y-%m-%d %H:%M" }}</time>
+      </div>
+    </header>
+    <div class="post__content content">
+      {{ content | toc | extlinks | katex }}
+    </div>
+  </article>
+  {% include contact.html %}
   {% if site.comment.enabled %}
   {% include comments.html %}
   {% endif %}
