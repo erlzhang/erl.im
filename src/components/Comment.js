@@ -3,13 +3,20 @@ window.jQuery = $;
 import Cookies from 'js-cookie'
 
 import Visitor from '../models/Visitor'
+import DateTime from '../helpers/DateTime'
 
-import TimeHelper from '../helpers/TimeHelper'
+import md5 from 'blueimp-md5'
 
+const MESSAGES = {
+  disabled: "Enmmm..",
+  error: "哎呀，出错了呢...呼叫一下叶子吧！",
+  enabled: "Go!",
+  sending: "Going.." 
+}
 
 export default class {
   constructor () {
-    this.list = document.getElementById("comments")
+    this.list = document.getElementById("commentsList")
 
     this.form = document.getElementById("newComment")
 
@@ -17,6 +24,7 @@ export default class {
     this.nameInput = document.getElementsByName("fields[name]")[0]
     this.emailInput = document.getElementsByName("fields[email]")[0]
     this.messageArea = document.getElementsByName("fields[message]")[0]
+    this.errorContainer = document.getElementById("commentHint")
     this.avatarImg = document.getElementById("visitorAvatar")
 
     this.submitBtn = document.getElementById("submitBtn")
@@ -39,6 +47,10 @@ export default class {
     this.form.addEventListener("submit", (event) => {
       event.preventDefault()
 
+      if ( !this.isValidate() ) {
+        return;
+      }
+
       if ( this.visitor ) {
         this.checkVisitorInfo() 
       } else {
@@ -49,6 +61,7 @@ export default class {
       const data = $(this.form).serialize()
       this.sendRequest(data)
     })
+
   }
 
   newVisitor () {
@@ -59,8 +72,6 @@ export default class {
   getVisitor () {
     let name = Cookies.get("name"),
         email = Cookies.get("email")
-
-    console.log(name)
 
     if ( name ) {
       return new Visitor(name, email)
@@ -87,50 +98,79 @@ export default class {
       url: this.postURL,
       type: "post",
       data: data,
-      complete: () => {
-        this.enableBtn()
-      },
       success: (res) => {
         this.clearMessage()
+        this.disableBtn()
         this.addComment(res.fields)
       },
       error: () => {
-        this.showError();
+        this.enableBtn()
+        this.showError( MESSAGES["error"] )
       }
     })
   }
 
   showError (message) {
+    this.errorContainer.innerText = message
+  }
+
+  clearError () {
+    this.errorContainer.innerText = ""
   }
 
   addComment (comment) {
     let content = this.parseComment(comment) 
     this.list.insertBefore(content, this.list.childNodes[0])
-    this.visitor.add_comment()
   }
 
   parseComment (comment) {
-    let content = document.createElement("div")
-    content.classList.add("comment", "comment_new")
-    content.innerHTML = '<div class="comment__meta"><div class="comment__avatar"><img src="https://www.gravatar.com/avatar/' + comment.email + '?d=mm&s=50" alt=""></div><span class="comment__author">' + comment.name + '</span><span class="comment__date">' + TimeHelper.timestampToTime(comment.date) + '</span></div><div class="comment__content">' + comment.message + '</div>'
-    return content
+    let div = document.createElement("div")
+    div.classList.add("comment", "comment_new", "clearfix")
+
+    let content = '<div class="comment-left"><div class="comment__avatar"><img src="https://www.gravatar.com/avatar/'+md5(comment.email)+'?d=mm&s=50"></div></div>'
+    content += '<div class="comment-right"><div class="comment__meta">'
+    content += '<span class="comment__author">' + comment.name + '</span>'
+
+    let dt = new DateTime(comment.date * 1000)
+    let dt_str = dt.parse("yy-mm-dd HH:MM")
+    content += '<span class="comment__date">' + dt_str + '</span>'
+
+    content += '</div>'
+    content += '<div class="comment__content">' + comment.message + '</div>'
+
+    div.innerHTML = content
+    return div
+  }
+
+  isValidate () {
+    if (     !this.nameInput.value
+          || !this.emailInput.value
+          || !this.messageArea.value
+       ) {
+      return false
+    } else {
+      return true
+    }
+  
   }
 
   clearMessage () {
     this.messageArea.innerText = ""
     this.messageArea.value = ""
+    this.clearError()
   }
 
   disableBtn (isInSubmit=false) {
     this.submitBtn.disabled = true
     if ( isInSubmit ) {
-      this.submitBtn.innerHTML = "发送中，稍等..."
+      this.submitBtn.innerHTML = MESSAGES["sending"]
+    } else {
+      this.submitBtn.innerHTML = MESSAGES["disabled"]
     }
   }
 
   enableBtn () {
     this.submitBtn.disabled = false
-    this.submitBtn.innerHTML = "Go!"
+    this.submitBtn.innerHTML = MESSAGES["enabled"]
   }
-
 }

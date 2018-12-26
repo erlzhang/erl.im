@@ -1,5 +1,5 @@
 <form method="POST" action="{{ site.comment.postUrl }}" class="comment__form clearfix" id="newComment">
-  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <input name="options[slug]" type="hidden" value="{{ page.ref }}">
   <input name="fields[parent]" type="hidden" value="">
   <div class="comment-left">
     <div class="comment__avatar">
@@ -27,8 +27,10 @@
         <span class="message-arrow"></span>
       </div>
       <div class="comment__box_bottom">
+        <div class="comment__error" id="commentHint">
+        </div>
         <button type="submit" class="submit-btn" id="submitBtn">
-          评论
+          enmmm..
         </button>
       </div>
     </div>

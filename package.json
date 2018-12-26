@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
+    "blueimp-md5": "^2.10.0",
     "gsap": "^2.0.2",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",

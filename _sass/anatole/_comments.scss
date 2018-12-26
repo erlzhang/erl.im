@@ -58,6 +58,13 @@
   border-top: 1px solid var(--lighter);
   justify-content: flex-end;
 }
+.comment__error {
+  position: absolute;
+  left: 1rem;
+  color: var(--red);
+  bottom: 8px;
+  font-size: 0.875rem;
+}
 
 .input-group {
   position: relative;
@@ -115,6 +122,10 @@ textarea.form-control {
   height: 40px;
   line-height: 40px;
   transition: all 0.45s ease-in;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 .comment__list {

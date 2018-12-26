@@ -1,29 +1,16 @@
 <div class="comment">
-  <div class="comment-left">
-    <div class="comment__avatar"><img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=50" alt=""></div>
+  <div class="comment-main clearfix">
+    <div class="comment-left">
+      <div class="comment__avatar"><img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=50"></div>
+    </div>
+    <div class="comment-right">
+      <div class="comment__meta">
+        <span class="comment__author">{{ name }}</span>
+        <span class="comment__date">{{ date | date: "%Y-%m-%d %H:%M"}}</span>
+      </div>
+      <div class="comment__content">
+        {{ message }}
+      </div>
+    </div>
   </div>
-  <div class="comment-right">
-    <div class="comment__meta">
-      <span class="comment__author">{{ name }}</span>
-      <span class="comment__date">{{ date | date: "%Y-%m-%d %H:%M"}}</span>
-    </div>
-    <div class="comment__content">
-      {{ message | markdownify }}
-    </div>
-    <div class="comment__reply">
-      <a href="#" class="reply-btn" data-reply-to="{{ index }}">Reply</a>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  {% capture i %}{{ include.index }}{% endcapture %}
-  {% assign replies = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].parent == i' %}
-  {% for reply in replies %}
-    {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
-    {% assign parent      = reply[1].parent | to_integer %}
-    {% assign email       = reply[1].email %}
-    {% assign name        = reply[1].name %}
-    {% assign date        = reply[1].date %}
-    {% assign message     = reply[1].message %}
-    {% include comment.html index=index parent=parent email=email name=name date=date message=message %}
-  {% endfor %}
 </div>

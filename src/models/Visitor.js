@@ -1,11 +1,11 @@
 import Cookies from 'js-cookie'
+import md5 from 'blueimp-md5'
 
 export default class {
   constructor (name, email) {
     this.name = name
     this.email = email
     this.avatar = this.get_avatar()
-    console.log(this.avatar)
 
     this.EXPIRE_DAYS = 365
   }
@@ -28,7 +28,7 @@ export default class {
 
   get_avatar () {
     var src = "https://www.gravatar.com/avatar/"
-    src += this.email
+    src += md5(this.email)
     src += "?d=mm&s=54"
     return src;
   }
