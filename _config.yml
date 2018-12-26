@@ -9,7 +9,7 @@ email: zhangshiyu1992@hotmail.com
 author: Erl
 url: http://yexiqingxi.com
 github_username: erlzhang
-version: v3.3.20181207
+version: v3.3.20181226
 sass:
   sass_dir: _sass
 markdown: kramdown
@@ -37,7 +37,8 @@ exclude:
 
 comment:
   enabled: false
-  postUrl: "http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/comment_dev/comments"
+  #postUrl: "http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/comment_dev/comments"
+  postUrl: http://localhost:5200/callbacks/comment
 
 pagination:
   enabled: true
