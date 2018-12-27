@@ -36,9 +36,8 @@ exclude:
   - README.md
 
 comment:
-  enabled: false
-  #postUrl: "http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/comment_dev/comments"
-  postUrl: http://localhost:5200/callbacks/comment
+  enabled: true
+  postUrl: "http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/master/comments"
 
 pagination:
   enabled: true
