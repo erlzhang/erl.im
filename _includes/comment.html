@@ -1,4 +1,4 @@
-<div class="comment">
+<div class="comment" id="comment-{{index}}">
   <div class="comment-main clearfix">
     <div class="comment-left">
       <div class="comment__avatar"><img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=50"></div>
@@ -11,6 +11,20 @@
       <div class="comment__content">
         {{ message }}
       </div>
+       <div class="comment__reply">
+        <a href="#commentContainer" class="reply-btn" data-reply-to="{{ index }}">Reply</a>
+       </div>
     </div>
   </div>
+   {% capture i %}{{ include.index }}{% endcapture %}
+   {% assign replies = site.data.comments[page.ref] | sort | where_exp: 'comment', 'comment[1].parent == i' %}
+   {% for reply in replies %}
+     {% assign index   = forloop.index | prepend: '-' | prepend: include.index %}
+     {% assign parent  = reply[1].parent | to_integer %}
+     {% assign email   = reply[1].email %}
+     {% assign name    = reply[1].name %}
+     {% assign date    = reply[1].date %}
+     {% assign message = reply[1].message %}
+     {% include comment.html index=index parent=parent email=email name=name date=date message=message %}
+   {% endfor %}
 </div>

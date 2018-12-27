@@ -1,5 +1,5 @@
-.comment__form {
-  margin-top: 4rem;
+.comment-container {
+  padding: 3rem 0 1.5rem 0;
 }
 .comment-left {
   float: left;
@@ -58,12 +58,15 @@
   border-top: 1px solid var(--lighter);
   justify-content: flex-end;
 }
-.comment__error {
+.comment__hint {
   position: absolute;
   left: 1rem;
-  color: var(--red);
   bottom: 8px;
   font-size: 0.875rem;
+  color: var(--gray);
+}
+.comment__error {
+  color: var(--red);
 }
 
 .input-group {
@@ -110,6 +113,7 @@ textarea.form-control {
   height: 7em;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  resize: vertical;
 }
 .submit-btn {
   width: 120px;
@@ -133,8 +137,12 @@ textarea.form-control {
 }
 .comment {
   margin: 1rem 0;
-  padding: 1rem;
   border-radius: 0.35rem;
+  border-top: 1px dashed var(--lightest);
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  .comment {
+    margin-left: 2rem;
+  }
 }
 .comment_new {
   background-color: var(--lightest);
