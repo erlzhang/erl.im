@@ -2,7 +2,7 @@
   {% include new_comment.html %}
   <div class="comment__list" id="commentsList">
   {% if site.data.comments[page.ref] %}
-    {% assign comments = site.data.comments[page.ref] | sort | where_exp: 'comment', 'comment[1].parent == blank' %}
+    {% assign comments = site.data.comments[page.ref] | sort | where_exp: 'comment', 'comment[1].parent == ""' %}
     {% for comment in comments %}
       {% assign index   = forloop.index %}
       {% assign email   = comment[1].email %}

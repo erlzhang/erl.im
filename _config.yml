@@ -36,7 +36,7 @@ exclude:
   - README.md
 
 comment:
-  enabled: false
+  enabled: true
   postUrl: "http://yexiqingxi.com:8979/v2/entry/erlzhang/persephone/master/comments"
 
 pagination:
