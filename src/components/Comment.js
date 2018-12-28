@@ -130,8 +130,8 @@ export default class {
     let content = this.parseComment(comment) 
     let target
 
-    if ( this.replyTo ) {
-      target = document.getElementById("comment-" + this.replyTo)
+    if ( comment.parent ) {
+      target = document.getElementById("comment-" + comment.parent)
       target.append(content)
     } else {
       target = this.list
@@ -177,7 +177,6 @@ export default class {
     this.parentInput.value = ""
     this.hintContainer.innerText = ""
     this.clearError()
-    this.replyTo = null
   }
 
   disableBtn (isInSubmit=false) {
@@ -199,13 +198,11 @@ export default class {
     let author = authorEle.innerText
     this.hintContainer.innerText = "@" + author
     this.parentInput.value = index;
-    this.replyTo = index
     this.messageArea.focus()
   }
 
   cancleReply () {
     this.parentInput.value = ""
-    this.replyTo = nil
     this.hintContainer.innerText = ""
   }
 
