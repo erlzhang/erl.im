@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="{{ "/assets/css/tomorrow.css" | relative_url }}" />
 <script src="{{ "/assets/js/highlight.js" | relative_url }}"></script>
 {% endif %}
-{% if page.latex %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.css" integrity="sha384-JwmmMju6Z7M9jiY4RXeJLoNb3aown2QCC/cI7JPgmOLsn3n33pdwAj0Ml/CMMd1W" crossorigin="anonymous">
+{% if page.math%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 {% endif %}
 {% if page.mermaid %}
 <script src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js" defer></script>

@@ -5,7 +5,7 @@ date: 2018-11-17T03:27:18.320Z
 locale: en
 ref: learning_methods
 toc: true
-latex: true
+math: true
 excerpt: Studying is enjoyable for me, but studying for an examination is miserable especially when the contents learned are boring and meaningless.
 ---
 Studying is enjoyable for me, but studying for an examination is miserable especially when the contents learned are boring and meaningless.
@@ -32,7 +32,7 @@ The Motivation Curve means the relation between one's motivations and results. T
 
 The textbooks I used in preparing for examines provides only simple and general knowledge. They won't explain everything deeply. Fortunately, I had watched the  *9.00sc Introduction to Psychology* from MIT's open courseware, in which these contents are also included.
 
-A short-term memory contains 7 $\pm $ 2 chunks. There is even none explanation of what a chunk is in my textbook. But there is an examination in OCW 9.00sc. The professor showed some letters with no relations and let the students repeat them immediately after he hid them. The average count of letters the students could repeat exactly was seven. Some repeated more than this while some less.
+A short-term memory contains 7 $$\pm $$ 2 chunks. There is even none explanation of what a chunk is in my textbook. But there is an examination in OCW 9.00sc. The professor showed some letters with no relations and let the students repeat them immediately after he hid them. The average count of letters the students could repeat exactly was seven. Some repeated more than this while some less.
 
 We can change the short-term memories to long-term memories by **repeating**, the method we often used in junior high school. **Read repeatedly and then try to memorize it.** The critical period of memory is 24 years old. Unfortunately, I'm beyond that.
 
@@ -40,7 +40,7 @@ We can change the short-term memories to long-term memories by **repeating**, th
 
 These contents are often mentioned in all kinds of relative books. **The speed of forgetting is high in early time and get lower later gradually as the days after learning increased.**
 
-![The forgetting curve(/img/learning_2.jpg)
+![The forgetting curve](/img/learning_2.jpg)
 
 ### The Proactive and Retroactive Inhibition
 
