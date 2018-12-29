@@ -101,6 +101,7 @@
   font-size: 1rem;
   line-height: 1.5;
   background-color: transparent;
+  font-family: "OpenSans", "Microsoft YaHei", "微软雅黑", "宋体", STXihei, "华文细黑", Arial, Verdana, arial, serif;
   &:focus {
     outline: none;
   }
@@ -147,7 +148,7 @@ textarea.form-control {
   background-color: var(--lightest);
 }
 .comment__author {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 2.5rem;
   margin-right: 10px;
 }
@@ -162,6 +163,6 @@ textarea.form-control {
 }
 .comment__reply {
   float: right;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   border-bottom: 1px dashed var(--gray);
 }
