@@ -1,10 +1,9 @@
 ---
 layout: post
 title: JAMstack博客搭建
-name: blog made of jamstack
-date: 2018-11-04T05:23:03.340Z
-locale: zh
+date: 2018-11-04 15:23:03 +0800
 ref: jamstack
+locale: zh
 code: true
 toc: true
 keywords: JAMstack, Jekyll, Netlify CMS, 静态网页生成器, serverless, GitHub

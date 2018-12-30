@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 三次广州之行
-locale: zh
 ref: guangzhou
+locale: zh
 toc: true
 keywords: 旅行随笔, 广州, 黄埔古港, 沙面, 广州城中村
 description: 2016年到2018年，三次广州旅游的经历和感悟。

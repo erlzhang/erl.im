@@ -1,9 +1,9 @@
 ---
-title: 利用Scrapy + gitbook做kindle电子报推送
-date: 2018-08-25 00:00:00 Z
 layout: post
-locale: zh
+title: 利用Scrapy + gitbook做kindle电子报推送
+date: 2018-08-25 12:34:12 +0800
 ref: kindlepush
+locale: zh
 code: true
 mermaid: true
 toc: true

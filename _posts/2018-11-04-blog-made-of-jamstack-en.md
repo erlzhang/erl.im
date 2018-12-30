@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Blog Made of Jamstack
-date: 2018-11-04T05:23:03.340Z
-locale: en
+date: 2018-11-04 15:23:03 +0800
 ref: jamstack
+locale: en
 code: true
 toc: true
 ---

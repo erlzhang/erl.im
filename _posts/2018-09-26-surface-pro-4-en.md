@@ -2,8 +2,8 @@
 layout: post
 title: How to Program in Surface Pro 4?
 date: 2018-09-26 09:43:44 +0800
-locale: en
 ref: surfacepro4
+locale: en
 toc: true
 ---
 Everyone has its own criteria to choose a new computer, like the performance, the appearance, the portability or the compromise among those. It depends on how you use it.

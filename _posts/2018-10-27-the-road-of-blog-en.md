@@ -1,8 +1,9 @@
 ---
 layout: post
 title: The Road Of My Blog
-locale: en
+date: 2018-10-27 13:36:04 +0800
 ref: blog
+locale: en
 excerpt: I started to build a blog in 2012 when I was studying International Politics in college with my limited acknowledge in HTML and CSS. The programming languages I knew then including JSP, ASP, and PHP. And I thought that I would never learn PHP and JavaScript well.
 ---
 I started to build a blog in 2012 when I was studying International Politics in college with my limited acknowledge in HTML and CSS. The programming languages I knew then including JSP, ASP, and PHP. And I thought that I would never learn PHP and JavaScript well.

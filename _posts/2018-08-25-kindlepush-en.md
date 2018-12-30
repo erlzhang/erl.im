@@ -1,9 +1,9 @@
 ---
-title: Make Subscription to Daily News with Scrapy and Gitbook and Push it to Kindle
-date: 2018-08-25 00:00:00 Z
 layout: post
-locale: en
+title: Make Subscription to Daily News with Scrapy and Gitbook and Push it to Kindle
+date: 2018-08-25 12:34:12 +0800
 ref: kindlepush
+locale: en
 code: true
 mermaid: true
 toc: true

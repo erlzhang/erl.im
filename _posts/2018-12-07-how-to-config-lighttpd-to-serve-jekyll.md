@@ -2,9 +2,9 @@
 layout: post
 title:  基于Lighttpd的Jekyll博客配置及优化
 date: "2018-12-07 21:19:26 +0800"
-code: true
-locale: zh
 ref: lighttpd
+locale: zh
+code: true
 toc: true
 keywords: Jekyll, Lighttpd, Ubuntu, 博客优化
 description: 怎么使用Lighttpd配置Jekyll博客服务，并进行速度优化、seo优化。

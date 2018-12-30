@@ -1,16 +1,11 @@
 ---
 layout: post
 title: 张良：论“侠客”与“谋士”人设的兼容性
-name: zhangliang the warrior and the counsellor
+date: 2018-11-10 12:36:21 +0800
+ref: zhangliang
+locale: zh
 keywords: '张良, 谋圣, 博浪沙击秦, 史记'
 description: 张良，一个从侠士兼刺客成长为谋士，又进化为隐士的千古谋圣。
-date: 2018-11-10T02:36:21.095Z
-locale: zh
-ref: zhangliang
-toc: false
-code: false
-mermaid: false
-latex: false
 excerpt: 要说张良，肯定要从博浪沙刺杀秦始皇说起。这件事情想想就觉得有意思，不过史书的记载非常简略，很多细节只能脑补了。
 ---
 要说张良，肯定要从博浪沙刺杀秦始皇说起。这件事情想想就觉得有意思，不过史书的记载非常简略，很多细节只能脑补了。

@@ -1,12 +1,9 @@
 ---
 layout: post
 title: “叶夕青兮”是什么意思
-date: 2018-10-13T07:47:42.129Z
-locale: zh
+date: 2018-10-13 17:47:42 +0800
 ref: blueleaf
-code: false
-mermaid: false
-latex: false
+locale: zh
 keywords: 叶夕青兮, 独立博客, 写作, 文艺
 description: 我为什么要起“叶夕青兮”这样一个博客名及笔名。
 ---
