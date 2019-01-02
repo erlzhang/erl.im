@@ -20,7 +20,7 @@ export default class {
     Cookies.set('name', this.name, { expires: this.EXPIRE_DAYS })  
   }
 
-  set_email () {
+  set_email (email) {
     this.email = email
     this.avatar = this.get_avatar()
     Cookies.set('email', this.email, { expires: this.EXPIRE_DAYS })  
