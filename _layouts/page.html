@@ -4,18 +4,14 @@ layout: default
 
 {% include header.html %}
 
-<main class="post__wrapper">
-  <article class="post">
-    <header class="post__header">
-      <h1 class="post__title">{{ page.title | escape }}</h1>
-    </header>
-
-    <div class="post__content content">
-
-      {{ content }}
-
-    </div>
-
-  </article>
-
+<main class="archive">
+  <div class="archive__header">
+    <h1>
+      <a href="/">{{ site.title }}</a>
+    </h1>
+    {% include icons.html %}
+  </div>
+  <div class="archive__content">
+		{{ content }}
+  </div>
 </main>

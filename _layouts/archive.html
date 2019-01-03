@@ -1,28 +1,16 @@
 ---
-layout: default
+layout: page 
 ---
 
-{% include header.html %}
-
-<main class="archive">
-  <div class="archive__header">
-    <h1>
-      <a href="/">{{ site.title }}</a>
-    </h1>
-    {% include icons.html %}
-  </div>
-  <div class="archive__content">
-    <div class="archive__list">
-      <ul>
-      {% for book in site.archive %}
-        <li class="archive__item">
-          <a href="/{{ book.slug }}/" class="archive__link">
-            <span class="archive__time">{{ book.date }}</span>
-            <span class="archive__title">{{ book.title }}</span>
-          </a>
-        </li>
-      {% endfor %}
-      <ul>
-    </div>
-  </div>
-</main>
+<div class="archive__list">
+  <ul>
+  {% for book in site.archive %}
+    <li class="archive__item">
+      <a href="/{{ book.slug }}/" class="archive__link">
+        <span class="archive__time">{{ book.date }}</span>
+        <span class="archive__title">{{ book.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+  <ul>
+</div>
