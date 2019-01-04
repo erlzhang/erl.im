@@ -8,7 +8,7 @@ email: zhangshiyu1992@hotmail.com
 author: Erl
 url: http://yexiqingxi.com
 github_username: erlzhang
-version: v3.4.20190104
+version: v3.4.201901041
 sass:
   sass_dir: _sass
 markdown: kramdown
