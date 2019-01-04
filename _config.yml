@@ -1,6 +1,5 @@
 ---
 title: 叶夕青兮
-timezone: UTC
 newsletter: 生活就是一本书，一壶茶，一个阳光明媚的下午
 keywords: 叶夕青兮, 原创独立博客, Erl, Jekyll
 description: 叶夕青兮，目前还是程序员。这里是她的独立博客，分享编程、建站、生活感悟、读书随笔、原创小说等。
@@ -9,7 +8,7 @@ email: zhangshiyu1992@hotmail.com
 author: Erl
 url: http://yexiqingxi.com
 github_username: erlzhang
-version: v3.4.20190103
+version: v3.4.20190104
 sass:
   sass_dir: _sass
 markdown: kramdown
@@ -63,13 +62,3 @@ locales:
     langs:
       zh: "Chinese"
       en: "English"
-
-extlinks:
-  attributes: {rel: nofollow, target: _blank}
-
-defaults:
-  -
-    scope:
-      path: "admin/*"
-    values:
-      sitemap: false
