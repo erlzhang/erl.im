@@ -165,4 +165,7 @@ textarea.form-control {
   float: right;
   font-size: 0.8rem;
   border-bottom: 1px dashed var(--gray);
+  &:hover {
+    border-style: solid;
+  }
 }

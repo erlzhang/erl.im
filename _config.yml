@@ -18,8 +18,6 @@ timezone: Asia/Shanghai
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
-  - jekyll-toc
-  - jekyll-extlinks
   - jekyll-sitemap
 exclude:
   - Gemfile

@@ -69,15 +69,19 @@
   margin-bottom: 0.85em;
 }
 .content a {
-  color: var(--blue);
   text-decoration: none;
   background: transparent;
+  display: inline-block;
+  border-bottom: 1px dashed var(--gray);
+  margin: 0 0.25rem;
+  font-size: 0.95rem;
+  color: var(--grayer);
 }
 .content a:hover,
 .content a:focus,
 .content a:active {
   outline: 0;
-  text-decoration: underline;
+  border-style: solid;
 }
 .content img {
   border: 0;
@@ -166,7 +170,7 @@
   padding: 0.2em;
   margin: 0;
   font-size: 0.85em;
-  background-color: var(--lighter);
+  background-color: var(--lightest);
   border-radius: 3px;
 }
 .content code:before,

@@ -75,6 +75,7 @@
 }
 .post__langs {
   float: right;
+  line-height: 40px;
 }
 .post__header {
   margin-bottom: 1rem;
@@ -116,6 +117,9 @@
   a {
     display: inline-block;
     border-bottom: 1px dashed var(--gray);
+    &:hover {
+      border-style: solid;
+    }
   }
 }
 .section-nav {
