@@ -35,6 +35,7 @@ exclude:
   - package-lock.json
   - webpack.config.js
   - README.md
+  - staticman.yml
 
 comment:
   enabled: true

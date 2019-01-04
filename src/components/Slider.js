@@ -109,12 +109,12 @@ export default class Slider {
   }
 
   move (index) {
-    if( this.direction == true ) {
+    if( this.direction === true ) {
       this.current ++
       if( this.current > this.len - 1 ) {
         this.current = 0
       }
-    } else if ( this.direction == false ) {
+    } else if ( this.direction === false ) {
       this.current -- 
       if( this.current < 0 ) {
         this.current = this.len - 1
