@@ -37,9 +37,10 @@ layout: default
       {{ content }}
     </div>
   </article>
-  {% include contact.html %}
   {% if site.comment.enabled %}
   {% include comments.html %}
+  {% else %}
+  {% include contact.html %}
   {% endif %}
 </main>
 
