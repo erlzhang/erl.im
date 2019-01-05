@@ -5,7 +5,6 @@ date: "2018-12-07 21:19:26 +0800"
 ref: lighttpd
 locale: zh
 code: true
-toc: true
 keywords: Jekyll, Lighttpd, Ubuntu, 博客优化
 description: 怎么使用Lighttpd配置Jekyll博客服务，并进行速度优化、seo优化。
 excerpt: 某天脑子一热给自己搞了个VPS，单核，10G硬盘，512M内存。这个配置各种web应用基本都不要想了，但是用Jekyll搭建个静态博客还是绰绰有余的。

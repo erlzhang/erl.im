@@ -3,7 +3,6 @@ layout: post
 title: 呼伦贝尔
 ref: hulunbeier
 locale: zh
-toc: true
 keywords: 呼伦贝尔, 旅行随笔, 海拉尔, 莫日格勒河, 临江屯
 description: 呼伦贝尔七日游旅行随笔。
 ---

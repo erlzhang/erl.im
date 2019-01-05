@@ -4,7 +4,6 @@ title: 来自教育心理学的学习方法总结
 date: 2018-11-17 13:27:18 +0800
 ref: learning_methods
 locale: zh
-toc: true
 math: true
 keywords: '学习方法, 教育心理学, 教育资格证, 时间管理'
 description: 总结教育心理学里的学习方法，包含记忆策略，精细加工策略，组织策略，时间管理策略等。

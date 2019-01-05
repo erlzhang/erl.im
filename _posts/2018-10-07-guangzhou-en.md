@@ -3,7 +3,6 @@ layout: post
 title: I traveled to Guangzhou three times.
 ref: guangzhou
 locale: en
-toc: true
 ---
 It is in July of 2016 when I first travel to Guangzhou. How foolish that I went where in midsummer! I was in Shanghai at that time when I have two days of vocation. It is wasteful if I didn't travel to somewhere make use of the vocations. People who are rational may go north, nevertheless, I flew to the most southern city.
 

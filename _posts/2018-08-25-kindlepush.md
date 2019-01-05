@@ -6,7 +6,6 @@ ref: kindlepush
 locale: zh
 code: true
 mermaid: true
-toc: true
 keywords: kindle, Python, kindle推送, Scrapy, Gitbook
 description: 基于python、scrapy、gitbook制作新闻电子报并定时推送到kindle的过程方法分享。
 ---

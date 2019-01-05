@@ -5,7 +5,6 @@ date: "2018-12-07 21:19:26 +0800"
 ref: lighttpd
 locale: en
 code: true
-toc: true
 excerpt: I bought a VPS, with a single core, 10G memories of disk space, and 512M RAM,  in impulse one day. It is obvious that I can't serve any web APPs with that, but it is enough to serve a static blog.
 ---
 I bought a VPS, with a single core, 10G memories of disk space, and 512M RAM,  in impulse one day. It is obvious that I can't serve any web APPs with that, but it is enough to serve a static blog.

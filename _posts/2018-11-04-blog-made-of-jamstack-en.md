@@ -5,7 +5,6 @@ date: 2018-11-04 15:23:03 +0800
 ref: jamstack
 locale: en
 code: true
-toc: true
 ---
 What is JAMstack? J means JavaScript, A means API and M is Markup. Here is the official explanation:
 

@@ -4,7 +4,6 @@ title: The learning methods from educational psychology.
 date: 2018-11-17 13:27:18 +0800
 ref: learning_methods
 locale: en
-toc: true
 math: true
 excerpt: Studying is enjoyable for me, but studying for an examination is miserable especially when the contents learned are boring and meaningless.
 ---
