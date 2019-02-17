@@ -82,7 +82,7 @@ arktos:
 
 无需插件，即可使用mermaid。方法如下：
 
-<pre class="language-mermaid">
+<pre>
 ```mermaid
 graph TD;
   A-->B;
