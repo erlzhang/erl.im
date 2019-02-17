@@ -43,7 +43,7 @@ a:hover, a:visited, a:linked, a:active {
   height: 100vh;
   position: fixed;
   z-index: 15;
-  background-color: #fff;
+  background-color: var(--bg-color);
   align-items: center;
   justify-content: center;
 }

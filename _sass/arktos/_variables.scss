@@ -7,9 +7,9 @@
   --light: #dee2e6;
   --lighter: #e9ecef;
   --lightest: #faf9fa;
-  --bg-color: white;
   --white: #fff;
   --blue: #007bff;
   --red: #dc3545;
-  --content-width: 700px;
+  --bg-color: var(--lightest);
+  --content-width: 750px;
 }
