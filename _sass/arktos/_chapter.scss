@@ -64,8 +64,6 @@
   left: 0px;
   bottom: 0px;
   overflow-y: auto;
-  color: var(--dark);
-  background: white;
   @include transition(left 250ms ease);
 }
 .book__body .body__inner {

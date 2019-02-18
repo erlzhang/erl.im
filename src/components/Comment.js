@@ -22,6 +22,7 @@ export default class {
 
     this.nameInput = document.getElementsByName("fields[name]")[0]
     this.emailInput = document.getElementsByName("fields[email]")[0]
+    this.urlInput = document.getElementsByName("fields[url]")[0]
     this.parentInput = document.getElementsByName("fields[parent]")[0]
     this.messageArea = document.getElementsByName("fields[message]")[0]
 
@@ -71,7 +72,7 @@ export default class {
   }
 
   newVisitor () {
-    this.visitor = new Visitor(this.nameInput.value, this.emailInput.value)
+    this.visitor = new Visitor(this.nameInput.value, this.emailInput.value, this.urlInput.value)
     this.visitor.save()
   }
 

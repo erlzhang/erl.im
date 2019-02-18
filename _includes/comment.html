@@ -5,7 +5,11 @@
     </div>
     <div class="comment-right">
       <div class="comment__meta">
+        {% if url %}
+        <a class="comment__author" href="{{url}}" target="_blank" rel="nofollow">{{ name }}</a>
+        {% else %}
         <span class="comment__author">{{ name }}</span>
+        {% endif %}
         <span class="comment__date">{{ date | date: "%Y-%m-%d %H:%M"}}</span>
       </div>
       <div class="comment__content">
@@ -23,8 +27,9 @@
      {% assign parent  = reply[1].parent | to_integer %}
      {% assign email   = reply[1].email %}
      {% assign name    = reply[1].name %}
+     {% assign url     = reply[1].url %}
      {% assign date    = reply[1].date %}
      {% assign message = reply[1].message %}
-     {% include comment.html index=index parent=parent email=email name=name date=date message=message %}
+     {% include comment.html index=index parent=parent email=email name=name url=url date=date message=message %}
    {% endfor %}
 </div>

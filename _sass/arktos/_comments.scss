@@ -20,7 +20,7 @@
 }
 .comment__box {
   position: relative;
-  border: 1px solid var(--light);
+  border: 1px solid var(--lighter);
   @include flex;
   @include flex-column;
   border-radius: 0.35rem;
@@ -34,7 +34,7 @@
   }
   &:after {
     border-width: 8px;
-    border-color: transparent var(--light) transparent transparent;
+    border-color: transparent var(--lighter) transparent transparent;
     left: -16px;
     top: 11px;
     z-index: 4;
@@ -52,10 +52,15 @@
   @include flex;
 }
 .comment__box_top {
-  border-bottom: 1px solid var(--light);
+  border-bottom: 1px solid var(--lighter);
+}
+@media screen and (max-width: 500px) {
+  .comment__box_top {
+    @include flex-column;
+  }
 }
 .comment__box_bottom {
-  border-top: 1px solid var(--light);
+  border-top: 1px solid var(--lighter);
   justify-content: flex-end;
 }
 .comment__hint {
@@ -110,6 +115,9 @@
     color: var(--gray-light);
   }
 }
+.form-control-name {
+  max-width: 100px;
+}
 textarea.form-control {
   height: 7em;
   padding-top: 0.5rem;
@@ -121,7 +129,7 @@ textarea.form-control {
   display: inline-block;
   background: none;
   color: var(--gray);
-  border-left: 1px solid var(--light);
+  border-left: 1px solid var(--lighter);
   cursor: pointer;
   position: relative;
   height: 40px;

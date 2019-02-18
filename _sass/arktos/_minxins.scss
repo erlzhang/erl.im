@@ -23,6 +23,13 @@
   -webkit-box-orient: horizontal;
 }
 
+@mixin flex-row() {
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 @mixin flex-column() {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

@@ -10,15 +10,21 @@
      <div class="comment__box">
        <div class="comment__box_top hide" id="visitorInfo">
          <div class="input-group">
-            <input type="text" name="fields[name]" placeholder="昵称" class="form-control" type="email" required autocomplete="true">
+            <input type="text" name="fields[name]" placeholder="*昵称" class="form-control form-control-name" type="email" required autocomplete="true">
             <label class="input-label">
             {% include icons/user.html %}
             </label>
           </div>
           <div class="input-group">
-            <input type="text" placeholder="邮箱" class="form-control" type="email" required name="fields[email]" autocomplete="true">
+            <input type="text" placeholder="*邮箱" class="form-control" type="email" required name="fields[email]" autocomplete="true">
             <label class="input-label">
             {% include icons/mail.html %}
+            </label>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="链接" class="form-control" type="email" name="fields[url]" autocomplete="true">
+            <label class="input-label">
+            {% include icons/link.html %}
             </label>
           </div>
         </div>
