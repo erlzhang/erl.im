@@ -8,7 +8,7 @@ email: zhangshiyu1992@hotmail.com
 author: Erl
 url: http://yexiqingxi.com
 github_username: erlzhang
-version: v3.4.201901041
+version: v3.4.20190218
 sass:
   sass_dir: _sass
 markdown: kramdown
@@ -49,16 +49,3 @@ pagination:
     before: 2
     after: 2
 
-locales:
-  zh:
-    index: "/blog"
-    blog_title: "博客"
-    langs:
-      zh: "中文"
-      en: "英文"
-  en:
-    index: "/blog/en"
-    blog_title: "Blog"
-    langs:
-      zh: "Chinese"
-      en: "English"

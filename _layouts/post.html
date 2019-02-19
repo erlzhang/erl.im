@@ -7,23 +7,17 @@ layout: default
 <main class="post__wrapper">
   <div class="post__top_navs clearfix">
     <nav class="post__archive_path">
-      <a href="{{ site.locales[page.locale].index }}" id="archiveBtn">
+      <a href="/blog/" id="archiveBtn">
         <div class="post__archive_icon">
           <svg width="40" height="40">
             <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" />
           </svg>
           <span class="post__archive_icon"></span>
         </div>
-        {{ site.locales[page.locale].blog_title }}
+        博客
       </a>
     </nav>
     <nav class="post__langs">
-    {% assign posts=site.posts | where:"ref", page.ref | sort: 'locale' %}
-    {% for post in posts %}
-      {% if post.locale != page.locale %}
-      <a href="{{ post.url }}" class="{{ post.locale}}"> {{ post.locale }}</a>
-      {% endif %}
-    {% endfor %}
     </nav>
   </div>
   <article class="post">

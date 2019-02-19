@@ -7,11 +7,6 @@ layout: default
 <main class="post__archive">
   <div class="post__top_navs clearfix">
     <nav class="post__langs">
-      {% if page.locale == 'zh' %}
-      <a href="/blog/en/">English</a>
-      {% else %}
-      <a href="/blog/">中文</a>
-      {% endif %}
     </nav>
   </div>
   {% assign posts=paginator.posts %}
