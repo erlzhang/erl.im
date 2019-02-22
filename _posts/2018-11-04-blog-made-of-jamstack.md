@@ -20,9 +20,9 @@ description: 基于JAMstack搭建serverless静态博客理念及方法分享。
 
 ## SSG
 
-在放弃了Wordpress之后，我首先转向了[Jekyll](https://jekyllrb.com/)。Jekyll是最流行的SSG，它的流行与GitPage密不可分。不论是Jekyll、Hexo或是Huge，它们都代表了JAM中的M，即Markup。
+在放弃了Wordpress之后，我首先转向了[Jekyll](https://jekyllrb.com/)。Jekyll是最流行的SSG，它的流行与Github Pages密不可分。不论是Jekyll、Hexo或是Huge，它们都代表了JAM中的M，即Markup。
 
-SSG就是通过一些约定俗成的标记和转换规则构建静态网页，耗费资源少，访问速度快，再加上GitPage等平台的兴起使得网站可以做到serverless，引得大批程序员的青睐。
+SSG就是通过一些约定俗成的标记和转换规则构建静态网页，耗费资源少，访问速度快，再加上Github Pages等平台的兴起使得网站可以做到serverless，引得大批程序员的青睐。
 
 但SSG终究代替不了cms，因为不是每个人都是程序员。即便是我也有cms的需求。我可能随时都有灵感产生，都想写文章，或是临时发现某个错别字需要做改动，但我不会随身携带着git环境。
 
@@ -36,9 +36,9 @@ SSG就是通过一些约定俗成的标记和转换规则构建静态网页，�
 
 最后我发现了一个不算完美但非常好用的东西：[Netlifycms](https://www.netlifycms.org/)。
 
-[Netlify](https://www.netlify.com/)也是个好东西。GitPage本身有局限性，不能运行第三方插件，Netlify却可以，可以自动同步GitHub上的内容，内容有变动的时候自动 `build`，支持自定义域名，支持https。GitPage能做到的，它都做到了；GitPage做不到的，也都做不到了，加上Netlifycms的无缝衔接，堪称完美。
+[Netlify](https://www.netlify.com/)也是个好东西。GitPage本身有局限性，不能运行第三方插件，Netlify却可以，可以自动同步GitHub上的内容，内容有变动的时候自动 `build`，支持自定义域名，支持https。Github Pages能做到的，它都做到了；Github Pages做不到的，也都做不到了，加上Netlifycms的无缝衔接，堪称完美。
 
-要说缺点只有一个：国内访问速度不稳。其实也不算很慢，比GitPage快一些。
+要说缺点只有一个：国内访问速度不稳。其实也不算很慢，比Github Pages快一些。
 
 要不是我在发现它之前已经搞了个服务器，我就选定它了，也免了很多折腾（也可能因为我天生就喜欢折腾）。
 
