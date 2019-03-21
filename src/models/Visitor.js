@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 import md5 from 'blueimp-md5'
 
 export default class {
-  constructor (name, email, url) {
+  constructor (name, email, url="") {
     this.name = name
     this.email = email
     this.url = url

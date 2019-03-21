@@ -78,10 +78,11 @@ export default class {
 
   getVisitor () {
     let name = Cookies.get("name"),
-        email = Cookies.get("email")
+        email = Cookies.get("email"),
+        url = Cookies.get("url")
 
     if ( name ) {
-      return new Visitor(name, email)
+      return new Visitor(name, email, url)
     }
   }
 
@@ -92,11 +93,15 @@ export default class {
     if ( this.visitor.email != this.emailInput.value ) {
       this.visitor.set_email(this.emailInput.value)
     }
+    if ( this.visitor.url!= this.urlInput.value ) {
+      this.visitor.set_url(this.urlInput.value)
+    }
   }
 
   initVisitorInfo () {
     this.nameInput.value = this.visitor.name
     this.emailInput.value = this.visitor.email || ""
+    this.urlInput.value = this.visitor.url || ""
     this.avatarImg.src = this.visitor.avatar
   }
 
