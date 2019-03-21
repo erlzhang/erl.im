@@ -5,9 +5,8 @@
   //outline: none;
 	box-sizing: border-box;
 }
-@font-face{font-family:'OpenSans';src:url('fonts/OpenSans-Regular.ttf') format('truetype');font-weight:normal;font-style:normal}
 body, html {
-  font-family: "OpenSans", "Microsoft YaHei", "微软雅黑", "宋体", STXihei, "华文细黑", Arial, Verdana, arial, serif;
+  font-family: "Microsoft YaHei", "微软雅黑", "宋体", STXihei, "华文细黑", Arial, Verdana, arial, serif;
 	width: 100%;
 	height: 100%;
 	background-color: var(--bg-color);
