@@ -82,6 +82,9 @@
   .post__title {
     margin: 3rem 0 1.3rem 0;
   }
+  .page__title {
+    margin-top: 1rem;
+  }
   .post__meta {
     color: var(--gray);
     font-size: 0.935rem;
@@ -98,29 +101,26 @@
   position: relative;
   color: var(--gray);
   width: 100%;
-  text-align: right;
+  text-align: left;
   &:before {
     @include pseudo();
-    right: 0;
+    left: 0;
     background-color: var(--light);
-    width: 150px;
+    width: 30%;
     height: 1px;
     top: 0;
   }
   h4 {
-    font-weight: normal;
-    font-size: 1.15rem;
+    color: var(--grayer);
+    font-size: 1.25rem;
+    font-weight: 400;
   }
   p {
     font-size: 0.875rem;
     margin: 3px 0 0.875rem 0;
   }
-  a {
-    display: inline-block;
-    border-bottom: 1px dashed var(--gray);
-    &:hover {
-      border-style: solid;
-    }
+  .icon__list {
+    text-align: left;
   }
 }
 .section-nav {

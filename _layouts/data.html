@@ -1,0 +1,79 @@
+---
+layout: page
+---
+<h2>概览</h2>
+<table>
+  <tr>
+    <td>文章数</td>
+    <td>{{ site.posts.size }}</td>
+  </tr>
+  <tr>
+    <td>文章字数统计</td>
+    {% assign count = 0 %}
+    {% for post in site.posts %}
+        {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
+        {% assign count = count | plus: single_count %}
+    {% endfor %}
+    <td>{{ count }}</td>
+  </tr>
+  <tr>
+    <td>总评论数</td>
+    {% assign comment_count = 0 %}
+    {% for post in site.posts %}
+      {% assign sc = site.data.comments[post.ref].size | default: 0 %}
+      {% assign comment_count = comment_count | plus: sc %}
+    {% endfor %}
+    <td>{{ comment_count }}</td>
+  </tr>
+</table> 
+<h2>文章</h2>
+<table>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>发布时间</th>
+      <th>字数</th>
+      <th>评论数</th>
+    </tr>
+  </thead>
+  </tbody>
+    {% for post in site.posts %}
+    <tr>
+      <td>{{ post.title  }}</td>
+      <td>{{ post.date | date: "%Y-%m-%d %H:%M"}}</td>
+      <td>{{ post.content | strip_html | strip_newlines | remove: " " | size }}</td>
+      <td>{{ site.data.comments[post.ref].size | default: 0 }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<h2>书籍</h2>
+<table>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>写作时间</th>
+      <th>字数</th>
+    </tr>
+  </thead>
+  </tbody>
+    {% for book in site.archive %}
+    {% if book.slug != "blog" %}
+    <tr>
+      <td>{{ book.title  }}</td>
+      <td>{{ book.date }}</td>
+      {% assign count = 0 %}
+      {% for part in book.parts %}
+          {% assign single_count = part.content | strip_html | strip_newlines | remove: " " | size %}
+          {% for sub_part in part.parts %}
+            {% assign sub_count = sub_part.content | strip_html | strip_newlines | remove: " " | size %}
+            {% assign count = count | plus: sub_count %}
+          {% endfor %}
+          {% assign count = count | plus: single_count %}
+      {% endfor %}
+      <td>{{ count }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </tbody>
+</table>

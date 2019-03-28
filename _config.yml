@@ -2,13 +2,14 @@
 title: 叶夕青兮
 keywords: 叶夕青兮, 原创独立博客, Erl, Jekyll
 description: 叶夕青兮，目前还是程序员。这里是她的独立博客，分享编程、建站、生活感悟、读书随笔、原创小说等。
+intro: 生活就是一本书，一壶茶，一个阳光明媚的下午！
 production: true
 email: zhangshiyu1992@hotmail.com
 author: Erl
 url: http://yexiqingxi.com
 img_prefix: http://persephone.oss-cn-beijing.aliyuncs.com
 github_username: erlzhang
-version: v3.4.20190327
+version: v3.4.20190328
 sass:
   sass_dir: _sass
 markdown: kramdown
