@@ -249,3 +249,29 @@
 .content .mermaid {
   margin-bottom: 0.85rem;
 }
+.content sup {
+  .footnote {
+    font-size: 0.75rem;
+  }
+}
+.content .footnotes {
+  margin: 2rem 0 0 0;
+  padding: 1rem 0;
+  position: relative;
+  color: var(--gray);
+  width: 100%;
+  text-align: left;
+  &:before {
+    @include pseudo();
+    left: 0;
+    background-color: var(--light);
+    width: 30%;
+    height: 1px;
+    top: 0;
+  }
+  ol {
+    li {
+      font-size: 0.875rem;
+    }
+  } 
+}

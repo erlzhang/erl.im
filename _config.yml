@@ -9,7 +9,7 @@ author: Erl
 url: http://yexiqingxi.com
 img_prefix: http://persephone.oss-cn-beijing.aliyuncs.com
 github_username: erlzhang
-version: v3.4.20190328
+version: v3.5.20190329
 sass:
   sass_dir: _sass
 markdown: kramdown

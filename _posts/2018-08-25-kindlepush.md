@@ -91,7 +91,7 @@ def parse_article(self, response):
 ```
 ### 管道处理
 
-Scrapy抓取到的内容都扔进管道，在`pipeline`中处理。通常抓取都是用数据库存储，这里为了配合后面制作电子书，按gitbook规定的格式，创建md文件即可 *（md文件里带有html标签，markdown是可以正常解析的）*。
+Scrapy抓取到的内容都扔进管道，在`pipeline`中处理。通常抓取都是用数据库存储，这里为了配合后面制作电子书，按gitbook规定的格式，创建md文件即可[^1]。
 
 ```python
 class KindlePipeline(object):
@@ -162,3 +162,5 @@ echo "kindle推送-${ls_date}" | mutt -s "kindle推送-${ls_date}" icily0719@kin
 没有异常处理机制——懒得做！
 
 **完整代码：** [kindlepush](https://github.com/erlzhang/kindlepush)
+
+[^1]: md文件里带有html标签，markdown是可以正常解析的。
