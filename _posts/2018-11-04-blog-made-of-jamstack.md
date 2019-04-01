@@ -1,14 +1,14 @@
 ---
-layout: post
 title: JAMstack博客搭建
 date: 2018-11-04 15:23:03 +0800
-ref: jamstack
-locale: zh
 code: true
+category: 编程
 keywords: JAMstack, Jekyll, Netlify CMS, 静态网页生成器, serverless, GitHub
 description: 基于JAMstack搭建serverless静态博客理念及方法分享。
 ---
 何谓JAMstack？J即JavaScript，A即APIs，M即Markup，官方解释如下：
+
+<!--more-->
 
 > Modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.
 

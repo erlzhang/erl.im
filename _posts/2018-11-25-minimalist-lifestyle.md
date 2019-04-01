@@ -1,13 +1,12 @@
 ---
-layout: post
 title: 极简主义生活方式
 date: "2018-11-25 11:42:10 +0800"
-ref: milimalism
-locale: zh
+category: 生活
 keywords: 极简主义, 极简主义生活方式
-excerpt: 说极简主义这四个字彻底改变了我的生活，也并不为过。
 ---
 说极简主义这四个字彻底改变了我的生活，也并不为过。
+
+<!--more-->
 
 提到极简主义你会想到什么？
 

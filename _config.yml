@@ -15,6 +15,15 @@ sass:
 markdown: kramdown
 permalink: /blog/:title:output_ext
 timezone: Asia/Shanghai
+excerpt_separator: <!--more-->
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2

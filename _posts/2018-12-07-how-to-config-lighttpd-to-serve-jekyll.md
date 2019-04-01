@@ -1,15 +1,14 @@
 ---
-layout: post
 title:  基于Lighttpd的Jekyll博客配置及优化
 date: "2018-12-07 21:19:26 +0800"
-ref: lighttpd
-locale: zh
 code: true
+category: 编程
 keywords: Jekyll, Lighttpd, Ubuntu, 博客优化
 description: 怎么使用Lighttpd配置Jekyll博客服务，并进行速度优化、seo优化。
-excerpt: 某天脑子一热给自己搞了个VPS，单核，10G硬盘，512M内存。这个配置各种web应用基本都不要想了，但是用Jekyll搭建个静态博客还是绰绰有余的。
 ---
 某天脑子一热给自己搞了个VPS，单核，10G硬盘，512M内存。这个配置各种web应用基本都不要想了，但是用Jekyll搭建个静态博客还是绰绰有余的。
+
+<!--more-->
 
 从Wordpress转向Jekyll之后，我的博客最早也是托管在Github Page上的。但是Github Page自制插件全部用不了，满足不了需求，只能在本地 `build` 之后再 `push` 到Github Page，很麻烦。最后还是选择部署在服务器上， Github仓库里设一个`callback`，每次 `push` 的操作，服务器都会同步拉取仓库并执行`build`。
 

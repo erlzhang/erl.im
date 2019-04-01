@@ -1,13 +1,13 @@
 ---
-layout: post
 title: 如何让SurfacePro4满足日常编程需求
 date: '2018-09-26 09:43:44 +0800'
-ref: surfacepro4
-locale: zh
+category: 编程
 keywords: Surface Pro 4, windows编程工具, Linux子系统, Ubuntu in windows10, Termius
 description: 分享使用Surface Pro 4基于Windows10的Linux子系统编程的体验与常用工具。
 ---
 电脑的选购理由有很多，有人追求性能，有人追求外观，有人追求便携性，也有人追求折衷。合理的电脑选购应当依据目标使用场景而定。
+
+<!--more-->
 
 在我的宏碁最终退役之前，我大概花了近两年的时间来选购新机——听起来有些夸张。主要是资金的局限，让我一直下定不了决心。
 

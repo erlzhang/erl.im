@@ -1,13 +1,12 @@
 ---
-layout: post
 title: 落网祭
 date: "2018-12-15 16:28:26 +0800"
-ref: luoo
-locale: zh
+category: 生活
 keywords: 落网, 季风书园
-excerpt: 2018年12月8日，我洗完澡，房间收拾妥当，在深蓝色的高脚杯里倒了半杯红酒，走回房间。打开电脑，点开 Microsoft Office Word，敲了两行字。
 ---
 2018年12月8日，我洗完澡，房间收拾妥当，在深蓝色的高脚杯里倒了半杯红酒，走回房间。打开电脑，点开 Microsoft Office Word，敲了两行字。
+
+<!--more-->
 
 是不是缺了点什么？
 

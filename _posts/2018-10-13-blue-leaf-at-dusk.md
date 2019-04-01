@@ -1,13 +1,11 @@
 ---
-layout: post
 title: “叶夕青兮”是什么意思
 date: 2018-10-13 17:47:42 +0800
-ref: blueleaf
-locale: zh
-keywords: 叶夕青兮, 独立博客, 写作, 文艺
-description: 我为什么要起“叶夕青兮”这样一个博客名及笔名。
+category: 生活
 ---
 叶夕青兮这四个字，源于13年某日，读楚辞有感。
+
+<!--more-->
 
 > 秋兰兮麋芜，罗生兮堂下；
 >

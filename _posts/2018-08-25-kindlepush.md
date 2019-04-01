@@ -1,15 +1,15 @@
 ---
-layout: post
 title: 利用Scrapy + gitbook做kindle电子报推送
 date: 2018-08-25 12:34:12 +0800
-ref: kindlepush
-locale: zh
 code: true
 mermaid: true
+category: 编程
 keywords: kindle, Python, kindle推送, Scrapy, Gitbook
 description: 基于python、scrapy、gitbook制作新闻电子报并定时推送到kindle的过程方法分享。
 ---
 kindle刚买来没多久的时候，用过狗耳朵日报做每日电子报推送。后来觉得没什么用途，便弃之不用了。前一阵子忽然觉得我的生活过于与世隔绝了，于是便想再启用kindle的电子报推送功能。对比了一下决定用kindle4rss，买了一年的付费版。
+
+<!--more-->
 
 也是我自己的粗心大意，将近一个月我才发现，订阅的参考消息很多内容不全。对比一下网页版的，只有第一页的内容，而且文章里没有任何提示。导致我一度以为参考消息质量验证严重下降，文不对题。与客服交涉无果之后，我决定，作为一个有手有脚的程序员，还是自己动手吧！
 

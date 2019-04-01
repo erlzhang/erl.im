@@ -1,13 +1,13 @@
 ---
-layout: post
 title: 博客之路
+category: 生活
 date: 2018-10-27 13:36:04 +0800
-ref: blog
-locale: zh
 keywords: 'emlog, Jekyll, 独立博客, wordpress, wordpress主题'
 description: 从Emlog到WordPress再到Jekyll，回顾六年博客搭建及写作生涯。
 ---
 2012年，我还在大学读国际政治学，凭着在大学网页设计与制作课上学到的一点零星的html和css知识，开始搭建博客。那时所知道的web编程语言还是JSP、ASP和PHP，PHP和JavaScript是注定学不懂的东西。
+
+<!--more-->
 
 最早尝试的是emlog，在还不属于阿里云的万网注册个如今已被废弃的erlmy.com域名，租了一年的300M虚拟主机。
 

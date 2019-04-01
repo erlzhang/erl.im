@@ -1,14 +1,13 @@
 ---
-layout: post
 title: Jekyll 主题 Arktos
 date: 2019-01-11 21:46 +0800
-ref: arktos
-locale: zh
+category: 编程
 keywords: Jekyll, Jekyll theme, Jekyll主题, jekyll-theme-arktos
-excerpt: 去年8月开始，我彻底从Wordpress毕业，转向了Jekyll。这一折腾又是大半年，如今折腾累了，差不多也该安定一下了。毕竟，时间和精力都是有限的，排着队要做的事情却有很多。
 ---
 
 去年8月开始，我彻底从Wordpress毕业，转向了Jekyll。这一折腾又是大半年，如今折腾累了，差不多也该安定一下了。毕竟，时间和精力都是有限的，排着队要做的事情却有很多。
+
+<!--more-->
 
 这一版博客的主题我是本着超极简风格的目标做的，其极简程度远甚于之前做的两款Wordpress主题。为什么总是倾向于极简风格呢？原因很简单，因为我不是专业设计师，我只是一个程序员。
 
