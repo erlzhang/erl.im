@@ -46,7 +46,7 @@ exclude:
 
 comment:
   enabled: true
-  postUrl: "http://comment.yexiqingxi.com/v2/entry/erlzhang/persephone/master/comments"
+  postUrl: "https://dev.staticman.net/v3/entry/github/erlzhang/persephone/staticman_app_dev/comments"
 
 pagination:
   enabled: true
