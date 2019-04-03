@@ -9,7 +9,7 @@ comments:
   # not here is part of the request, an error will be thrown.
   allowedFields: ["name", "email", "url", "message", "parent"]
 
-  allowedOrigins: ["yexiqingxi.com"]
+  allowedOrigins: ["yexiqingxi.com", "erl.im"]
 
   # (*) REQUIRED
   #
