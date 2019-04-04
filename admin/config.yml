@@ -1,6 +1,5 @@
 backend:
-  name: github
-  branch: master    # Branch to update
+  name: git-gateway
 media_folder: "img"
 collections:
   - name: "post" # Used in routes, e.g., /admin/collections/blog
