@@ -7,15 +7,13 @@ slug:
 collections:
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "文章" # Used in the UI
-    identifier_field: "name"
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    preview_path: "blog/{{slug}}"
-    summary: "{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "blog/{{name}}"
     fields: # The fields for each document, usually in front matter
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "英文标题", name: "name", widget: "string", required: false}
+      - {label: "Slug", name: "name", widget: "string", required: false}
       - {label: "发布日期", name: "date", widget: "datetime", required: false}
       - {label: "代码高亮", name: "code", widget: "boolean", default: false, required: false}
       - {label: "流程图", name: "mermaid", widget: "boolean", default: false, required: false}
