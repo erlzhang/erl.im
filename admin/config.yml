@@ -1,18 +1,23 @@
 backend:
   name: git-gateway
 media_folder: "img"
+site_url: "https://erl.im"
+slug:
+  sanitize_replacement: "-"
 collections:
   - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
+    label: "文章" # Used in the UI
+    identifier_field: "name"
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "blog/{{slug}}"
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Name", name: "name", widget: "string", required: false}
-      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
-      - {label: "Code", name: "code", widget: "boolean", default: false, required: false}
-      - {label: "mermaid", name: "mermaid", widget: "boolean", default: false, required: false}
-      - {label: "math", name: "math", widget: "boolean", default: false, required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "链接名", name: "name", widget: "string", required: false}
+      - {label: "发布日期", name: "date", widget: "datetime", required: false}
+      - {label: "代码高亮", name: "code", widget: "boolean", default: false, required: false}
+      - {label: "流程图", name: "mermaid", widget: "boolean", default: false, required: false}
+      - {label: "公式", name: "math", widget: "boolean", default: false, required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
 
