@@ -12,9 +12,10 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     preview_path: "blog/{{slug}}"
+    summary: "{{title}}"
     fields: # The fields for each document, usually in front matter
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "链接名", name: "name", widget: "string", required: false}
+      - {label: "英文标题", name: "name", widget: "string", required: false}
       - {label: "发布日期", name: "date", widget: "datetime", required: false}
       - {label: "代码高亮", name: "code", widget: "boolean", default: false, required: false}
       - {label: "流程图", name: "mermaid", widget: "boolean", default: false, required: false}
