@@ -3,6 +3,7 @@ backend:
   repo: erlzhang/persephone # Path to your Github/Gitlab repository
   branch: master    # Branch to update
   base_url: https://erl.im/ # Path to ext auth providera
+media_folder: "img"
 collections:
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
