@@ -6,7 +6,7 @@
     <div class="comment-right">
       <div class="comment__meta">
         {% if url and url != "" %}
-        <a class="comment__author" href="{{url}}" target="_blank" rel="nofollow">{{ name }}</a>
+        <a class="comment__author" href="{{ url | absolute_url }}" target="_blank" rel="nofollow">{{ name }}</a>
         {% else %}
         <span class="comment__author">{{ name }}</span>
         {% endif %}
