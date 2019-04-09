@@ -45,6 +45,7 @@ exclude:
   - staticman.yml
 include:
   - _redirects
+  - _headers
 
 comment:
   enabled: true
