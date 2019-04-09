@@ -43,6 +43,8 @@ exclude:
   - webpack.config.js
   - README.md
   - staticman.yml
+include:
+  - _redirects
 
 comment:
   enabled: true
