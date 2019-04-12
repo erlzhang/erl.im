@@ -1,14 +1,15 @@
 <main class="slide" id="sectionContainer">
-  {% for book in page.books %}
+  {% for book in site.books limit:4 %}
+    {% assign is_odd = forloop.index | modulo: 2 %}
     <div class="slide__section">
-      {% if book.odd %}
+      {% if is_odd == 1 %}
         <div class="slide__img">
           <a href="/{{ book.slug }}/" class="slide__link"></a>
           <div class="slide__img_placehold"></div>
           <img src="{{ site.img_prefix }}/img/home/{{ book.slug }}.jpg" class="slide__img_entity" alt="{{ book.title }}">
         </div>
       {% endif %}
-      {% if book.odd %}
+      {% if is_odd == 1 %}
         <div class="slide__text slide__text_right">
       {% else %}
         <div class="slide__text slide__text_left">
@@ -25,13 +26,13 @@
           </div>
         </div>
       </div>
-      {% unless book.odd %}
+      {% if is_odd == 0 %}
         <div class="slide__img">
           <a href="/{{ book.slug }}/" class="slide__link"></a>
           <div class="slide__img_placehold"></div>
           <img src="{{ site.img_prefix }}/img/home/{{ book.slug }}.jpg" alt="{{ book.title }}">
         </div>
-      {% endunless %}
+      {% endif %}
     </div>
   {% endfor %}
 </main>
@@ -43,12 +44,9 @@
     </svg>
     <span class="slide__control_arrow slide__control_up"></span>
   </div>
-  {% for book in page.books %}
-    {% if book.current %}
-	    <li class="slide__control current"></li>
-    {% else %}
-	    <li class="slide__control"></li>
-    {% endif %}
+	<li class="slide__control current"></li>
+  {% for i in (1..3) %}
+	<li class="slide__control"></li>
   {% endfor %}
   <div class="slide__control__icon slide__control_bottom" id="nextBtn">
     <svg width="40" height="40">

@@ -7,14 +7,14 @@ layout: default
 <main class="archive">
   <div class="archive__header">
     <h1>
-      <a href="/about.html">{{ site.title }}</a>
+      <a href="{% link about.md %}">{{ site.title }}</a>
     </h1>
     {% include icons.html %}
   </div>
   <div class="archive__content">
 		<div class="archive__list">
 			<ul>
-			{% for book in site.archive %}
+			{% for book in site.books %}
 				<li class="archive__item">
 					<a href="/{{ book.slug }}/" class="archive__link">
 						<span class="archive__time">{{ book.date }}</span>
@@ -22,7 +22,7 @@ layout: default
 					</a>
 				</li>
 			{% endfor %}
-			<ul>
+			</ul>
 		</div>
   </div>
 </main>

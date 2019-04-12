@@ -1,23 +1,4 @@
 module Jekyll
-
-  class IndexPage < Page
-    def initialize(site, base, dir, books)
-      @site = site
-      @base = base
-      @dir = dir.gsub(/^_/, "").downcase
-      @name = "index.html"
-
-      self.process(@name)
-
-      book_index = File.join(base, "_layouts", "home.html")
-      read_yaml(File.dirname(book_index), File.basename(book_index))
-
-      self.data["layout"] = "home"
-      self.data["title"] = "首页"
-      self.data["books"] = books
-    end
-  end
-
   class BookPage < Page
     def initialize(site, base, dir)
       @site = site
@@ -81,7 +62,7 @@ module Jekyll
 
       dir = "_books"
 
-      archive = []
+      books = []
 
       begin
         Dir.foreach(dir) do |book_dir|
@@ -102,24 +83,18 @@ module Jekyll
 
             add_next_to_book_and_prev_to_chapter(book, chapters.first)
 
-            archive << book
+            books << book
             site.pages << book
           end
         end
 
         blog = init_blog_page_data
 
-        sort_archive_by_date(archive)
+        sort_books_by_date(books)
 
-        add_is_odd_to_every_book(archive)
+        unshift_blog_page_to_books(books, blog)
 
-        unshift_blog_page_to_archive(archive, blog)
-
-        site.config["archive"] = archive
-
-        book_index = create_index_page(site, archive)
-
-        site.pages << book_index
+        site.config["books"] = books
       rescue Exception => e
         puts e
       end
@@ -180,15 +155,8 @@ module Jekyll
         blog["date"] = "2018至今"
         blog["slug"] = "blog"
         blog["title"] = "博客"
-        blog["odd"] = true
-        blog["current"] = true
+        blog["url"] = "/blog/"
         return blog
-      end
-
-      def add_is_odd_to_every_book(books)
-        books.each_with_index do |book, index|
-          book.data["odd"] = ( index % 2 > 0 )
-        end
       end
 
       def create_index_page(site, books)
@@ -220,14 +188,14 @@ module Jekyll
         return chapters
       end
 
-      def sort_archive_by_date(archive)
-        archive.sort! { |x, y|
+      def sort_books_by_date(books)
+        books.sort! { |x, y|
           y.data["end"].to_i <=> x.data["end"].to_i
         }
       end
 
-      def unshift_blog_page_to_archive(archive, blog)
-        archive.unshift(blog)
+      def unshift_blog_page_to_books(books, blog)
+        books.unshift(blog)
       end
   end
 end
