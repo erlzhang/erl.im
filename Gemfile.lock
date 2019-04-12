@@ -69,7 +69,7 @@ PLATFORMS
 
 DEPENDENCIES
   exifr
-  jekyll (>= 3.7.4)
+  jekyll (>= 3.8.5)
   jekyll-feed (~> 0.6)
   jekyll-paginate-v2
   jekyll-sitemap

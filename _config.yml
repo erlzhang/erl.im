@@ -41,7 +41,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - build.sh
   - src
   - package.json
   - package-lock.json
