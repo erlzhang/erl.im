@@ -20,7 +20,7 @@ layout: page
     <td>总评论数</td>
     {% assign comment_count = 0 %}
     {% for post in site.posts %}
-      {% assign sc = site.data.comments[post.ref].size | default: 0 %}
+      {% assign sc = site.data.comments[post.slug].size | default: 0 %}
       {% assign comment_count = comment_count | plus: sc %}
     {% endfor %}
     <td>{{ comment_count }}</td>
@@ -39,10 +39,14 @@ layout: page
   </tbody>
     {% for post in site.posts %}
     <tr>
-      <td>{{ post.title  }}</td>
+      <td>
+				<a href="{{ post.url }}" target="_blank">
+					{{ post.title  }}
+				</a>
+			</td>
       <td>{{ post.date | date: "%Y-%m-%d %H:%M"}}</td>
       <td>{{ post.content | strip_html | strip_newlines | remove: " " | size }}</td>
-      <td>{{ site.data.comments[post.ref].size | default: 0 }}</td>
+      <td>{{ site.data.comments[post.slug].size | default: 0 }}</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -57,10 +61,14 @@ layout: page
     </tr>
   </thead>
   </tbody>
-    {% for book in site.archive %}
+    {% for book in site.books %}
     {% if book.slug != "blog" %}
     <tr>
-      <td>{{ book.title  }}</td>
+      <td>
+				<a href="/{{ book.slug }}/" target="_blank">
+				{{ book.title  }}
+				</a>
+			</td>
       <td>{{ book.date }}</td>
       {% assign count = 0 %}
       {% for part in book.parts %}
