@@ -38,6 +38,13 @@
           enmmm..
         </button>
       </div>
+      <div class="comment__smileys">
+        {%- for smiley in site.smileys -%}
+        <a href="#" data-smiley="{{ smiley['slug'] }}">
+          <img src="{{ smiley['img'] }}" alt="{{ smiley['name'] }}" />
+        </a>
+        {%- endfor -%}
+      </div>
     </div>
   </div>
 </form>
