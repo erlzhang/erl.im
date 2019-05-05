@@ -17,7 +17,7 @@
         <span class="comment__date">{{ date | date: "%Y-%m-%d %H:%M"}}</span>
       </div>
       <div class="comment__content">
-        {{ message }}
+        {{ message | smiley | markdownify }}
       </div>
        <div class="comment__reply">
         <a href="#commentContainer" class="reply-btn" data-reply-to="{{ index }}">回复</a>

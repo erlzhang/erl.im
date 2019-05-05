@@ -69,6 +69,7 @@ export default class {
       this.reply(target)
     })
 
+    this.initSmileys();
   }
 
   newVisitor () {
@@ -217,5 +218,26 @@ export default class {
     $("html, body").animate({
       scrollTop: t
     }, 450)
+  }
+
+  initSmileys() {
+    var smileys = document.getElementsByClassName("comment__smiley");
+    console.log(smileys);
+    var _this = this;
+    for( var i = 0, l = smileys.length; i < l; i++ ) {
+      console.log(smileys[i])
+      smileys[i].onclick = function(event) {
+        event.preventDefault();
+
+        var tag = this.getAttribute("data-smiley");
+        _this.grin(tag);
+      }
+    }
+  }
+
+  grin(smiley) {
+    var tag = ' ' + smiley + ' ';
+    this.messageArea.value += tag;
+    this.messageArea.focus();
   }
 }
