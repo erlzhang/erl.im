@@ -27,7 +27,9 @@ export default class {
     this.parentInput = document.getElementsByName("fields[parent]")[0]
     this.messageArea = document.getElementsByName("fields[message]")[0]
 
-    this.smiley = new Smiley(this.messageArea)
+    if ( document.getElementById("smileyContainer") ) {
+      this.smiley = new Smiley(this.messageArea)
+    }
 
     this.hintContainer = document.getElementById("commentHint")
     this.avatarImg = document.getElementById("visitorAvatar")
@@ -163,7 +165,11 @@ export default class {
 
     content += '</div>'
 
-    let message = this.smiley.parse(comment.message)
+    if ( this.smiley ) {
+      let message = this.smiley.parse(comment.message)
+    } else {
+      let message = comment.message
+    }
     content += '<div class="comment__content">' + message + '</div></div>'
 
     div.innerHTML = content

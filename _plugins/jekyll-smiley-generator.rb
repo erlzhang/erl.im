@@ -1,7 +1,11 @@
 module Jekyll
   class SmileyGenerator < Generator
     def generate(site)
-      dir = "assets/smileys"
+      smiley_config = site.config["smiley"]
+      return if not smiley_config or not smiley_config["enabled"]
+      
+      dir = smiley_config["dir"]
+
       smileys = {}
 
       begin
@@ -11,7 +15,7 @@ module Jekyll
             name = basename.split("_").last
             smiley = {
               "name" => name,
-              "img" => "/assets/smileys/#{filename}",
+              "img" => "/#{dir}/#{filename}",
               "slug" => ":#{name}:"
             }
             smileys[name] = smiley

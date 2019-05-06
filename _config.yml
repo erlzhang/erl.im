@@ -54,6 +54,9 @@ include:
 comment:
   enabled: true
   postUrl: "https://dev.staticman.net/v3/entry/github/erlzhang/persephone/master/comments"
+smiley:
+  enabled: true
+  dir: "assets/smileys"
 
 pagination:
   enabled: true
