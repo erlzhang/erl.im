@@ -40,7 +40,7 @@
       </div>
       <div class="comment__smileys">
         {%- for smiley in site.smileys -%}
-        <a href="#" data-smiley="{{ smiley[1]['slug'] }}" class="comment__smiley">
+        <a href="#" data-smiley="{{ smiley[1]['slug'] }}" data-src="{{ smiley[1]['img'] }}" class="comment__smiley">
           <img src="{{ smiley[1]['img'] }}" alt="{{ smiley[0] }}" />
         </a>
         {%- endfor -%}

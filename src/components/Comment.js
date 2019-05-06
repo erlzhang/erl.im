@@ -2,6 +2,7 @@ const $ = require("jquery");
 window.jQuery = $;
 import Cookies from 'js-cookie'
 
+import Smiley from '../components/Smiley'
 import Visitor from '../models/Visitor'
 import DateTime from '../helpers/DateTime'
 
@@ -25,6 +26,8 @@ export default class {
     this.urlInput = document.getElementsByName("fields[url]")[0]
     this.parentInput = document.getElementsByName("fields[parent]")[0]
     this.messageArea = document.getElementsByName("fields[message]")[0]
+
+    this.smiley = new Smiley(this.messageArea)
 
     this.hintContainer = document.getElementById("commentHint")
     this.avatarImg = document.getElementById("visitorAvatar")
@@ -69,7 +72,6 @@ export default class {
       this.reply(target)
     })
 
-    this.initSmileys();
   }
 
   newVisitor () {
@@ -160,7 +162,9 @@ export default class {
     content += '<span class="comment__date">' + dt_str + '</span>'
 
     content += '</div>'
-    content += '<div class="comment__content">' + comment.message + '</div></div>'
+
+    let message = this.smiley.parse(comment.message)
+    content += '<div class="comment__content">' + message + '</div></div>'
 
     div.innerHTML = content
     return div
@@ -218,26 +222,5 @@ export default class {
     $("html, body").animate({
       scrollTop: t
     }, 450)
-  }
-
-  initSmileys() {
-    var smileys = document.getElementsByClassName("comment__smiley");
-    console.log(smileys);
-    var _this = this;
-    for( var i = 0, l = smileys.length; i < l; i++ ) {
-      console.log(smileys[i])
-      smileys[i].onclick = function(event) {
-        event.preventDefault();
-
-        var tag = this.getAttribute("data-smiley");
-        _this.grin(tag);
-      }
-    }
-  }
-
-  grin(smiley) {
-    var tag = ' ' + smiley + ' ';
-    this.messageArea.value += tag;
-    this.messageArea.focus();
   }
 }
