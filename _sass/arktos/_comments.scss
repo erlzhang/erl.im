@@ -64,11 +64,37 @@
   justify-content: flex-end;
 }
 .comment__hint {
-  position: absolute;
-  left: 1rem;
-  bottom: 8px;
   font-size: 0.875rem;
   color: var(--gray);
+  flex: 1;
+  line-height: 40px;
+  padding: 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.comment__smileys_box {
+  padding: 4px 10px;
+  border-top: 1px solid var(--lighter);
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: none;
+  img {
+    width: 34px;
+    height: auto;
+  }
+}
+.comment__smileys_toggler {
+  width: 48px;
+  text-align: center;
+  padding: 9px 0 0 0;
+  border-right: 1px solid var(--lighter);
+  cursor: pointer;
+  svg {
+    stroke: var(--light-gray);
+  }
 }
 .comment__error {
   color: var(--red);

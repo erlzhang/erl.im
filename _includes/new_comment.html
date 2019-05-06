@@ -33,17 +33,23 @@
         <span class="message-arrow"></span>
       </div>
       <div class="comment__box_bottom">
-        <div class="comment__hint" id="commentHint"></div>
+        <div class="comment__smileys" id="smileyContainer">
+          <div class="comment__smileys_box" id="smileyBox">
+            {%- for smiley in site.smileys -%}
+            <a href="#" data-smiley="{{ smiley[1]['slug'] }}" data-src="{{ smiley[1]['img'] }}" class="comment__smiley">
+              <img src="{{ smiley[1]['img'] }}" alt="{{ smiley[0] }}" />
+            </a>
+            {%- endfor -%}
+          </div>
+          <div class="comment__smileys_toggler">
+          {% include icons/smile.html %}
+          </div>
+        </div>
+        <div class="comment__hint" id="commentHint">
+        </div>
         <button type="submit" class="submit-btn" id="submitBtn">
           enmmm..
         </button>
-      </div>
-      <div class="comment__smileys">
-        {%- for smiley in site.smileys -%}
-        <a href="#" data-smiley="{{ smiley[1]['slug'] }}" data-src="{{ smiley[1]['img'] }}" class="comment__smiley">
-          <img src="{{ smiley[1]['img'] }}" alt="{{ smiley[0] }}" />
-        </a>
-        {%- endfor -%}
       </div>
     </div>
   </div>
