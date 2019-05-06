@@ -192,9 +192,11 @@ textarea.form-control {
 }
 .comment__content {
   padding: 0.5rem 0;
-  color: var(--gray);
-  font-size: 0.95rem;
-  white-space: pre-line;
+  p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    white-space: pre-line;
+  }
 }
 .comment__reply {
   float: right;
