@@ -29,7 +29,9 @@ theme_setting:
       reply: "回复"
 comment:
   enabled: true
-  postUrl: "https://jekyll-comment-server.herokuapp.com/post-comment"
+  provider: "static"
+  static:
+    postUrl: "https://jekyll-comment-server.herokuapp.com/post-comment"
 smiley:
   enabled: true
 head_code: |
