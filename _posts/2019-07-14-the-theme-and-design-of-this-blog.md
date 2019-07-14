@@ -3,7 +3,7 @@ title: 有关博客主题与设计
 date: 2019-07-14 10:40 +0800
 category: 折腾
 ---
-大约两个多星期以前，我把现用的Jekyll主题封装成[GEM](https://rubygems.org/gems/jekyll-theme-persephone) 发布。
+大约两个多星期以前，我把现用的Jekyll主题封装成[GEM](https://rubygems.org/gems/jekyll-theme-persephone) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-persephone.svg)](https://rubygems.org/gems/jekyll-theme-persephone) 发布。
 
 自用主题和公共主题会有很多不同：
 
@@ -15,9 +15,9 @@ category: 折腾
 
 Jekyll主题一般只含样式，插件只能以依赖的方式引入。于是我把原有 `_plugins` 下的文件，去除不必要的，单独封装成三个插件：
 
-- [jekyll-books](https://github.com/erlzhang/jekyll-books)：仿造Gitbook的书籍生成器（详见[用jekyll模拟gitbook实现多书籍页面生成器](/blog/gitbook-made-of-jekyll)）；
-- [jekyll-smiley](https://github.com/erlzhang/jekyll-smiley)：灵活可配置的评论表情；
-- [jekyll-img-prefix](https://github.com/erlzhang/jekyll-img-prefix)：给文章内的图片加上外部链接前缀，为了不对原有文章做改动把图片迁移到sso上而写的 `filter`。
+- [jekyll-books](https://github.com/erlzhang/jekyll-books) [![Gem Version](https://badge.fury.io/rb/jekyll-books.svg)](https://rubygems.org/gems/jekyll-books)：仿造Gitbook的书籍生成器（详见[用jekyll模拟gitbook实现多书籍页面生成器](/blog/gitbook-made-of-jekyll)）；
+- [jekyll-smiley](https://github.com/erlzhang/jekyll-smiley) [![Gem Version](https://badge.fury.io/rb/jekyll-smiley.svg)](https://rubygems.org/gems/jekyll-smiley)：灵活可配置的评论表情；
+- [jekyll-img-prefix](https://github.com/erlzhang/jekyll-img-prefix) [![Gem Version](https://badge.fury.io/rb/jekyll-img-prefix.svg)](https://rubygems.org/gems/jekyll-img-prefix)：给文章内的图片加上外部链接前缀，为了不对原有文章做改动把图片迁移到sso上而写的 `filter`。
 
 我斟酌了一下，没有把他们设成 `jekyll-theme-persephone` 的依赖，因为它们只有对我来说才是必要的，对别人来说未必是。这几个插件都还很粗糙，很多异常情况还未兼顾到，还需进一步完善。
 
@@ -41,6 +41,8 @@ Jekyll主题一般只含样式，插件只能以依赖的方式引入。于是�
 
 归档页是仿造 [Perrera.com](http://perrera.com) 。小说内页是由legacy版的[Gitbook](https://legacy.gitbook.com/)基本样式更改而来。
 
+内置svg图标来自 [feather](https://feathericons.com/) 和 [bytesize-icons](https://github.com/danklammer/bytesize-icons)。
+ 
 评论框是最头疼的地方。以前做Dysis的时候，翻遍国内外收费的和免费的WordPress主题，没有一个让我觉得很别致的设计，都是千篇一律。Dysis的评论部分我参考了很多社交系统的评论（尤其是G+），做了不少交互动画。但是那种评论框放到这种版式的博客上不太合适，于是我随意拿线条做了一款简约的，原本还想加些动画效果，但是没想好要怎么动。应某些同志的要求又加上了评论表情的支持。
 
 前端部分，js用了大量es6语法，webpack打包；css是Jekyll内置的sass，大量使用`flex`布局，没有做低版本IE的兼容性支持。
