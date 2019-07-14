@@ -1,0 +1,8 @@
+_id: 39a1df80-a638-11e9-834e-fd3dce94d8d9
+parent: '8'
+name: Erl
+email: 8f8195c9c36d6c98e8bcade3e3ac69fe
+url: 'https://erl.im'
+message: >-
+  这是静态博客，没有数据库……评论是部署在外部的api，当它接收到一条评论请求后，会创建一个yml文件，写入我的GitHub仓库中，我的博客部署在Netlify上，GitHub接收到push请求后会通知Netlify，Netlify收到通知后就把repo拉取过去build，生成静态页面后部署，这个中间经历了多方的网络传输，再加上build也需要时间，所以很慢。
+date: 1563109602
