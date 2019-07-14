@@ -1,0 +1,9 @@
+_id: b972aaf0-a638-11e9-834e-fd3dce94d8d9
+parent: '2'
+name: Erl
+email: 8f8195c9c36d6c98e8bcade3e3ac69fe
+url: 'https://erl.im'
+message: >-
+  没有后台，使用Jekyll静态博客生成器，详情见
+  [https://jekyllrb.com/](https://jekyllrb.com/)。数据存在Github仓库里，部署在Netlify上，评论是用nodejs单独写的接口。
+date: 1563109817
