@@ -1,0 +1,9 @@
+_id: 55b82220-a9bb-11e9-bd3b-71513adee44e
+parent: '3'
+name: 叶夕青兮
+email: 8f8195c9c36d6c98e8bcade3e3ac69fe
+url: 'https://erl.im'
+message: >-
+  可能因为我是Ruby程序员，Jekyll比较符合我的习惯，二次开发和使用都很方便，唯一的痛点就是build时间太慢；最早我试过用hexo做 Books
+  Generator，没有成功，可能Node.js还不熟吧
+date: 1563495767
