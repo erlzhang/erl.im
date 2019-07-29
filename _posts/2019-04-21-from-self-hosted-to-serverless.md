@@ -1,4 +1,4 @@
-﻿---
+---
 title: 从self-hosted到Serverless
 category: 折腾
 date: 2019-04-21 14:30 +0800
@@ -9,7 +9,7 @@ keywords: 阿里云oss, Jekyll, Jekyll评论系统, Staticman, Netlify
 
 <!--more-->
 
-去年8月购了VPS之后，从部署博客到优化配置折腾了两三个月。其实拿VPS部署静态博客完全是在浪费资源，所以在安定了几个月后，我突然又决定把博客迁出VPS，彻底做到serverless。
+去年8月购了VPS之后，从部署博客到优化配置折腾了三个月。其实拿VPS部署静态博客完全是在浪费资源，所以在安定了几个月后，我突然又决定把博客迁出VPS，彻底做到serverless。
 
 ## 阿里云oss
 
@@ -17,7 +17,7 @@ keywords: 阿里云oss, Jekyll, Jekyll评论系统, Staticman, Netlify
 
 促使我决定这样做的原因，是每次commit里含多张图片，push到github上的速度极慢，甚至卡着半天不动，以至于提交失败。
 
-静态博客启用国内图床的有很多。本身Github Pages访问速度不稳，图床也带有CDN加速的意味，流量便宜。基于某位同志曾经的惨痛教训，我决定直接启用阿里云。
+静态博客启用国内图床的很多。本身Github Pages访问速度不稳，图床也带有CDN加速的意味，流量便宜。基于某位同志曾经的惨痛教训，我决定直接启用阿里云。
 
 步骤呢？打开阿里云oss，新建一个bucket，然后把图片文件夹拖进去，搞定！
 
@@ -27,7 +27,7 @@ keywords: 阿里云oss, Jekyll, Jekyll评论系统, Staticman, Netlify
 
 另一种方法是写个脚本，遍历所有markdown文件，把图片链接更改掉——不便于维护，图床地址一旦有更改，都要操作一遍所有的markdown文件。
 
-最终的办法，是不动md文件。写一个`filter`，在`build`的时候，把markdown中的`img`的相对路径改为绝对路径。图床的`base_url`配置在`config.yml`里，在本地环境下设为空即，这样我在本地预览调试的时候也不会消耗oss的流量。
+最终的办法，是不动md文件。写一个`filter`，在`build`的时候，把markdown中的`img`的相对路径改为绝对路径。图床的`base_url`配置在`config.yml`里，在本地环境下设为空，这样我在本地预览调试的时候也不会消耗oss的流量。
 
 ## Staticman v3
 
@@ -59,11 +59,11 @@ allowedOrigins: ["erl.im"]
 
 评论搞定后，剩下的统统交给[Netlify](https://www.netlify.com/)实现就可以了！此前讲过Netlify是个好东西，那时候还只是简单尝试了一下，现在看来，它确实是个好东西。
 
-- 支持第三方Jekyll插件
-- 支持域名绑定，而且可以绑定多个域名
-- 支持301跳转
-- 支持https
-- 支持自定义头部（也就是可以给静态资源设置缓存和过期时间）
-- 支持[netlifycms](https://erl.im/blog/blog-made-of-jamstack#cms)
+- 支持第三方Jekyll插件；
+- 支持域名绑定，而且可以绑定多个域名；
+- 支持301跳转；
+- 支持https；
+- 支持自定义头部（也就是可以给静态资源设置缓存和过期时间）；
+- 支持[netlifycms](https://erl.im/blog/blog-made-of-jamstack#cms)。
 
 目前看来唯一的缺点是`build`的时间较长，有时需要排队，这样评论延迟会比较久——我觉得在我博客评论的人应该也都习惯了。
