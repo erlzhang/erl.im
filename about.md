@@ -29,7 +29,7 @@ web开发者（web developer）。
 
 [Sky](https://sky.erl.im/)：我的死党，喜欢啰嗦
 
-[静水流深](https://www.geekboy.org/)：某资深大牌程序员
+[静水流深](https://www.geekboy.org/)：静水流深，闻喧享静
 
 ### 版权声明
 
