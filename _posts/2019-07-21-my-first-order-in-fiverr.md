@@ -2,6 +2,7 @@
 title: 记第一笔Fiverr订单
 category: 折腾
 date: 2019-07-21 10:30 +0800
+keywords: fiverr, fiverr freelancer, fiverr接单, fiverr order
 ---
 [Fiverr](https://www.fiverr.com/) 是国外一个提供自由职业者服务的平台（有点像一个专门卖互联网服务的淘宝），你可以作为卖家或买家入住。
 
