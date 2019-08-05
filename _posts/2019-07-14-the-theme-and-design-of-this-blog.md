@@ -2,6 +2,7 @@
 title: 有关博客主题与设计
 date: 2019-07-14 10:40 +0800
 category: 折腾
+keywords: Jekyll theme, jekyll 主题, jekyll 主题设计, jekyll theme persephone
 ---
 大约两个多星期以前，我把现用的Jekyll主题封装成[GEM](https://rubygems.org/gems/jekyll-theme-persephone) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-persephone.svg)](https://rubygems.org/gems/jekyll-theme-persephone) 发布。
 
