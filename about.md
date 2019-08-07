@@ -17,6 +17,8 @@ web开发者（web developer）。
 
 现居于吉林。
 
+[Here](https://en.erl.im) is my English blog.
+
 ### 关于博客
 
 始建于2012年12月31日，途径几番折腾，用过Emlog、Wordpress、Typecho。
