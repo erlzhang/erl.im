@@ -11,7 +11,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "jekyll", ">= 3.8.5"
-gem 'jekyll-theme-persephone', ">= 0.1.9"
+gem 'jekyll-theme-persephone', ">= 0.2.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
