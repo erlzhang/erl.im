@@ -22,8 +22,8 @@ theme_setting:
     - "about.md"
     - "archive.md"
     -
-      title: 书单
-      url: https://www.notion.so/erlzhang/ab3c934221ad4fc18a910757f1953cce
+      title: English
+      url: https://en.erl.im
   lang:
     category_all: "全部"
     blog_title: "博客"
