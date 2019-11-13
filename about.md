@@ -15,7 +15,7 @@ web开发者（web developer）。
 
 “叶夕青兮”是我的笔名，喜欢写点儿不怎么好看的私小说 ~~（兴趣是挖坑不填）~~。
 
-现居于吉林。
+现居于北京。
 
 [Here](https://en.erl.im) is my English blog.
 
