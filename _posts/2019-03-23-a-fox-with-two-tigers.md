@@ -1,7 +1,7 @@
 ---
 title: 养了两只老虎的狐狸
 date: 2019-03-23 19:30 +0800
-category: 生活
+category: 戏言
 excerpt: 回忆一下14年以前的诛仙！
 ---
 
