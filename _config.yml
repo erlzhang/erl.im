@@ -21,9 +21,6 @@ theme_setting:
   nav_pages:
     - "about.md"
     - "archive.md"
-    -
-      title: English
-      url: https://en.erl.im
   lang:
     category_all: "全部"
     blog_title: "博客"
