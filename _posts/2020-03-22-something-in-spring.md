@@ -2,7 +2,10 @@
 title: 春日杂记
 category: 生活
 date: 2020-03-22 20:00 +0800
+img: /img/spring/peach-blossom.jpg
 ---
+
+![桃花](/img/spring/peach-blossom.jpg)
 
 桃花其实是有很多种的。我在公园看到的有两种：
 
