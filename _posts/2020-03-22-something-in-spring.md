@@ -2,7 +2,7 @@
 title: 春日杂记
 category: 生活
 date: 2020-03-22 20:00 +0800
-img: /img/spring/peach-blossom.jpg
+img: /img/thumbnails/peach-blossom.jpg
 ---
 
 ![桃花](/img/spring/peach-blossom.jpg)

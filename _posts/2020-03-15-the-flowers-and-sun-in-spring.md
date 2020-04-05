@@ -2,7 +2,7 @@
 title: 春天，朝看花，晚看夕阳
 category: 生活
 date: 2020-03-15 16:00 +0800
-img: /img/spring/peach-blossom-2.jpg
+img: /img/thumbnails/peach-blossom-2.
 ---
 
 一个多星期前，京城的一场雨，下了我一个措手不及。
