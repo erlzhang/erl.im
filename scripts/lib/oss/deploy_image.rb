@@ -3,11 +3,20 @@ require 'find'
 
 class DeployImages
 
+  attr_reader :access_key_id, :access_key_secret, :endpoint, :bucket_name
+
+  def initialize(id, secret, params = {})
+    @access_key_id     = id
+    @access_key_secret = secret
+    @endpoint          = params[:endpoint] || 'oss-cn-beijing.aliyuncs.com'
+    @bucket_name       = params[:bucket_name] || 'persephone'
+  end
+
   def client
     @client ||= Aliyun::OSS::Client.new(
-      endpoint: 'oss-cn-beijing.aliyuncs.com',
-      access_key_id: 'LTAI4Fm5UANWwexZufHWRXVH',
-      access_key_secret: '39KcROZbMPKniPquLhED34xaQNt2vR'
+      endpoint: endpoint,
+      access_key_id: access_key_id,
+      access_key_secret: access_key_secret
     )
   end
 
@@ -16,7 +25,7 @@ class DeployImages
   end
 
   def bucket
-    @bucket ||= client.get_bucket('persephone')
+    @bucket ||= client.get_bucket(bucket_name)
   end
 
   # 文件列表
