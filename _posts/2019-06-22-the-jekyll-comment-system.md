@@ -47,3 +47,8 @@ Staticman 的原理是提供一个 API，当用户发布评论（即提交表单
 这个自制的 Staticman 的替代品稳定性如何还未知，不过自己写应用最大的好处就是，你可以很容易定位到问题所在，出了问题自己维护，不用指望他人。另外就是，你可以随意折腾。
 
 依旧开源，有需求自取：[jekyll-comment-server](https://github.com/erlzhang/jekyll-comment-server)，后期还会逐渐完善功能（比如：回复邮件通知）。第一次写 `nodejs` 应用，就当写着玩儿吧！
+
+**2020年4月更新：**
+
+Heroku 的国内访问速度实在是不稳定，不时会被墙掉，于是我找到了可替代的国内的服务 leancloud（valine似乎也是基于leancloud，只是与我的理念不符）。leancloud需要使用自己的中间件和api，于是在原来的源码上稍做了改动（拉了个 [leancloud](https://github.com/erlzhang/jekyll-comment-server/tree/leancloud) 分支用于部署）。
+
