@@ -23,7 +23,7 @@ img: /img/thumbnails/insomnia_night.jpg
 
 ![夜-03:41](/img/insomnia_night/2.jpg)
 
-三点五十五分，蓝色间淡。
+三点五十五分，蓝色渐淡。
 
 ![日出-03:55](/img/insomnia_night/3.jpg)
 
