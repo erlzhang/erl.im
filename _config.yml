@@ -34,8 +34,8 @@ comment:
   enabled: true
   provider: "static"
   static:
-    # postUrl: "https://jekyll-comment-server.herokuapp.com/post-comment"
-    postUrl: "https://g4vdkkahpjie.leanapp.cn/post-comment"
+    postUrl: "https://jekyll-comment-server.herokuapp.com/post-comment"
+    # postUrl: "https://g4vdkkahpjie.leanapp.cn/post-comment"
 smiley:
   enabled: true
 head_code: |
