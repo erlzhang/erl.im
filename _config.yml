@@ -31,7 +31,7 @@ theme_setting:
       message: "说点什么吧..."
       reply: "回复"
 comment:
-  enabled: true
+  enabled: false
   provider: "static"
   static:
     postUrl: "https://jekyll-comment-server.herokuapp.com/post-comment"
