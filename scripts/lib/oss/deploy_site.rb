@@ -1,16 +1,19 @@
 require_relative './deploy'
 
-class DeployImage < Deploy
-  # 本地文件列表
+class DeploySite < Deploy
   def local_objects
     files = []
     Find.find('img') { |path| files << path if File.file?(path) }
     files.compact
   end
 
-  # 推送本地文件到远程
   def push_object(path)
-    bucket.put_object(path, file: path)
+    if path.start_with?('_site')
+      remote_path = path.sub('_site/', '')
+    else
+      remote_path = path
+    end
+    bucket.put_object(remote_path, file: path)
 
     check_push_status(path)
   end
