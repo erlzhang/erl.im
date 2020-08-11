@@ -1,4 +1,4 @@
-require_relative './deploy'
+require_relative './deploy.rb'
 
 class DeploySite < Deploy
   def local_objects

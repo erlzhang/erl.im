@@ -1,4 +1,4 @@
-require_relative './deploy'
+require_relative './deploy.rb'
 
 class DeployImage < Deploy
   # 本地文件列表

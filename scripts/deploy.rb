@@ -1,4 +1,4 @@
-require_relative './lib/deploy_site'
+require_relative './lib/oss/deploy_site.rb'
 
 params = {
   endpoint: "oss-cn-hongkong.aliyuncs.com",
