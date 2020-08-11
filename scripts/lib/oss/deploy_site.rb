@@ -3,7 +3,7 @@ require_relative './deploy.rb'
 class DeploySite < Deploy
   def local_objects
     files = []
-    Find.find('img') { |path| files << path if File.file?(path) }
+    Find.find('_site') { |path| files << path if File.file?(path) }
     files.compact
   end
 
