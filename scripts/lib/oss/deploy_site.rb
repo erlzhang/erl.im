@@ -4,6 +4,8 @@ class DeploySite < Deploy
   def local_objects
     files = []
     Find.find('_site/blog') { |path| files << path if File.file?(path) }
+    files << "_site/sitemap.xml"
+    files << "_site/feed.xml"
     files.compact
   end
 
