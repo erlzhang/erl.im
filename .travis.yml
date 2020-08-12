@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+  - 2.5
+script: bundle exec jekyll build
+cache: bundler
+
+branches:
+  only:
+      - deploy 
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: gem install aliyun-sdk && ruby scripts/deploy.rb
+  keep_history: true
+  on:
+    branch: deploy 
+
+notifications:
+  email: false
