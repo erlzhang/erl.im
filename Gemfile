@@ -11,7 +11,7 @@ source 'https://gems.ruby-china.com'
 # Happy Jekylling!
 
 gem "jekyll", ">= 4.0.0"
-gem 'jekyll-theme-persephone', ">= 0.2.4"
+gem 'jekyll-theme-persephone', ">= 0.2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
@@ -23,6 +23,7 @@ group :jekyll_plugins do
   gem 'jekyll-books'
   gem 'jekyll-img-prefix', '>= 0.1.2'
   gem 'jekyll-smiley', ">= 0.1.4"
+  gem 'jekyll-toc'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -69,12 +69,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      toc: true
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-books
   - jekyll-img-prefix
   - jekyll-smiley
+  - jekyll-toc
 exclude:
   - Gemfile
   - Gemfile.lock
