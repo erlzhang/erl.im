@@ -23,7 +23,7 @@ title: 关于
 
 制作并使用过主题[Erlsimple](https://github.com/erlzhang/erlsimple)、[Dysis](https://github.com/erlzhang/dysis)（←这俩货都是做业余开发时写的，如果又~~双叒叕~~发现了bug，可[邮件](mailto:zhangshiyu1992@hotmail.com)或[Github](https://github.com/erlzhang)联系我）。
 
-目前使用Jekyll，居于[Netlify](https://www.netlify.com/)。主题 [Persephone](https://github.com/erlzhang/jekyll-theme-persephone)。
+目前使用Jekyll，居于~~[Netlify](https://www.netlify.com/)~~ 阿里云oss。主题 [Persephone](https://github.com/erlzhang/jekyll-theme-persephone)。
 
 ### 友情链接
 
