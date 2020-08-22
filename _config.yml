@@ -77,6 +77,7 @@ plugins:
   - jekyll-img-prefix
   - jekyll-smiley
   - jekyll-toc
+  - jekyll-deploy-oss
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -86,6 +87,11 @@ exclude:
   - vendor/ruby/
   - README.md
   - scripts/
-include:
-  - _redirects
-  - _headers
+deploy:
+  endpoint: "oss-cn-hongkong.aliyuncs.com"
+  bucket_name: "erlim"
+  expired_in: 3650
+  paths:
+    - blog
+    - feed.xml
+    - sitemap.xml
