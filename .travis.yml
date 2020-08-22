@@ -8,12 +8,6 @@ after_success: bundle exec jekyll deploy
 branches:
   only:
       - master
-# deploy:
-#   provider: script
-#   #script: gem install aliyun-sdk && ruby scripts/deploy.rb
-#   script: bundle exec jekyll deploy
-#   on:
-#     branch: master 
 
 notifications:
   email: false
