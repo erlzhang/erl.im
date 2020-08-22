@@ -90,7 +90,7 @@ exclude:
 deploy:
   endpoint: "oss-cn-hongkong.aliyuncs.com"
   bucket_name: "erlim"
-  expired_in: 3650
+  expired_in: 1
   paths:
     - blog
     - feed.xml
