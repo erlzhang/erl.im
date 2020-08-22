@@ -9,10 +9,8 @@ branches:
       - master
 deploy:
   provider: script
-  skip_cleanup: true
   #script: gem install aliyun-sdk && ruby scripts/deploy.rb
   script: bundle exec jekyll deploy
-  keep_history: true
   on:
     branch: master 
 
