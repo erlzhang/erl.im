@@ -1,0 +1,9 @@
+_id: 32d74d60-eac1-11ea-b679-7d8ba81b99fd
+parent: 5-1
+name: nameyule
+email: c6ad82ea42451414f46f99b9dec4d285
+url: ''
+message: >-
+  搞定了，是jekyll版本问题。我之前用github-pages插件（依赖最高支持jekyll
+  3.9.0），build之后看不到slide首页，改用4.0之后可以了。
+date: 1598792609
