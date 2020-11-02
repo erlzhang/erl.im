@@ -37,16 +37,6 @@ comment:
     # postUrl: "https://g4vdkkahpjie.leanapp.cn/post-comment"
 smiley:
   enabled: true
-head_code: |
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?3176e6e675ed7773f831e38c7a57880f";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 # Jekyll Settings
 markdown: kramdown
