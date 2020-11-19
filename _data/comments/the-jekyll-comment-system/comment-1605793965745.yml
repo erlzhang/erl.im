@@ -1,0 +1,7 @@
+_id: 809ca210-2a6e-11eb-9b48-7f7c3e501f8d
+parent: 25-1
+name: 暗夜零星
+email: fe97a42e735f901f8b1a2390dc5f72b8
+url: 'http://wlz.922.top'
+message: 我前天搭建的hugo的博客，也有这个评论系统，用的Valine，配置的LeanCloud的存储服务。不过貌似不会自动发回复邮件。
+date: 1605793965
