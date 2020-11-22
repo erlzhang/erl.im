@@ -20,7 +20,7 @@ gem 'jekyll-theme-persephone', ">= 0.2.5"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem 'jekyll-sitemap'
-  gem 'jekyll-books'
+  gem 'jekyll-books', ">= 0.2.1"
   #gem 'jekyll-img-prefix', '>= 0.1.2'
   gem 'jekyll-smiley', ">= 0.1.4"
   gem 'jekyll-toc'

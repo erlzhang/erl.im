@@ -37,7 +37,7 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
-    jekyll-books (0.1.1)
+    jekyll-books (0.2.1)
       jekyll (>= 3.5)
       nokogiri (~> 1.9)
     jekyll-deploy-oss (0.1.0)
@@ -99,7 +99,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (>= 4.0.0)
-  jekyll-books
+  jekyll-books (>= 0.2.1)
   jekyll-deploy-oss
   jekyll-feed (~> 0.6)
   jekyll-sitemap
