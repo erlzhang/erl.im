@@ -1,0 +1,9 @@
+_id: b608db20-2f8d-11eb-bd35-83bf7bc4ef17
+parent: ''
+name: 暗夜零星
+email: fe97a42e735f901f8b1a2390dc5f72b8
+url: 'https://wlizhi.cc'
+message: >-
+  大神，你有碰到过这种问题吗？评论系统的邮件提醒功能，在发送邮件的时候被邮件服务器拒绝，提示连接频率限制。我碰到了这个问题（response=550
+  Connection frequency limited）。
+date: 1606357125
