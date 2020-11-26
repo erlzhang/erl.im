@@ -1,0 +1,7 @@
+_id: 5f03c4a0-2fe9-11eb-8f39-e1dac3070378
+parent: 7-1
+name: 暗夜零星
+email: fe97a42e735f901f8b1a2390dc5f72b8
+url: 'https://wlizhi.cc'
+message: github上找的邮件提醒的开源项目，都是基于node.js写的，只能部署在云引擎上面使用。自己实现的话，就能部署到阿里云ECS了。
+date: 1606396493
