@@ -1,0 +1,8 @@
+_id: cecb7310-2fe8-11eb-8f39-e1dac3070378
+parent: 7-1
+name: 暗夜零星
+email: fe97a42e735f901f8b1a2390dc5f72b8
+url: 'https://wlizhi.cc'
+message: >-
+  是啊，用的valine，奇怪，我再leancloud文档上面找有关事件回调的接口，也没找到。如果能找到基于http协议事件回调的接口，就能自己开发一个邮件提醒了。他们的云引擎所在的外网ip被qq、163邮箱服务器都拉黑了。
+date: 1606396251
