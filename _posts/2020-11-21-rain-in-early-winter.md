@@ -2,7 +2,7 @@
 title: 初冬的雨
 category: 生活
 date: 2020-11-21 19:00 +0800
-img: /img/rain-in-winter.jpg
+img: /img/thumbnails/rain-in-winter.jpg
 ---
 
 雨天的日子里没有阳光，这是雨天里的一大憾事。但是有遗憾便有补偿，补偿便是那雨天带来的安静。
