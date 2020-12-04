@@ -1,0 +1,7 @@
+_id: 385083c0-3601-11eb-966f-a7d55a977243
+parent: ''
+name: 暗夜零星
+email: fe97a42e735f901f8b1a2390dc5f72b8
+url: 'https://wlizhi.cc'
+message: OSS自动同步的脚步，需要本地手动执行么？还是说可以直接嵌入达到某个地方，git提交时通过钩子自动触发？
+date: 1607066443
