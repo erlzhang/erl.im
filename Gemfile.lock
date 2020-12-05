@@ -51,7 +51,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-smiley (0.1.4)
       jekyll (>= 3.5)
-    jekyll-theme-persephone (0.2.5)
+    jekyll-theme-persephone (0.2.6)
     jekyll-toc (0.14.0)
       jekyll (>= 3.8)
       nokogiri (~> 1.10)
@@ -104,7 +104,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-sitemap
   jekyll-smiley (>= 0.1.4)
-  jekyll-theme-persephone (>= 0.2.5)
+  jekyll-theme-persephone (>= 0.2.6)
   jekyll-toc
   tzinfo-data
 
