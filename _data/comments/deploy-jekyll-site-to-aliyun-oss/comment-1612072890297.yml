@@ -1,0 +1,7 @@
+_id: c34991a0-6389-11eb-8fd4-47cb49e8bd5e
+parent: ''
+name: 李嘉图
+email: d4c519da09078d9303ddb4ad077f3748
+url: ''
+message: "我用 GitHub Actions 自动化部署过 Hexo、Hugo，到阿里云OSS，感觉也挺方便好用的，姐你可以试试……\r\nGitHub Actions 的 CI/CD 功能对于公开仓库免费开放，对于私有仓库，每个月也有 2000min 的免费额度，对于个人独立博客来说完全够了，微软爸爸还是挺良心的！"
+date: 1612072890
