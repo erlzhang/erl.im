@@ -6,8 +6,6 @@ email: "zhangshiyu1992@hotmail.com"
 url: "https://erl.im"
 social:
   github: "erlzhang"
-  twitter: "icily0719"
-  codepen: "erlzhang"
 
 # Theme Settings
 logo: /img/logo.svg
@@ -68,9 +66,3 @@ exclude:
   - vendor/ruby/
   - README.md
   - scripts/
-deploy:
-  endpoint: "oss-cn-hongkong.aliyuncs.com"
-  bucket_name: "erlim"
-  expired_in: 1
-  OSS_ID: "LTAI4G16NbeUCi5g2HR3yMoh"
-  OSS_SECRET: "mC45fine4aKommoPGvDfDiqSAhoXJH"
