@@ -29,14 +29,6 @@ theme_setting:
       url: "链接"
       message: "说点什么吧..."
       reply: "回复"
-comment:
-  enabled: true
-  provider: "static"
-  static:
-    postUrl: "https://jekyll-comment-server.herokuapp.com/post-comment"
-    # postUrl: "https://g4vdkkahpjie.leanapp.cn/post-comment"
-smiley:
-  enabled: true
 
 # Jekyll Settings
 markdown: kramdown
@@ -60,12 +52,12 @@ defaults:
       layout: "post"
       toc: true
 plugins:
-  - jekyll-feed
+  #- jekyll-feed
   - jekyll-sitemap
   - jekyll-books
   #- jekyll-img-prefix
-  - jekyll-smiley
-  - jekyll-toc
+  #- jekyll-smiley
+  #- jekyll-toc
   - jekyll-deploy-oss
 exclude:
   - Gemfile
@@ -80,7 +72,5 @@ deploy:
   endpoint: "oss-cn-hongkong.aliyuncs.com"
   bucket_name: "erlim"
   expired_in: 1
-  paths:
-    - blog
-    - feed.xml
-    - sitemap.xml
+  OSS_ID: "LTAI4G16NbeUCi5g2HR3yMoh"
+  OSS_SECRET: "mC45fine4aKommoPGvDfDiqSAhoXJH"

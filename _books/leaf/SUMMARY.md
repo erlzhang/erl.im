@@ -24,7 +24,7 @@
     * [小侄](nephew.md)
     * [下次](next-time.md)
 * [无病呻吟](part-4.md)
-    * [旋律依旧，物是人非](6824.md)
+    * [旋律依旧，物是人非](melody-remains-same.md)
     * [喧闹里的孤独与宁静](lonely-and-peace-at-the-noise.md)
     * [人之初，&ldquo;性&rdquo;本善](at-the-beginning-of-life-sex-is-good.md)
     * [往事逐孤鸿，但乱云流水](when-time-flies-like-geese-clouds-and-waters-stand-still.md)

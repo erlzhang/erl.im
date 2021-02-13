@@ -49,12 +49,7 @@ GEM
       sassc (> 2.0.1, < 3.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-smiley (0.1.4)
-      jekyll (>= 3.5)
     jekyll-theme-persephone (0.2.6)
-    jekyll-toc (0.14.0)
-      jekyll (>= 3.8)
-      nokogiri (~> 1.10)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.1.0)
@@ -103,9 +98,7 @@ DEPENDENCIES
   jekyll-deploy-oss
   jekyll-feed (~> 0.6)
   jekyll-sitemap
-  jekyll-smiley (>= 0.1.4)
-  jekyll-theme-persephone (>= 0.2.6)
-  jekyll-toc
+  jekyll-theme-persephone
   tzinfo-data
 
 BUNDLED WITH
