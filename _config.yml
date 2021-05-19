@@ -66,3 +66,8 @@ exclude:
   - vendor/ruby/
   - README.md
   - scripts/
+books_settings:
+  ebook:
+    enabled: true
+    formats:
+      - "mobi"
