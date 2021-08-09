@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>书名</th>
+      <th>年份</th>
+      <th>字数</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- assign books = site.books -%}
+    {%- assign amount = 0 -%}
+    {%- for book in books -%}
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.date }}</td>
+        {%- assign book_count = 0 -%}
+        {% for post in book.parts %}
+          {%- if post.parts -%}
+            {%- for part in post.parts -%}
+              {% assign single_count = part.content | strip_html | strip_newlines | remove: " " | size %}
+              {% assign book_count = book_count | plus: single_count %}
+            {%- endfor -%}
+          {%- endif -%}
+          {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
+          {% assign book_count = book_count | plus: single_count %}
+        {% endfor %}
+        <td>{{ book_count }}</td>
+        {%- assign amount = amount | plus: book_count -%}
+      </tr>
+    {%- endfor -%}
+    <tr>
+      <td>合计</td>
+      <td></td>
+      <td>{{ amount }}</td>
+    </tr>
+  </tbody>
+</table>
