@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-books', ">= 0.3.0"
   #gem 'jekyll-books'
-  gem 'jekyll-img-prefix', '>= 0.1.2'
+  #gem 'jekyll-img-prefix', '>= 0.1.2'
   #gem 'jekyll-smiley', ">= 0.1.4"
   #gem 'jekyll-toc'
   gem 'jekyll-deploy-oss'
