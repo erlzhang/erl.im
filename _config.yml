@@ -9,8 +9,9 @@ social:
 
 # Theme Settings
 logo: /img/logo.svg
-rss: "/feed.xml"
+# rss: "/feed.xml"
 theme: 'jekyll-theme-persephone'
+img_prefix: https://erl.im
 theme_setting:
   blog_page: "blog/index.md"
   about_page: "about.md"
@@ -53,7 +54,7 @@ plugins:
   #- jekyll-feed
   - jekyll-sitemap
   - jekyll-books
-  #- jekyll-img-prefix
+  - jekyll-img-prefix
   #- jekyll-smiley
   #- jekyll-toc
   - jekyll-deploy-oss
@@ -68,6 +69,7 @@ exclude:
   - scripts/
 books_settings:
   ebook:
-    enabled: true
+    enabled: false
     formats:
       - "mobi"
+      - "txt"
