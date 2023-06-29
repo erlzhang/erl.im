@@ -54,10 +54,10 @@ plugins:
   #- jekyll-feed
   - jekyll-sitemap
   - jekyll-books
-  #- jekyll-img-prefix
+  - jekyll-img-prefix
   #- jekyll-smiley
   #- jekyll-toc
-  - jekyll-deploy-oss
+  #- jekyll-deploy-oss
 exclude:
   - Gemfile
   - Gemfile.lock
