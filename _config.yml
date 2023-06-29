@@ -1,5 +1,5 @@
 ---
-title: 叶夕青兮
+title: Jekyll 主题 Persephone
 description: jekyll-theme-persephone Demo演示站
 locale: zh
 email: "zhangshiyu1992@hotmail.com"
@@ -17,8 +17,9 @@ theme_setting:
   about_page: "about.md"
   archive_page: "archive.md"
   nav_pages:
-    - "about.md"
-    - "archive.md"
+    -
+      title: "叶夕青兮"
+      url: "https://erl.im"
   lang:
     category_all: "全部"
     blog_title: "博客"
