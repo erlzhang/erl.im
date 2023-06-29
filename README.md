@@ -1,4 +1,4 @@
-# 博客
+# jekyll-theme-persephone Demo site
 
 [https://erl.im](https://erl.im)
 
