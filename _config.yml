@@ -11,7 +11,7 @@ social:
 logo: /img/logo.svg
 # rss: "/feed.xml"
 theme: 'jekyll-theme-persephone'
-img_prefix: https://erl.im
+img_prefix: https://erlim.oss-cn-hongkong.aliyuncs.com
 theme_setting:
   blog_page: "blog/index.md"
   about_page: "about.md"
